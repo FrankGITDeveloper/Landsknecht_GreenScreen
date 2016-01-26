@@ -80,7 +80,7 @@ Partial Class frmMain
         '
         Me.btnEnd.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnEnd.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnEnd.Location = New System.Drawing.Point(417, 281)
+        Me.btnEnd.Location = New System.Drawing.Point(406, 280)
         Me.btnEnd.Name = "btnEnd"
         Me.btnEnd.Size = New System.Drawing.Size(92, 36)
         Me.btnEnd.TabIndex = 32
@@ -90,7 +90,7 @@ Partial Class frmMain
         'btnStop
         '
         Me.btnStop.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnStop.Location = New System.Drawing.Point(111, 281)
+        Me.btnStop.Location = New System.Drawing.Point(111, 280)
         Me.btnStop.Name = "btnStop"
         Me.btnStop.Size = New System.Drawing.Size(93, 36)
         Me.btnStop.TabIndex = 31
@@ -100,7 +100,7 @@ Partial Class frmMain
         'btnStart
         '
         Me.btnStart.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnStart.Location = New System.Drawing.Point(12, 281)
+        Me.btnStart.Location = New System.Drawing.Point(12, 280)
         Me.btnStart.Name = "btnStart"
         Me.btnStart.Size = New System.Drawing.Size(93, 36)
         Me.btnStart.TabIndex = 30
@@ -124,6 +124,7 @@ Partial Class frmMain
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.HotTrack = True
         Me.TabControl1.Location = New System.Drawing.Point(12, 12)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -265,6 +266,7 @@ Partial Class frmMain
         '
         'TabPage2
         '
+        Me.TabPage2.BackColor = System.Drawing.SystemColors.Control
         Me.TabPage2.Controls.Add(Me.GroupBox2)
         Me.TabPage2.Controls.Add(Me.GroupBox1)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
@@ -273,7 +275,6 @@ Partial Class frmMain
         Me.TabPage2.Size = New System.Drawing.Size(493, 229)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Anwendung 2"
-        Me.TabPage2.UseVisualStyleBackColor = True
         '
         'GroupBox2
         '
@@ -400,11 +401,12 @@ Partial Class frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(533, 329)
+        Me.ClientSize = New System.Drawing.Size(522, 328)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.btnEnd)
         Me.Controls.Add(Me.btnStop)
         Me.Controls.Add(Me.btnStart)
+        Me.MaximizeBox = False
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Partyhaus Landsknecht -  GreenScreen Shooting"

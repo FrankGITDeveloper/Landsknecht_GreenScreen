@@ -158,7 +158,7 @@
 
 
 
-    Private Sub btnScanPath1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnScanPath1.Click
+    Private Sub btnScanPath1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
             FolderBrowserDialog1.ShowDialog()
 
@@ -169,7 +169,7 @@
     End Sub
 
 
-    Private Sub btnScanPath2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnScanPath2.Click
+    Private Sub btnScanPath2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
             FolderBrowserDialog1.ShowDialog()
 
@@ -181,7 +181,7 @@
 
 
 
-    Private Sub btnApplication2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnApplication2.Click
+    Private Sub btnApplication2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         '  Dim myStream As Stream = Nothing
         Dim openFileDialog1 As New OpenFileDialog()
 
@@ -210,7 +210,7 @@
     End Sub
 
 
-    Private Sub btnApplication1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnApplication1.Click
+    Private Sub btnApplication1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         '  Dim myStream As Stream = Nothing
         Dim openFileDialog1 As New OpenFileDialog()
 
@@ -239,43 +239,43 @@
     End Sub
 
 
-    Private Sub chkScanSubDir1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles chkScanSubDir1.CheckedChanged
+    Private Sub chkScanSubDir1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         bolChanges = True
     End Sub
 
-    Private Sub txtScanPath1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtScanPath1.TextChanged
+    Private Sub txtScanPath1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         bolChanges = True
     End Sub
 
-    Private Sub txtApplication1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtApplication1.TextChanged
+    Private Sub txtApplication1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         bolChanges = True
     End Sub
 
-    Private Sub txtApplication1Filter_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtApplication1Filter.TextChanged
+    Private Sub txtApplication1Filter_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         bolChanges = True
     End Sub
 
-    Private Sub txtApplication1Arguments_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtApplication1Arguments.TextChanged
+    Private Sub txtApplication1Arguments_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         bolChanges = True
     End Sub
 
-    Private Sub chkScanSubDir2_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles chkScanSubDir2.CheckedChanged
+    Private Sub chkScanSubDir2_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         bolChanges = True
     End Sub
 
-    Private Sub txtScanPath2_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtScanPath2.TextChanged
+    Private Sub txtScanPath2_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         bolChanges = True
     End Sub
 
-    Private Sub txtApplication2_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtApplication2.TextChanged
+    Private Sub txtApplication2_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         bolChanges = True
     End Sub
 
-    Private Sub txtApplication2Filter_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtApplication2Filter.TextChanged
+    Private Sub txtApplication2Filter_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         bolChanges = True
     End Sub
 
-    Private Sub txtApplication2Arguments_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtApplication2Arguments.TextChanged
+    Private Sub txtApplication2Arguments_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         bolChanges = True
     End Sub
 

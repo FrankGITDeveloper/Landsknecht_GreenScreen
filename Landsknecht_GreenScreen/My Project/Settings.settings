@@ -3,13 +3,13 @@
   <Profiles />
   <Settings>
     <Setting Name="setScanPath1" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">D:\Eye-Fi</Value>
     </Setting>
     <Setting Name="setSubFolders1" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="setApplication1" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">D:\PortableApps\Photoline\PhotoLine64.exe</Value>
     </Setting>
     <Setting Name="setApplication2" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
@@ -46,6 +46,9 @@
     </Setting>
     <Setting Name="setBackgroundColorActive2" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)">128, 255, 128</Value>
+    </Setting>
+    <Setting Name="setPhotolineArguments" Type="System.String" Scope="User">
+      <Value Profile="(Default)">True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

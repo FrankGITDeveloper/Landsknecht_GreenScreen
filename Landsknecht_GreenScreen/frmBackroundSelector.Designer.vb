@@ -40,6 +40,8 @@ Partial Class frmBackroundSelector
         Me.Button15 = New System.Windows.Forms.Button()
         Me.Button16 = New System.Windows.Forms.Button()
         Me.Button17 = New System.Windows.Forms.Button()
+        Me.btnClose = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button1
@@ -186,11 +188,34 @@ Partial Class frmBackroundSelector
         Me.Button17.TabIndex = 16
         Me.Button17.UseVisualStyleBackColor = True
         '
+        'btnClose
+        '
+        Me.btnClose.Location = New System.Drawing.Point(943, 535)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(129, 26)
+        Me.btnClose.TabIndex = 17
+        Me.btnClose.Text = "btnClose"
+        Me.btnClose.UseVisualStyleBackColor = True
+        '
+        'btnCancel
+        '
+        Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnCancel.Location = New System.Drawing.Point(782, 535)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(129, 26)
+        Me.btnCancel.TabIndex = 18
+        Me.btnCancel.Text = "btnCancel"
+        Me.btnCancel.UseVisualStyleBackColor = True
+        '
         'frmBackroundSelector
         '
+        Me.AcceptButton = Me.btnClose
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1097, 546)
+        Me.CancelButton = Me.btnCancel
+        Me.ClientSize = New System.Drawing.Size(1097, 567)
+        Me.Controls.Add(Me.btnCancel)
+        Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.Button17)
         Me.Controls.Add(Me.Button16)
         Me.Controls.Add(Me.Button15)
@@ -208,8 +233,11 @@ Partial Class frmBackroundSelector
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Name = "frmBackroundSelector"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmBackroundSelector"
+        Me.TopMost = True
         Me.ResumeLayout(False)
 
     End Sub
@@ -231,4 +259,6 @@ Partial Class frmBackroundSelector
     Friend WithEvents Button15 As Button
     Friend WithEvents Button16 As Button
     Friend WithEvents Button17 As Button
+    Friend WithEvents btnClose As Button
+    Friend WithEvents btnCancel As Button
 End Class

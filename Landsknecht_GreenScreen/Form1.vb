@@ -17,6 +17,7 @@
             txtApplication2.Text = My.Settings.setApplication2
             txtApplication2Filter.Text = My.Settings.setApplication2Filter
             txtApplication2Arguments.Text = My.Settings.setApplication2Argument
+            chkPhotolineArtguments.Checked = My.Settings.setPhotolineArguments
             Me.Location = New Point(My.Settings.setPositionX, My.Settings.setPositionY)
 
             bolChanges = False
@@ -52,6 +53,7 @@
                             My.Settings.setApplication2 = txtApplication2.Text
                             My.Settings.setApplication2Filter = txtApplication2Filter.Text
                             My.Settings.setApplication2Argument = txtApplication2Arguments.Text
+                            My.Settings.setPhotolineArguments = chkPhotolineArtguments.Checked
                             My.Settings.setPositionX = Me.Location.X
                             My.Settings.setPositionY = Me.Location.Y
                             My.Settings.Save()
@@ -285,8 +287,17 @@
     Private Sub FileSystemWatcher2_Created(sender As Object, e As IO.FileSystemEventArgs) Handles FileSystemWatcher2.Created
         Try
 
+            My.Computer.Audio.PlaySystemSound(System.Media.SystemSounds.Beep)
+
+            frmBackroundSelector.Visible = False
+            ShowDialog(frmBackroundSelector)
+            ' frmBackroundSelector.ShowDialog(frmBackroundSelector)
+
+
+
+
             '    MsgBox("File: " & e.FullPath & " " & e.ChangeType)
-            '    MsgBox(txtApplication2.Text)
+            MsgBox(txtApplication2.Text, 0, e.FullPath.ToString)
 
             Process.Start(txtApplication2.Text, e.FullPath.ToString)
 
@@ -305,6 +316,11 @@
     End Sub
 
     Private Sub FileSystemWatcher1_Created(sender As Object, e As IO.FileSystemEventArgs) Handles FileSystemWatcher1.Created
+        'Sound abspielen bei Event
+
+        My.Computer.Audio.PlaySystemSound(System.Media.SystemSounds.Beep)
+
+
         Dim strCommandstring As String
         Dim PhotolineAktionsname As String = "GreenScreen"
         Try
@@ -317,11 +333,18 @@
             End If
             'MsgBox("File: " & e.FullPath & " " & e.ChangeType)
             'MsgBox(txtApplication1.Text)
+            '       MsgBox(strCommandstring)
 
             Process.Start(txtApplication1.Text, strCommandstring)
+
+
 
         Catch
             MessageBox.Show(Err.Number & " - " & Err.Description, "Es ist ein Fehler aufgetreten!")
         End Try
+    End Sub
+
+    Private Sub chkPhotolineArtguments_CheckedChanged(sender As Object, e As EventArgs) Handles chkPhotolineArtguments.CheckedChanged
+        bolChanges = True
     End Sub
 End Class

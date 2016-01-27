@@ -56,7 +56,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("D:\Eye-Fi")>  _
         Public Property setScanPath1() As String
             Get
                 Return CType(Me("setScanPath1"),String)
@@ -79,7 +79,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("D:\PortableApps\Photoline\PhotoLine64.exe")>  _
         Public Property setApplication1() As String
             Get
                 Return CType(Me("setApplication1"),String)
@@ -229,6 +229,18 @@ Namespace My
             End Get
             Set
                 Me("setBackgroundColorActive2") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property setPhotolineArguments() As String
+            Get
+                Return CType(Me("setPhotolineArguments"),String)
+            End Get
+            Set
+                Me("setPhotolineArguments") = value
             End Set
         End Property
     End Class

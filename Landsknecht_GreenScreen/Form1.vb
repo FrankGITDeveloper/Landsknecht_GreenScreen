@@ -143,18 +143,6 @@
         End Try
     End Sub
 
-    Private Sub FileSystemWatcher1_Created(ByVal sender As System.Object, ByVal e As System.IO.FileSystemEventArgs) Handles FileSystemWatcher1.Created
-        Try
-
-            'MsgBox("File: " & e.FullPath & " " & e.ChangeType)
-            'MsgBox(txtApplication1.Text)
-
-            Process.Start(txtApplication1.Text, e.FullPath.ToString)
-
-        Catch
-            MessageBox.Show(Err.Number & " - " & Err.Description, "Es ist ein Fehler aufgetreten!")
-        End Try
-    End Sub
 
 
 
@@ -314,5 +302,26 @@
     Private Sub btnBackgrounds_Click(sender As Object, e As EventArgs) Handles btnBackgrounds.Click
         frmBackroundSelector.ShowDialog()
 
+    End Sub
+
+    Private Sub FileSystemWatcher1_Created(sender As Object, e As IO.FileSystemEventArgs) Handles FileSystemWatcher1.Created
+        Dim strCommandstring As String
+        Dim PhotolineAktionsname As String = "GreenScreen"
+        Try
+            'Prüfe auf Photoline Argumente Checkbox
+            If chkPhotolineArtguments.Checked = True Then
+                strCommandstring = "-Convert " & e.FullPath.ToString & " " & e.FullPath.ToString & ".PLD " & PhotolineAktionsname
+            Else
+                strCommandstring = e.FullPath.ToString & txtApplication1Arguments.Text
+
+            End If
+            'MsgBox("File: " & e.FullPath & " " & e.ChangeType)
+            'MsgBox(txtApplication1.Text)
+
+            Process.Start(txtApplication1.Text, strCommandstring)
+
+        Catch
+            MessageBox.Show(Err.Number & " - " & Err.Description, "Es ist ein Fehler aufgetreten!")
+        End Try
     End Sub
 End Class

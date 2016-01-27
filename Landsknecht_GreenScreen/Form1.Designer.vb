@@ -34,6 +34,7 @@ Partial Class frmMain
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.grpApp1 = New System.Windows.Forms.GroupBox()
+        Me.chkPhotolineArtguments = New System.Windows.Forms.CheckBox()
         Me.txtApplication1Arguments = New System.Windows.Forms.TextBox()
         Me.txtApplication1 = New System.Windows.Forms.TextBox()
         Me.lblApp1 = New System.Windows.Forms.Label()
@@ -147,6 +148,7 @@ Partial Class frmMain
         'grpApp1
         '
         Me.grpApp1.BackColor = System.Drawing.Color.Transparent
+        Me.grpApp1.Controls.Add(Me.chkPhotolineArtguments)
         Me.grpApp1.Controls.Add(Me.txtApplication1Arguments)
         Me.grpApp1.Controls.Add(Me.txtApplication1)
         Me.grpApp1.Controls.Add(Me.lblApp1)
@@ -157,6 +159,15 @@ Partial Class frmMain
         Me.grpApp1.Size = New System.Drawing.Size(474, 118)
         Me.grpApp1.TabIndex = 41
         Me.grpApp1.TabStop = False
+        '
+        'chkPhotolineArtguments
+        '
+        Me.chkPhotolineArtguments.Location = New System.Drawing.Point(239, 68)
+        Me.chkPhotolineArtguments.Name = "chkPhotolineArtguments"
+        Me.chkPhotolineArtguments.Size = New System.Drawing.Size(216, 17)
+        Me.chkPhotolineArtguments.TabIndex = 39
+        Me.chkPhotolineArtguments.Text = "Photoline Übergabeargumente nutzen"
+        Me.chkPhotolineArtguments.UseVisualStyleBackColor = True
         '
         'txtApplication1Arguments
         '
@@ -476,4 +487,5 @@ Partial Class frmMain
     Private WithEvents Label2 As Label
     Private WithEvents txtApplication2Filter As TextBox
     Friend WithEvents btnBackgrounds As Button
+    Friend WithEvents chkPhotolineArtguments As CheckBox
 End Class

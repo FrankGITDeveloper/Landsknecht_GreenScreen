@@ -54,83 +54,78 @@ Partial Class frmBackroundSelector
         'Button2
         '
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(224, 12)
+        Me.Button2.Location = New System.Drawing.Point(228, 12)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(206, 147)
         Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Button2"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(436, 12)
+        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
+        Me.Button3.Location = New System.Drawing.Point(444, 12)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(206, 147)
         Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Button3"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(648, 12)
+        Me.Button4.Image = CType(resources.GetObject("Button4.Image"), System.Drawing.Image)
+        Me.Button4.Location = New System.Drawing.Point(660, 12)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(206, 147)
         Me.Button4.TabIndex = 3
-        Me.Button4.Text = "Button4"
         Me.Button4.UseVisualStyleBackColor = True
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(860, 12)
+        Me.Button5.Image = CType(resources.GetObject("Button5.Image"), System.Drawing.Image)
+        Me.Button5.Location = New System.Drawing.Point(876, 12)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(206, 147)
         Me.Button5.TabIndex = 4
-        Me.Button5.Text = "Button5"
         Me.Button5.UseVisualStyleBackColor = True
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(860, 165)
+        Me.Button6.Location = New System.Drawing.Point(876, 165)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(206, 147)
         Me.Button6.TabIndex = 9
-        Me.Button6.Text = "Button6"
         Me.Button6.UseVisualStyleBackColor = True
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(648, 165)
+        Me.Button7.Location = New System.Drawing.Point(660, 165)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(206, 147)
         Me.Button7.TabIndex = 8
-        Me.Button7.Text = "Button7"
         Me.Button7.UseVisualStyleBackColor = True
         '
         'Button8
         '
-        Me.Button8.Location = New System.Drawing.Point(436, 165)
+        Me.Button8.Location = New System.Drawing.Point(444, 165)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(206, 147)
         Me.Button8.TabIndex = 7
-        Me.Button8.Text = "Button8"
         Me.Button8.UseVisualStyleBackColor = True
         '
         'Button9
         '
-        Me.Button9.Location = New System.Drawing.Point(224, 165)
+        Me.Button9.Location = New System.Drawing.Point(228, 165)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(206, 147)
         Me.Button9.TabIndex = 6
-        Me.Button9.Text = "Button9"
         Me.Button9.UseVisualStyleBackColor = True
         '
         'Button10
         '
+        Me.Button10.Image = CType(resources.GetObject("Button10.Image"), System.Drawing.Image)
         Me.Button10.Location = New System.Drawing.Point(12, 165)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(206, 147)
         Me.Button10.TabIndex = 5
-        Me.Button10.Text = "Button10"
         Me.Button10.UseVisualStyleBackColor = True
         '
         'Button11
@@ -140,16 +135,15 @@ Partial Class frmBackroundSelector
         Me.Button11.Name = "Button11"
         Me.Button11.Size = New System.Drawing.Size(147, 206)
         Me.Button11.TabIndex = 10
-        Me.Button11.Text = "Button11"
         Me.Button11.UseVisualStyleBackColor = True
         '
         'Button12
         '
+        Me.Button12.Image = CType(resources.GetObject("Button12.Image"), System.Drawing.Image)
         Me.Button12.Location = New System.Drawing.Point(166, 318)
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(147, 206)
         Me.Button12.TabIndex = 11
-        Me.Button12.Text = "Button12"
         Me.Button12.UseVisualStyleBackColor = True
         '
         'Button13
@@ -158,7 +152,6 @@ Partial Class frmBackroundSelector
         Me.Button13.Name = "Button13"
         Me.Button13.Size = New System.Drawing.Size(147, 206)
         Me.Button13.TabIndex = 12
-        Me.Button13.Text = "Button13"
         Me.Button13.UseVisualStyleBackColor = True
         '
         'Button14
@@ -167,7 +160,6 @@ Partial Class frmBackroundSelector
         Me.Button14.Name = "Button14"
         Me.Button14.Size = New System.Drawing.Size(147, 206)
         Me.Button14.TabIndex = 13
-        Me.Button14.Text = "Button14"
         Me.Button14.UseVisualStyleBackColor = True
         '
         'Button15
@@ -176,7 +168,6 @@ Partial Class frmBackroundSelector
         Me.Button15.Name = "Button15"
         Me.Button15.Size = New System.Drawing.Size(147, 206)
         Me.Button15.TabIndex = 14
-        Me.Button15.Text = "Button15"
         Me.Button15.UseVisualStyleBackColor = True
         '
         'Button16
@@ -185,7 +176,6 @@ Partial Class frmBackroundSelector
         Me.Button16.Name = "Button16"
         Me.Button16.Size = New System.Drawing.Size(147, 206)
         Me.Button16.TabIndex = 15
-        Me.Button16.Text = "Button16"
         Me.Button16.UseVisualStyleBackColor = True
         '
         'Button17
@@ -194,14 +184,13 @@ Partial Class frmBackroundSelector
         Me.Button17.Name = "Button17"
         Me.Button17.Size = New System.Drawing.Size(147, 206)
         Me.Button17.TabIndex = 16
-        Me.Button17.Text = "Button17"
         Me.Button17.UseVisualStyleBackColor = True
         '
         'frmBackroundSelector
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1100, 546)
+        Me.ClientSize = New System.Drawing.Size(1097, 546)
         Me.Controls.Add(Me.Button17)
         Me.Controls.Add(Me.Button16)
         Me.Controls.Add(Me.Button15)

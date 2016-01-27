@@ -13,9 +13,8 @@
     <AssemblyName>Landsknecht_GreenScreen</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <NoWin32Manifest>False</NoWin32Manifest>
     <SignAssembly>false</SignAssembly>
@@ -105,9 +104,6 @@
     <AssemblyOriginatorKeyFile>test.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Cyotek.Windows.Forms.ImageBox">
-      <HintPath>C:\Users\Frank\Downloads\Cyotek.Windows.Forms.ImageBox\Cyotek.Windows.Forms.ImageBox\bin\Release\Cyotek.Windows.Forms.ImageBox.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />

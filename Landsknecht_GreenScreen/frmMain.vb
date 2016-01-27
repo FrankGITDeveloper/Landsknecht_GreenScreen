@@ -290,10 +290,7 @@
         bolChanges = True
     End Sub
 
-    Private Sub btnBackgrounds_Click(sender As Object, e As EventArgs) Handles btnBackgrounds.Click
-        frmBackroundSelector.ShowDialog()
 
-    End Sub
 
     Private Sub FileSystemWatcher1_Created(sender As Object, e As IO.FileSystemEventArgs) Handles FileSystemWatcher1.Created
         'Sound abspielen bei Event
@@ -332,7 +329,8 @@
             ' ShowDialog(frmBackroundSelector)
             Dim x As Integer = frmBackroundSelector.ShowDialog()
 
-            Dim SourceFile, DestinationFile As String
+            Dim SourceFile As String = ""
+            Dim DestinationFile As String = ""
             'Background1q.jpg
             'Msgbox in echtem Programm muss der Pfad in eine Configdatei
 
@@ -352,6 +350,7 @@
 
             MsgBox(SourceFile)
 
+
             DestinationFile = My.Settings.setBackgroundImagePath & "\Background_temp.jpg"   ' Define target file name.
             'DestinationFile = txtScanPath2.Text & "\Background_temp.jpg"   ' Define target file name.
 
@@ -370,7 +369,41 @@
 
     Private Sub chkPhotolineArtguments_CheckedChanged(sender As Object, e As EventArgs) Handles chkPhotolineArtguments.CheckedChanged
         bolChanges = True
+        '  If chkPhotolineArtguments.Checked = True Then
+        txtApplication1Arguments.Enabled = Not chkPhotolineArtguments.Checked
+        ' End If
     End Sub
 
+    Private Sub HintergrundAuswahlToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HintergrundAuswahlToolStripMenuItem.Click
+        Try
+            frmBackroundSelector.ShowDialog()
+        Catch ex As Exception
 
+        End Try
+
+
+    End Sub
+
+    Private Sub ÜberToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ÜberToolStripMenuItem.Click
+        frmAbout.ShowDialog()
+
+    End Sub
+
+    Private Sub frmMain_LocationChanged(sender As Object, e As EventArgs) Handles MyBase.LocationChanged
+        bolChanges = True
+    End Sub
+
+    Private Sub BeendenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BeendenToolStripMenuItem.Click
+        btnEnd.PerformClick()
+
+    End Sub
+
+    Private Sub KonfigurationToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles KonfigurationToolStripMenuItem.Click
+        Try
+            frmConfiguration.ShowDialog()
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
 End Class

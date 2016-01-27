@@ -23,6 +23,7 @@ Partial Class frmMain
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.FileSystemWatcher1 = New System.IO.FileSystemWatcher()
         Me.btnEnd = New System.Windows.Forms.Button()
         Me.btnStop = New System.Windows.Forms.Button()
@@ -62,6 +63,14 @@ Partial Class frmMain
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtApplication2Filter = New System.Windows.Forms.TextBox()
         Me.btnBackgrounds = New System.Windows.Forms.Button()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.DateiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.KonfigurationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HintergrundAuswahlToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BeendenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HilfeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ÜberToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FileSystemWatcher2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -71,6 +80,7 @@ Partial Class frmMain
         Me.TabPage2.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'FileSystemWatcher1
@@ -82,7 +92,7 @@ Partial Class frmMain
         '
         Me.btnEnd.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnEnd.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnEnd.Location = New System.Drawing.Point(406, 280)
+        Me.btnEnd.Location = New System.Drawing.Point(406, 329)
         Me.btnEnd.Name = "btnEnd"
         Me.btnEnd.Size = New System.Drawing.Size(92, 36)
         Me.btnEnd.TabIndex = 10
@@ -92,7 +102,7 @@ Partial Class frmMain
         'btnStop
         '
         Me.btnStop.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnStop.Location = New System.Drawing.Point(111, 280)
+        Me.btnStop.Location = New System.Drawing.Point(111, 329)
         Me.btnStop.Name = "btnStop"
         Me.btnStop.Size = New System.Drawing.Size(93, 36)
         Me.btnStop.TabIndex = 9
@@ -102,7 +112,7 @@ Partial Class frmMain
         'btnStart
         '
         Me.btnStart.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnStart.Location = New System.Drawing.Point(12, 280)
+        Me.btnStart.Location = New System.Drawing.Point(12, 329)
         Me.btnStart.Name = "btnStart"
         Me.btnStart.Size = New System.Drawing.Size(93, 36)
         Me.btnStart.TabIndex = 8
@@ -127,7 +137,7 @@ Partial Class frmMain
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.HotTrack = True
-        Me.TabControl1.Location = New System.Drawing.Point(12, 12)
+        Me.TabControl1.Location = New System.Drawing.Point(12, 27)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(501, 255)
@@ -412,23 +422,78 @@ Partial Class frmMain
         '
         'btnBackgrounds
         '
-        Me.btnBackgrounds.Location = New System.Drawing.Point(273, 280)
+        Me.btnBackgrounds.Location = New System.Drawing.Point(275, 329)
         Me.btnBackgrounds.Name = "btnBackgrounds"
         Me.btnBackgrounds.Size = New System.Drawing.Size(94, 36)
         Me.btnBackgrounds.TabIndex = 36
         Me.btnBackgrounds.Text = "Hintergründe"
         Me.btnBackgrounds.UseVisualStyleBackColor = True
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DateiToolStripMenuItem, Me.HilfeToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(522, 24)
+        Me.MenuStrip1.TabIndex = 37
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'DateiToolStripMenuItem
+        '
+        Me.DateiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.KonfigurationToolStripMenuItem, Me.HintergrundAuswahlToolStripMenuItem, Me.ToolStripMenuItem1, Me.BeendenToolStripMenuItem})
+        Me.DateiToolStripMenuItem.Name = "DateiToolStripMenuItem"
+        Me.DateiToolStripMenuItem.Size = New System.Drawing.Size(46, 20)
+        Me.DateiToolStripMenuItem.Text = "&Datei"
+        '
+        'KonfigurationToolStripMenuItem
+        '
+        Me.KonfigurationToolStripMenuItem.Name = "KonfigurationToolStripMenuItem"
+        Me.KonfigurationToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.KonfigurationToolStripMenuItem.Text = "Konfiguration"
+        '
+        'HintergrundAuswahlToolStripMenuItem
+        '
+        Me.HintergrundAuswahlToolStripMenuItem.Name = "HintergrundAuswahlToolStripMenuItem"
+        Me.HintergrundAuswahlToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.HintergrundAuswahlToolStripMenuItem.Text = "Hintergrund Auswahl"
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(184, 6)
+        '
+        'BeendenToolStripMenuItem
+        '
+        Me.BeendenToolStripMenuItem.Name = "BeendenToolStripMenuItem"
+        Me.BeendenToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.BeendenToolStripMenuItem.Text = "&Beenden"
+        '
+        'HilfeToolStripMenuItem
+        '
+        Me.HilfeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ÜberToolStripMenuItem})
+        Me.HilfeToolStripMenuItem.Name = "HilfeToolStripMenuItem"
+        Me.HilfeToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.HilfeToolStripMenuItem.Text = "Hilfe"
+        '
+        'ÜberToolStripMenuItem
+        '
+        Me.ÜberToolStripMenuItem.Name = "ÜberToolStripMenuItem"
+        Me.ÜberToolStripMenuItem.Size = New System.Drawing.Size(99, 22)
+        Me.ÜberToolStripMenuItem.Text = "Über"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(522, 328)
+        Me.ClientSize = New System.Drawing.Size(522, 377)
         Me.Controls.Add(Me.btnBackgrounds)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.btnEnd)
         Me.Controls.Add(Me.btnStop)
         Me.Controls.Add(Me.btnStart)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
@@ -446,7 +511,10 @@ Partial Class frmMain
         Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents FileSystemWatcher1 As System.IO.FileSystemWatcher
@@ -488,4 +556,12 @@ Partial Class frmMain
     Private WithEvents txtApplication2Filter As TextBox
     Friend WithEvents btnBackgrounds As Button
     Friend WithEvents chkPhotolineArtguments As CheckBox
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents DateiToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents KonfigurationToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HintergrundAuswahlToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem1 As ToolStripSeparator
+    Friend WithEvents BeendenToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HilfeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ÜberToolStripMenuItem As ToolStripMenuItem
 End Class

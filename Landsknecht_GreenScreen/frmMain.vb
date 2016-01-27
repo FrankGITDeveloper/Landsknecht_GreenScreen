@@ -340,10 +340,48 @@
 
 
             Select Case x
-                Case 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
-                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackgroundImagePrefix & x.ToString & My.Settings.setBackgroundImageSuffixQ & ".jpg"    ' Define source file name.
-                Case 11, 12, 13, 14, 15
-                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackgroundImagePrefix & x.ToString & My.Settings.setBackgroundImageSuffixH & ".jpg"    ' Define source file name.
+                Case 1
+                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground1  ' Define source file name.
+                Case 2
+                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground2  ' Define source file name.
+                Case 3
+                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground3  ' Define source file name.
+                Case 4
+                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground4  ' Define source file name.
+                Case 5
+                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground5  ' Define source file name.
+                Case 6
+                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground6  ' Define source file name.
+                Case 7
+                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground7  ' Define source file name.
+                Case 8
+
+                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground8  ' Define source file name.
+                Case 9
+                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground9  ' Define source file name.
+                Case 10
+                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground10  ' Define source file name.
+                Case 11
+                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground11  ' Define source file name.
+                Case 12
+                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground12  ' Define source file name.
+                Case 13
+                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground13  ' Define source file name.
+                Case 14
+                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground14  ' Define source file name.
+                Case 15
+                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground15  ' Define source file name.
+                Case 16
+                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground16  ' Define source file name.
+                Case 17
+                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground17   ' Define source file name.
+                Case 18
+                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground18  ' Define source file name.
+                Case 19
+                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground19  ' Define source file name.
+                Case 20
+                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground20  ' Define source file name.
+
                 Case Else
 
             End Select

@@ -258,37 +258,13 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Q")>  _
-        Public Property setBackgroundImageSuffixQ() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("Thumbnail")>  _
+        Public Property setBackgroundThumbnailImageSuffix() As String
             Get
-                Return CType(Me("setBackgroundImageSuffixQ"),String)
+                Return CType(Me("setBackgroundThumbnailImageSuffix"),String)
             End Get
             Set
-                Me("setBackgroundImageSuffixQ") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Background")>  _
-        Public Property setBackgroundImagePrefix() As String
-            Get
-                Return CType(Me("setBackgroundImagePrefix"),String)
-            End Get
-            Set
-                Me("setBackgroundImagePrefix") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("H")>  _
-        Public Property setBackgroundImageSuffixH() As String
-            Get
-                Return CType(Me("setBackgroundImageSuffixH"),String)
-            End Get
-            Set
-                Me("setBackgroundImageSuffixH") = value
+                Me("setBackgroundThumbnailImageSuffix") = value
             End Set
         End Property
         
@@ -307,12 +283,12 @@ Namespace My
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property setPLAktion() As String
+        Public Property setPLAktion2() As String
             Get
-                Return CType(Me("setPLAktion"),String)
+                Return CType(Me("setPLAktion2"),String)
             End Get
             Set
-                Me("setPLAktion") = value
+                Me("setPLAktion2") = value
             End Set
         End Property
         

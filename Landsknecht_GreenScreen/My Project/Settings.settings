@@ -50,5 +50,17 @@
     <Setting Name="setPhotolineArguments" Type="System.String" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
+    <Setting Name="setBackgroundImagePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D:\Eye-Fi\Hintergründe_GreenScreen</Value>
+    </Setting>
+    <Setting Name="setBackgroundImageSuffixQ" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Q</Value>
+    </Setting>
+    <Setting Name="setBackgroundImagePrefix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Background</Value>
+    </Setting>
+    <Setting Name="setBackgroundImageSuffixH" Type="System.String" Scope="User">
+      <Value Profile="(Default)">H</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

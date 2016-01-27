@@ -1,6 +1,6 @@
 ﻿Public Class frmMain
-    Public bolChanges As Boolean    'Änderungen am Ende speichern
-
+    Public bolChanges As Boolean = False    'Änderungen am Ende speichern
+    Public intBackgroundPicSelected As Integer = 0
 
     Private Sub frmMain_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Try
@@ -284,27 +284,7 @@
 
     End Sub
 
-    Private Sub FileSystemWatcher2_Created(sender As Object, e As IO.FileSystemEventArgs) Handles FileSystemWatcher2.Created
-        Try
 
-            My.Computer.Audio.PlaySystemSound(System.Media.SystemSounds.Beep)
-
-            frmBackroundSelector.Visible = False
-            ShowDialog(frmBackroundSelector)
-            ' frmBackroundSelector.ShowDialog(frmBackroundSelector)
-
-
-
-
-            '    MsgBox("File: " & e.FullPath & " " & e.ChangeType)
-            MsgBox(txtApplication2.Text, 0, e.FullPath.ToString)
-
-            Process.Start(txtApplication2.Text, e.FullPath.ToString)
-
-        Catch
-            MessageBox.Show(Err.Number & " - " & Err.Description, "Es ist ein Fehler aufgetreten!")
-        End Try
-    End Sub
 
     Private Sub txtApplication2_TextChanged(sender As Object, e As EventArgs) Handles txtApplication2.TextChanged
         bolChanges = True
@@ -344,7 +324,53 @@
         End Try
     End Sub
 
+    Private Sub FileSystemWatcher2_Created(sender As Object, e As IO.FileSystemEventArgs) Handles FileSystemWatcher2.Created
+        Try
+
+            My.Computer.Audio.PlaySystemSound(System.Media.SystemSounds.Beep)
+            frmBackroundSelector.Visible = False
+            ' ShowDialog(frmBackroundSelector)
+            Dim x As Integer = frmBackroundSelector.ShowDialog()
+
+            Dim SourceFile, DestinationFile As String
+            'Background1q.jpg
+            'Msgbox in echtem Programm muss der Pfad in eine Configdatei
+
+
+
+
+
+
+            Select Case x
+                Case 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackgroundImagePrefix & x.ToString & My.Settings.setBackgroundImageSuffixQ & ".jpg"    ' Define source file name.
+                Case 11, 12, 13, 14, 15
+                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackgroundImagePrefix & x.ToString & My.Settings.setBackgroundImageSuffixH & ".jpg"    ' Define source file name.
+                Case Else
+
+            End Select
+
+            MsgBox(SourceFile)
+
+            DestinationFile = My.Settings.setBackgroundImagePath & "\Background_temp.jpg"   ' Define target file name.
+            'DestinationFile = txtScanPath2.Text & "\Background_temp.jpg"   ' Define target file name.
+
+            FileCopy(SourceFile, DestinationFile)   ' Copy source to target.
+
+
+            '    MsgBox("File: " & e.FullPath & " " & e.ChangeType)
+            MsgBox(txtApplication2.Text, 0, e.FullPath.ToString)
+
+            Process.Start(txtApplication2.Text, e.FullPath.ToString)
+
+        Catch
+            MessageBox.Show(Err.Number & " - " & Err.Description, "Es ist ein Fehler aufgetreten!")
+        End Try
+    End Sub
+
     Private Sub chkPhotolineArtguments_CheckedChanged(sender As Object, e As EventArgs) Handles chkPhotolineArtguments.CheckedChanged
         bolChanges = True
     End Sub
+
+
 End Class

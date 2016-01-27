@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmBackroundSelector
     Inherits System.Windows.Forms.Form
 
     'Das Formular überschreibt den Löschvorgang, um die Komponentenliste zu bereinigen.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmBackroundSelector
     'Hinweis: Die folgende Prozedur ist für den Windows Form-Designer erforderlich.
     'Das Bearbeiten ist mit dem Windows Form-Designer möglich.  
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmBackroundSelector))
         Me.Button1 = New System.Windows.Forms.Button()
@@ -40,8 +40,6 @@ Partial Class frmBackroundSelector
         Me.Button15 = New System.Windows.Forms.Button()
         Me.Button16 = New System.Windows.Forms.Button()
         Me.Button17 = New System.Windows.Forms.Button()
-        Me.btnClose = New System.Windows.Forms.Button()
-        Me.btnCancel = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button1
@@ -188,34 +186,11 @@ Partial Class frmBackroundSelector
         Me.Button17.TabIndex = 16
         Me.Button17.UseVisualStyleBackColor = True
         '
-        'btnClose
-        '
-        Me.btnClose.Location = New System.Drawing.Point(943, 535)
-        Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(129, 26)
-        Me.btnClose.TabIndex = 17
-        Me.btnClose.Text = "btnClose"
-        Me.btnClose.UseVisualStyleBackColor = True
-        '
-        'btnCancel
-        '
-        Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnCancel.Location = New System.Drawing.Point(782, 535)
-        Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(129, 26)
-        Me.btnCancel.TabIndex = 18
-        Me.btnCancel.Text = "btnCancel"
-        Me.btnCancel.UseVisualStyleBackColor = True
-        '
         'frmBackroundSelector
         '
-        Me.AcceptButton = Me.btnClose
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.CancelButton = Me.btnCancel
-        Me.ClientSize = New System.Drawing.Size(1097, 567)
-        Me.Controls.Add(Me.btnCancel)
-        Me.Controls.Add(Me.btnClose)
+        Me.ClientSize = New System.Drawing.Size(1097, 532)
         Me.Controls.Add(Me.Button17)
         Me.Controls.Add(Me.Button16)
         Me.Controls.Add(Me.Button15)
@@ -259,6 +234,4 @@ Partial Class frmBackroundSelector
     Friend WithEvents Button15 As Button
     Friend WithEvents Button16 As Button
     Friend WithEvents Button17 As Button
-    Friend WithEvents btnClose As Button
-    Friend WithEvents btnCancel As Button
 End Class

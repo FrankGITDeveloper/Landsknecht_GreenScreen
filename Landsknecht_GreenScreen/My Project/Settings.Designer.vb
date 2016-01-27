@@ -243,6 +243,54 @@ Namespace My
                 Me("setPhotolineArguments") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("D:\Eye-Fi\Hintergründe_GreenScreen")>  _
+        Public Property setBackgroundImagePath() As String
+            Get
+                Return CType(Me("setBackgroundImagePath"),String)
+            End Get
+            Set
+                Me("setBackgroundImagePath") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Q")>  _
+        Public Property setBackgroundImageSuffixQ() As String
+            Get
+                Return CType(Me("setBackgroundImageSuffixQ"),String)
+            End Get
+            Set
+                Me("setBackgroundImageSuffixQ") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Background")>  _
+        Public Property setBackgroundImagePrefix() As String
+            Get
+                Return CType(Me("setBackgroundImagePrefix"),String)
+            End Get
+            Set
+                Me("setBackgroundImagePrefix") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("H")>  _
+        Public Property setBackgroundImageSuffixH() As String
+            Get
+                Return CType(Me("setBackgroundImageSuffixH"),String)
+            End Get
+            Set
+                Me("setBackgroundImageSuffixH") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

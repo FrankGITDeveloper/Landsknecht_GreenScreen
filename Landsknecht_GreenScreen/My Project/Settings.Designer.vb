@@ -259,12 +259,12 @@ Namespace My
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("Thumbnail")>  _
-        Public Property setBackgroundThumbnailImageSuffix() As String
+        Public Property setThumbnailImageSuffix() As String
             Get
-                Return CType(Me("setBackgroundThumbnailImageSuffix"),String)
+                Return CType(Me("setThumbnailImageSuffix"),String)
             End Get
             Set
-                Me("setBackgroundThumbnailImageSuffix") = value
+                Me("setThumbnailImageSuffix") = value
             End Set
         End Property
         

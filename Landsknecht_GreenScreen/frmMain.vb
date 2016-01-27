@@ -335,10 +335,6 @@
             'Msgbox in echtem Programm muss der Pfad in eine Configdatei
 
 
-
-
-
-
             Select Case x
                 Case 1
                     SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground1  ' Define source file name.
@@ -355,7 +351,6 @@
                 Case 7
                     SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground7  ' Define source file name.
                 Case 8
-
                     SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground8  ' Define source file name.
                 Case 9
                     SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground9  ' Define source file name.

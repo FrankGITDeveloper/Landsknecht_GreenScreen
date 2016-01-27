@@ -53,7 +53,7 @@
     <Setting Name="setBackgroundImagePath" Type="System.String" Scope="User">
       <Value Profile="(Default)">D:\Eye-Fi\Hintergründe_GreenScreen</Value>
     </Setting>
-    <Setting Name="setBackgroundThumbnailImageSuffix" Type="System.String" Scope="User">
+    <Setting Name="setThumbnailImageSuffix" Type="System.String" Scope="User">
       <Value Profile="(Default)">Thumbnail</Value>
     </Setting>
     <Setting Name="setPLAktion1" Type="System.String" Scope="User">

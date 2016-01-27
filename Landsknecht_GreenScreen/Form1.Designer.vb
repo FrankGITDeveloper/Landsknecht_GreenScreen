@@ -60,6 +60,7 @@ Partial Class frmMain
         Me.btnScanPath2 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtApplication2Filter = New System.Windows.Forms.TextBox()
+        Me.btnBackgrounds = New System.Windows.Forms.Button()
         CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FileSystemWatcher2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -83,7 +84,7 @@ Partial Class frmMain
         Me.btnEnd.Location = New System.Drawing.Point(406, 280)
         Me.btnEnd.Name = "btnEnd"
         Me.btnEnd.Size = New System.Drawing.Size(92, 36)
-        Me.btnEnd.TabIndex = 32
+        Me.btnEnd.TabIndex = 10
         Me.btnEnd.Text = "Programm beenden"
         Me.btnEnd.UseVisualStyleBackColor = True
         '
@@ -93,7 +94,7 @@ Partial Class frmMain
         Me.btnStop.Location = New System.Drawing.Point(111, 280)
         Me.btnStop.Name = "btnStop"
         Me.btnStop.Size = New System.Drawing.Size(93, 36)
-        Me.btnStop.TabIndex = 31
+        Me.btnStop.TabIndex = 9
         Me.btnStop.Text = "Überwachung beenden"
         Me.btnStop.UseVisualStyleBackColor = True
         '
@@ -103,7 +104,7 @@ Partial Class frmMain
         Me.btnStart.Location = New System.Drawing.Point(12, 280)
         Me.btnStart.Name = "btnStart"
         Me.btnStart.Size = New System.Drawing.Size(93, 36)
-        Me.btnStart.TabIndex = 30
+        Me.btnStart.TabIndex = 8
         Me.btnStart.Text = "Überwachung starten"
         Me.btnStart.UseVisualStyleBackColor = True
         '
@@ -162,14 +163,14 @@ Partial Class frmMain
         Me.txtApplication1Arguments.Location = New System.Drawing.Point(6, 85)
         Me.txtApplication1Arguments.Name = "txtApplication1Arguments"
         Me.txtApplication1Arguments.Size = New System.Drawing.Size(430, 20)
-        Me.txtApplication1Arguments.TabIndex = 46
+        Me.txtApplication1Arguments.TabIndex = 7
         '
         'txtApplication1
         '
         Me.txtApplication1.Location = New System.Drawing.Point(6, 35)
         Me.txtApplication1.Name = "txtApplication1"
         Me.txtApplication1.Size = New System.Drawing.Size(430, 20)
-        Me.txtApplication1.TabIndex = 45
+        Me.txtApplication1.TabIndex = 5
         '
         'lblApp1
         '
@@ -186,7 +187,7 @@ Partial Class frmMain
         Me.btnApplication1.Location = New System.Drawing.Point(442, 35)
         Me.btnApplication1.Name = "btnApplication1"
         Me.btnApplication1.Size = New System.Drawing.Size(25, 20)
-        Me.btnApplication1.TabIndex = 41
+        Me.btnApplication1.TabIndex = 6
         Me.btnApplication1.Text = "..."
         Me.btnApplication1.UseVisualStyleBackColor = True
         '
@@ -262,11 +263,11 @@ Partial Class frmMain
         Me.txtApplication1Filter.Location = New System.Drawing.Point(393, 63)
         Me.txtApplication1Filter.Name = "txtApplication1Filter"
         Me.txtApplication1Filter.Size = New System.Drawing.Size(43, 20)
-        Me.txtApplication1Filter.TabIndex = 6
+        Me.txtApplication1Filter.TabIndex = 4
         '
         'TabPage2
         '
-        Me.TabPage2.BackColor = System.Drawing.SystemColors.Control
+        Me.TabPage2.BackColor = System.Drawing.Color.Transparent
         Me.TabPage2.Controls.Add(Me.GroupBox2)
         Me.TabPage2.Controls.Add(Me.GroupBox1)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
@@ -275,6 +276,7 @@ Partial Class frmMain
         Me.TabPage2.Size = New System.Drawing.Size(493, 229)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Anwendung 2"
+        Me.TabPage2.UseVisualStyleBackColor = True
         '
         'GroupBox2
         '
@@ -295,14 +297,14 @@ Partial Class frmMain
         Me.txtApplication2Arguments.Location = New System.Drawing.Point(6, 85)
         Me.txtApplication2Arguments.Name = "txtApplication2Arguments"
         Me.txtApplication2Arguments.Size = New System.Drawing.Size(430, 20)
-        Me.txtApplication2Arguments.TabIndex = 46
+        Me.txtApplication2Arguments.TabIndex = 17
         '
         'txtApplication2
         '
         Me.txtApplication2.Location = New System.Drawing.Point(6, 35)
         Me.txtApplication2.Name = "txtApplication2"
         Me.txtApplication2.Size = New System.Drawing.Size(430, 20)
-        Me.txtApplication2.TabIndex = 45
+        Me.txtApplication2.TabIndex = 15
         '
         'Label3
         '
@@ -319,7 +321,7 @@ Partial Class frmMain
         Me.btnApplication2.Location = New System.Drawing.Point(442, 35)
         Me.btnApplication2.Name = "btnApplication2"
         Me.btnApplication2.Size = New System.Drawing.Size(25, 20)
-        Me.btnApplication2.TabIndex = 41
+        Me.btnApplication2.TabIndex = 16
         Me.btnApplication2.Text = "..."
         Me.btnApplication2.UseVisualStyleBackColor = True
         '
@@ -352,7 +354,7 @@ Partial Class frmMain
         Me.chkScanSubDir2.Location = New System.Drawing.Point(220, 19)
         Me.chkScanSubDir2.Name = "chkScanSubDir2"
         Me.chkScanSubDir2.Size = New System.Drawing.Size(216, 17)
-        Me.chkScanSubDir2.TabIndex = 1
+        Me.chkScanSubDir2.TabIndex = 11
         Me.chkScanSubDir2.Text = "Auch Unterverzeichnisse überwachen"
         Me.chkScanSubDir2.UseVisualStyleBackColor = True
         '
@@ -370,14 +372,14 @@ Partial Class frmMain
         Me.txtScanPath2.Location = New System.Drawing.Point(6, 37)
         Me.txtScanPath2.Name = "txtScanPath2"
         Me.txtScanPath2.Size = New System.Drawing.Size(430, 20)
-        Me.txtScanPath2.TabIndex = 2
+        Me.txtScanPath2.TabIndex = 12
         '
         'btnScanPath2
         '
         Me.btnScanPath2.Location = New System.Drawing.Point(442, 36)
         Me.btnScanPath2.Name = "btnScanPath2"
         Me.btnScanPath2.Size = New System.Drawing.Size(25, 20)
-        Me.btnScanPath2.TabIndex = 3
+        Me.btnScanPath2.TabIndex = 13
         Me.btnScanPath2.Text = "..."
         Me.btnScanPath2.UseVisualStyleBackColor = True
         '
@@ -395,13 +397,23 @@ Partial Class frmMain
         Me.txtApplication2Filter.Location = New System.Drawing.Point(393, 63)
         Me.txtApplication2Filter.Name = "txtApplication2Filter"
         Me.txtApplication2Filter.Size = New System.Drawing.Size(43, 20)
-        Me.txtApplication2Filter.TabIndex = 6
+        Me.txtApplication2Filter.TabIndex = 14
+        '
+        'btnBackgrounds
+        '
+        Me.btnBackgrounds.Location = New System.Drawing.Point(273, 280)
+        Me.btnBackgrounds.Name = "btnBackgrounds"
+        Me.btnBackgrounds.Size = New System.Drawing.Size(94, 36)
+        Me.btnBackgrounds.TabIndex = 36
+        Me.btnBackgrounds.Text = "Hintergründe"
+        Me.btnBackgrounds.UseVisualStyleBackColor = True
         '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(522, 328)
+        Me.Controls.Add(Me.btnBackgrounds)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.btnEnd)
         Me.Controls.Add(Me.btnStop)
@@ -463,4 +475,5 @@ Partial Class frmMain
     Friend WithEvents btnScanPath2 As Button
     Private WithEvents Label2 As Label
     Private WithEvents txtApplication2Filter As TextBox
+    Friend WithEvents btnBackgrounds As Button
 End Class

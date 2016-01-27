@@ -310,4 +310,9 @@
     Private Sub txtApplication2_TextChanged(sender As Object, e As EventArgs) Handles txtApplication2.TextChanged
         bolChanges = True
     End Sub
+
+    Private Sub btnBackgrounds_Click(sender As Object, e As EventArgs) Handles btnBackgrounds.Click
+        frmBackroundSelector.ShowDialog()
+
+    End Sub
 End Class

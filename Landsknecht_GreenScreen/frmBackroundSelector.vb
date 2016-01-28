@@ -1,27 +1,27 @@
 ﻿Public Class frmBackroundSelector
 
     Public intImageSelected As Integer
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    'Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
 
-        Me.DialogResult = vbOK
-        intImageSelected = 1
-        Me.Dispose()
+    '    Me.DialogResult = vbOK
+    '    intImageSelected = 1
+    '    Me.Dispose()
 
 
-    End Sub
+    'End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Me.DialogResult = vbOK
-        intImageSelected = 2
-        Me.Dispose()
-    End Sub
+    'Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    '    Me.DialogResult = vbOK
+    '    intImageSelected = 2
+    '    Me.Dispose()
+    'End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Me.DialogResult = vbOK
-        intImageSelected = 3
-        Me.Dispose()
-    End Sub
+    'Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    '    Me.DialogResult = vbOK
+    '    intImageSelected = 3
+    '    Me.Dispose()
+    'End Sub
 
 
     Private Sub frmBackroundSelector_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -113,94 +113,94 @@
 
     End Sub
 
-    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
-        Me.DialogResult = vbOK
-        intImageSelected = 11
-        Me.Dispose()
+    'Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+    '    Me.DialogResult = vbOK
+    '    intImageSelected = 11
+    '    Me.Dispose()
 
-    End Sub
+    'End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        Me.DialogResult = vbOK
-        intImageSelected = 4
-        Me.Dispose()
+    'Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    '    Me.DialogResult = vbOK
+    '    intImageSelected = 4
+    '    Me.Dispose()
 
-    End Sub
+    'End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        Me.DialogResult = vbOK
-        intImageSelected = 5
-        Me.Dispose()
+    'Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+    '    Me.DialogResult = vbOK
+    '    intImageSelected = 5
+    '    Me.Dispose()
 
-    End Sub
+    'End Sub
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        Me.DialogResult = vbOK
-        intImageSelected = 6
-        Me.Dispose()
-    End Sub
+    'Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+    '    Me.DialogResult = vbOK
+    '    intImageSelected = 6
+    '    Me.Dispose()
+    'End Sub
 
-    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
-        Me.DialogResult = vbOK
-        intImageSelected = 7
-        Me.Dispose()
+    'Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+    '    Me.DialogResult = vbOK
+    '    intImageSelected = 7
+    '    Me.Dispose()
 
-    End Sub
+    'End Sub
 
-    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
-        Me.DialogResult = vbOK
-        intImageSelected = 8
-        Me.Dispose()
-    End Sub
+    'Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+    '    Me.DialogResult = vbOK
+    '    intImageSelected = 8
+    '    Me.Dispose()
+    'End Sub
 
-    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
-        Me.DialogResult = vbOK
-        intImageSelected = 9
-        Me.Dispose()
-    End Sub
+    'Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+    '    Me.DialogResult = vbOK
+    '    intImageSelected = 9
+    '    Me.Dispose()
+    'End Sub
 
-    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
-        Me.DialogResult = vbOK
-        intImageSelected = 10
-        Me.Dispose()
+    'Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+    '    Me.DialogResult = vbOK
+    '    intImageSelected = 10
+    '    Me.Dispose()
 
-    End Sub
+    'End Sub
 
-    Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
-        Me.DialogResult = vbOK
-        intImageSelected = 12
-        Me.Dispose()
-    End Sub
+    'Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
+    '    Me.DialogResult = vbOK
+    '    intImageSelected = 12
+    '    Me.Dispose()
+    'End Sub
 
-    Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
-        Me.DialogResult = vbOK
-        intImageSelected = 13
-        Me.Dispose()
-    End Sub
+    'Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
+    '    Me.DialogResult = vbOK
+    '    intImageSelected = 13
+    '    Me.Dispose()
+    'End Sub
 
-    Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
-        Me.DialogResult = vbOK
-        intImageSelected = 14
-        Me.Dispose()
-    End Sub
+    'Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
+    '    Me.DialogResult = vbOK
+    '    intImageSelected = 14
+    '    Me.Dispose()
+    'End Sub
 
-    Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
-        Me.DialogResult = vbOK
-        intImageSelected = 15
-        Me.Dispose()
-    End Sub
+    'Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
+    '    Me.DialogResult = vbOK
+    '    intImageSelected = 15
+    '    Me.Dispose()
+    'End Sub
 
-    Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
-        Me.DialogResult = vbOK
-        intImageSelected = 16
-        Me.Dispose()
-    End Sub
+    'Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
+    '    Me.DialogResult = vbOK
+    '    intImageSelected = 16
+    '    Me.Dispose()
+    'End Sub
 
-    Private Sub Button17_Click(sender As Object, e As EventArgs) Handles Button17.Click
-        Me.DialogResult = vbOK
-        intImageSelected = 17
-        Me.Dispose()
-    End Sub
+    'Private Sub Button17_Click(sender As Object, e As EventArgs) Handles Button17.Click
+    '    Me.DialogResult = vbOK
+    '    intImageSelected = 17
+    '    Me.Dispose()
+    'End Sub
 
 
     Private Sub frmBackroundSelector_Disposed(sender As Object, e As EventArgs) Handles Me.Disposed
@@ -379,26 +379,7 @@
 
     End Sub
 
-    Private Sub Button1_MouseDown(sender As Object, e As MouseEventArgs) Handles Button1.MouseDown
 
-
-        Try
-            Select Case e.Button
-                Case MouseButtons.Right
-                    SelectImageAndStore(1)
-
-                    Button1.Image = Image.FromFile(My.Settings.setBackgrundThumbnail1)
-                Case MouseButtons.Left
-                    Me.DialogResult = vbOK
-                    intImageSelected = 1
-                    Me.Dispose()
-
-            End Select
-        Catch ex As Exception
-
-        End Try
-      
-    End Sub
 
     Private Sub SelectImageAndStore(Button As Integer)
 
@@ -496,4 +477,315 @@
 
 
     End Sub
+    Private Sub Button1_MouseDown(sender As Object, e As MouseEventArgs) Handles Button1.MouseDown
+
+
+        Try
+            Select Case e.Button
+                Case MouseButtons.Right
+                    SelectImageAndStore(1)
+
+                    Button1.Image = Image.FromFile(My.Settings.setBackgrundThumbnail1)
+                Case MouseButtons.Left
+                    Me.DialogResult = vbOK
+                    intImageSelected = 1
+                    Me.Dispose()
+
+            End Select
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
+    Private Sub Button2_MouseDown(sender As Object, e As MouseEventArgs) Handles Button2.MouseDown
+
+        Try
+            Select Case e.Button
+                Case MouseButtons.Right
+                    SelectImageAndStore(2)
+
+                    Button2.Image = Image.FromFile(My.Settings.setBackgrundThumbnail2)
+                Case MouseButtons.Left
+                    Me.DialogResult = vbOK
+                    intImageSelected = 2
+                    Me.Dispose()
+
+            End Select
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub Button3_MouseDown(sender As Object, e As MouseEventArgs) Handles Button3.MouseDown
+        Try
+            Select Case e.Button
+                Case MouseButtons.Right
+                    SelectImageAndStore(3)
+
+                    Button3.Image = Image.FromFile(My.Settings.setBackgrundThumbnail3)
+                Case MouseButtons.Left
+                    Me.DialogResult = vbOK
+                    intImageSelected = 3
+                    Me.Dispose()
+
+            End Select
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub Button4_MouseDown(sender As Object, e As MouseEventArgs) Handles Button4.MouseDown
+        Try
+            Select Case e.Button
+                Case MouseButtons.Right
+                    SelectImageAndStore(4)
+
+                    Button4.Image = Image.FromFile(My.Settings.setBackgrundThumbnail4)
+                Case MouseButtons.Left
+                    Me.DialogResult = vbOK
+                    intImageSelected = 4
+                    Me.Dispose()
+
+            End Select
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub Button5_MouseDown(sender As Object, e As MouseEventArgs) Handles Button5.MouseDown
+        Try
+            Select Case e.Button
+                Case MouseButtons.Right
+                    SelectImageAndStore(5)
+
+                    Button5.Image = Image.FromFile(My.Settings.setBackgrundThumbnail5)
+                Case MouseButtons.Left
+                    Me.DialogResult = vbOK
+                    intImageSelected = 5
+                    Me.Dispose()
+
+            End Select
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub Button6_MouseDown(sender As Object, e As MouseEventArgs) Handles Button6.MouseDown
+        Try
+            Select Case e.Button
+                Case MouseButtons.Right
+                    SelectImageAndStore(6)
+
+                    Button6.Image = Image.FromFile(My.Settings.setBackgrundThumbnail6)
+                Case MouseButtons.Left
+                    Me.DialogResult = vbOK
+                    intImageSelected = 6
+                    Me.Dispose()
+
+            End Select
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub Button7_MouseDown(sender As Object, e As MouseEventArgs) Handles Button7.MouseDown
+        Try
+            Select Case e.Button
+                Case MouseButtons.Right
+                    SelectImageAndStore(7)
+
+                    Button7.Image = Image.FromFile(My.Settings.setBackgrundThumbnail7)
+                Case MouseButtons.Left
+                    Me.DialogResult = vbOK
+                    intImageSelected = 7
+                    Me.Dispose()
+
+            End Select
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub Button8_MouseDown(sender As Object, e As MouseEventArgs) Handles Button8.MouseDown
+        Try
+            Select Case e.Button
+                Case MouseButtons.Right
+                    SelectImageAndStore(8)
+
+                    Button8.Image = Image.FromFile(My.Settings.setBackgrundThumbnail8)
+                Case MouseButtons.Left
+                    Me.DialogResult = vbOK
+                    intImageSelected = 8
+                    Me.Dispose()
+
+            End Select
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub Button9_MouseDown(sender As Object, e As MouseEventArgs) Handles Button9.MouseDown
+        Try
+            Select Case e.Button
+                Case MouseButtons.Right
+                    SelectImageAndStore(9)
+
+                    Button9.Image = Image.FromFile(My.Settings.setBackgrundThumbnail9)
+                Case MouseButtons.Left
+                    Me.DialogResult = vbOK
+                    intImageSelected = 9
+                    Me.Dispose()
+
+            End Select
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub Button10_MouseDown(sender As Object, e As MouseEventArgs) Handles Button10.MouseDown
+        Try
+            Select Case e.Button
+                Case MouseButtons.Right
+                    SelectImageAndStore(10)
+
+                    Button10.Image = Image.FromFile(My.Settings.setBackgrundThumbnail10)
+                Case MouseButtons.Left
+                    Me.DialogResult = vbOK
+                    intImageSelected = 10
+                    Me.Dispose()
+
+            End Select
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub Button11_MouseDown(sender As Object, e As MouseEventArgs) Handles Button11.MouseDown
+        Try
+            Select Case e.Button
+                Case MouseButtons.Right
+                    SelectImageAndStore(11)
+
+                    Button11.Image = Image.FromFile(My.Settings.setBackgrundThumbnail11)
+                Case MouseButtons.Left
+                    Me.DialogResult = vbOK
+                    intImageSelected = 11
+                    Me.Dispose()
+
+            End Select
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub Button12_MouseDown(sender As Object, e As MouseEventArgs) Handles Button12.MouseDown
+        Try
+            Select Case e.Button
+                Case MouseButtons.Right
+                    SelectImageAndStore(12)
+
+                    Button12.Image = Image.FromFile(My.Settings.setBackgrundThumbnail12)
+                Case MouseButtons.Left
+                    Me.DialogResult = vbOK
+                    intImageSelected = 12
+                    Me.Dispose()
+
+            End Select
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub Button13_MouseDown(sender As Object, e As MouseEventArgs) Handles Button13.MouseDown
+        Try
+            Select Case e.Button
+                Case MouseButtons.Right
+                    SelectImageAndStore(13)
+
+                    Button13.Image = Image.FromFile(My.Settings.setBackgrundThumbnail13)
+                Case MouseButtons.Left
+                    Me.DialogResult = vbOK
+                    intImageSelected = 13
+                    Me.Dispose()
+
+            End Select
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub Button14_MouseDown(sender As Object, e As MouseEventArgs) Handles Button14.MouseDown
+        Try
+            Select Case e.Button
+                Case MouseButtons.Right
+                    SelectImageAndStore(14)
+
+                    Button14.Image = Image.FromFile(My.Settings.setBackgrundThumbnail14)
+                Case MouseButtons.Left
+                    Me.DialogResult = vbOK
+                    intImageSelected = 14
+                    Me.Dispose()
+
+            End Select
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub Button15_MouseDown(sender As Object, e As MouseEventArgs) Handles Button15.MouseDown
+        Try
+            Select Case e.Button
+                Case MouseButtons.Right
+                    SelectImageAndStore(15)
+
+                    Button15.Image = Image.FromFile(My.Settings.setBackgrundThumbnail15)
+                Case MouseButtons.Left
+                    Me.DialogResult = vbOK
+                    intImageSelected = 15
+                    Me.Dispose()
+
+            End Select
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub Button16_MouseDown(sender As Object, e As MouseEventArgs) Handles Button16.MouseDown
+        Try
+            Select Case e.Button
+                Case MouseButtons.Right
+                    SelectImageAndStore(16)
+
+                    Button16.Image = Image.FromFile(My.Settings.setBackgrundThumbnail16)
+                Case MouseButtons.Left
+                    Me.DialogResult = vbOK
+                    intImageSelected = 16
+                    Me.Dispose()
+
+            End Select
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub Button17_MouseDown(sender As Object, e As MouseEventArgs) Handles Button17.MouseDown
+        Try
+            Select Case e.Button
+                Case MouseButtons.Right
+                    SelectImageAndStore(17)
+
+                    Button17.Image = Image.FromFile(My.Settings.setBackgrundThumbnail17)
+                Case MouseButtons.Left
+                    Me.DialogResult = vbOK
+                    intImageSelected = 17
+                    Me.Dispose()
+
+            End Select
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+
 End Class

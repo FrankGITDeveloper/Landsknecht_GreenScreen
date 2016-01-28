@@ -204,8 +204,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Landsknecht_GreenScreen_1_TemporaryKey.pfx" />
-    <None Include="Landsknecht_GreenScreen_TemporaryKey.pfx" />
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>

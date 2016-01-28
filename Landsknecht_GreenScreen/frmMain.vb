@@ -28,7 +28,7 @@
             'picPreview.Image = Image.FromFile(My.Settings.setTempBackgroundImagePreview)
 
 
-            bolChanges = False
+            bolChanges = False  'Zurücksetzen
 
 
         Catch

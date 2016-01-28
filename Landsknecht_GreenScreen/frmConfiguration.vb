@@ -24,6 +24,24 @@
         txtBackground16.Text = My.Settings.setBackground16
         txtBackground17.Text = My.Settings.setBackground17
 
+        txtThumbnail1.Text = My.Settings.setBackgroundThumbnail1
+        txtThumbnail2.Text = My.Settings.setBackgroundThumbnail2
+        txtThumbnail3.Text = My.Settings.setBackgroundThumbnail3
+        txtThumbnail4.Text = My.Settings.setBackgroundThumbnail4
+        txtThumbnail5.Text = My.Settings.setBackgroundThumbnail5
+        txtThumbnail6.Text = My.Settings.setBackgroundThumbnail6
+        txtThumbnail7.Text = My.Settings.setBackgroundThumbnail7
+        txtThumbnail8.Text = My.Settings.setBackgroundThumbnail8
+        txtThumbnail9.Text = My.Settings.setBackgroundThumbnail9
+        txtThumbnail10.Text = My.Settings.setBackgroundThumbnail10
+        txtThumbnail11.Text = My.Settings.setBackgroundThumbnail11
+        txtThumbnail12.Text = My.Settings.setBackgroundThumbnail12
+        txtThumbnail13.Text = My.Settings.setBackgroundThumbnail13
+        txtThumbnail14.Text = My.Settings.setBackgroundThumbnail14
+        txtThumbnail15.Text = My.Settings.setBackgroundThumbnail15
+        txtThumbnail16.Text = My.Settings.setBackgroundThumbnail16
+        txtThumbnail17.Text = My.Settings.setBackgroundThumbnail17
+
         btnBackgroundColorActive1.BackColor = My.Settings.setBackgroundColorActive1
         btnBackgroundColorActive2.BackColor = My.Settings.setBackgroundColorActive2
 
@@ -65,6 +83,25 @@
         My.Settings.setBackground15 = txtBackground15.Text
         My.Settings.setBackground16 = txtBackground16.Text
         My.Settings.setBackground17 = txtBackground17.Text
+
+        My.Settings.setBackgroundThumbnail1 = txtThumbnail1.Text
+        My.Settings.setBackgroundThumbnail2 = txtThumbnail2.Text
+        My.Settings.setBackgroundThumbnail3 = txtThumbnail3.Text
+        My.Settings.setBackgroundThumbnail4 = txtThumbnail4.Text
+        My.Settings.setBackgroundThumbnail5 = txtThumbnail5.Text
+        My.Settings.setBackgroundThumbnail6 = txtThumbnail6.Text
+        My.Settings.setBackgroundThumbnail7 = txtThumbnail7.Text
+        My.Settings.setBackgroundThumbnail8 = txtThumbnail8.Text
+        My.Settings.setBackgroundThumbnail9 = txtThumbnail9.Text
+        My.Settings.setBackgroundThumbnail10 = txtThumbnail10.Text
+        My.Settings.setBackgroundThumbnail11 = txtThumbnail11.Text
+        My.Settings.setBackgroundThumbnail12 = txtThumbnail12.Text
+        My.Settings.setBackgroundThumbnail13 = txtThumbnail13.Text
+        My.Settings.setBackgroundThumbnail14 = txtThumbnail14.Text
+        My.Settings.setBackgroundThumbnail15 = txtThumbnail15.Text
+        My.Settings.setBackgroundThumbnail16 = txtThumbnail16.Text
+        My.Settings.setBackgroundThumbnail17 = txtThumbnail17.Text
+
         My.Settings.setBackgroundColorActive1 = btnBackgroundColorActive1.BackColor
         My.Settings.setBackgroundColorActive2 = btnBackgroundColorActive2.BackColor
         My.Settings.Save()
@@ -100,32 +137,5 @@
         End Try
     End Sub
 
-    Private Sub btnHintergrund1_Click(sender As Object, e As EventArgs) Handles btnHintergrund1.Click
-        '  Dim myStream As Stream = Nothing
-        Dim openFileDialog1 As New OpenFileDialog()
-
-        openFileDialog1.InitialDirectory = '"C:\Program Files"
-        openFileDialog1.Filter = "Bilder (*.JPG)|*.jpg|All files (*.*)|*.*|Photoline (*.PLD)|*.PLD"
-        openFileDialog1.FilterIndex = 1
-        openFileDialog1.RestoreDirectory = True
-
-        If openFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
-            Try
-                txtBackground1.Text = openFileDialog1.FileName
-
-                'If (myStream IsNot Nothing) Then
-                '    ' Insert code to read the stream here.
-                'End If
-            Catch Ex As Exception
-                MessageBox.Show(Err.Number & " - " & Err.Description, "Es Ist Ein Fehler Aufgetreten! btnApplication1_Click")
-                '     MessageBox.Show("Cannot read file from disk. Original error: " & Ex.Message)
-            Finally
-                '' Check this again, since we need to make sure we didn't throw an exception on open.
-                'If (myStream IsNot Nothing) Then
-                '    myStream.Close()
-                'End If
-            End Try
-        End If
-    End Sub
 
 End Class

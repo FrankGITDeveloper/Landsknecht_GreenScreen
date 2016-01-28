@@ -114,7 +114,7 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="setBackgroundImageFileFormat" Type="System.String" Scope="User">
-      <Value Profile="(Default)">.JPG</Value>
+      <Value Profile="(Default)">JPG</Value>
     </Setting>
     <Setting Name="setTempBackgroundImage" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
@@ -125,55 +125,55 @@
     <Setting Name="setPhotolineArguments2" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="setBackgrundThumbnail1" Type="System.String" Scope="User">
+    <Setting Name="setBackgroundThumbnail1" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="setBackgrundThumbnail2" Type="System.String" Scope="User">
+    <Setting Name="setBackgroundThumbnail2" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="setBackgrundThumbnail3" Type="System.String" Scope="User">
+    <Setting Name="setBackgroundThumbnail3" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="setBackgrundThumbnail4" Type="System.String" Scope="User">
+    <Setting Name="setBackgroundThumbnail4" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="setBackgrundThumbnail5" Type="System.String" Scope="User">
+    <Setting Name="setBackgroundThumbnail5" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="setBackgrundThumbnail6" Type="System.String" Scope="User">
+    <Setting Name="setBackgroundThumbnail6" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="setBackgrundThumbnail7" Type="System.String" Scope="User">
+    <Setting Name="setBackgroundThumbnail7" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="setBackgrundThumbnail8" Type="System.String" Scope="User">
+    <Setting Name="setBackgroundThumbnail8" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="setBackgrundThumbnail9" Type="System.String" Scope="User">
+    <Setting Name="setBackgroundThumbnail9" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="setBackgrundThumbnail10" Type="System.String" Scope="User">
+    <Setting Name="setBackgroundThumbnail10" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="setBackgrundThumbnail11" Type="System.String" Scope="User">
+    <Setting Name="setBackgroundThumbnail11" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="setBackgrundThumbnail12" Type="System.String" Scope="User">
+    <Setting Name="setBackgroundThumbnail12" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="setBackgrundThumbnail13" Type="System.String" Scope="User">
+    <Setting Name="setBackgroundThumbnail13" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="setBackgrundThumbnail14" Type="System.String" Scope="User">
+    <Setting Name="setBackgroundThumbnail14" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="setBackgrundThumbnail15" Type="System.String" Scope="User">
+    <Setting Name="setBackgroundThumbnail15" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="setBackgrundThumbnail16" Type="System.String" Scope="User">
+    <Setting Name="setBackgroundThumbnail16" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="setBackgrundThumbnail17" Type="System.String" Scope="User">
+    <Setting Name="setBackgroundThumbnail17" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>

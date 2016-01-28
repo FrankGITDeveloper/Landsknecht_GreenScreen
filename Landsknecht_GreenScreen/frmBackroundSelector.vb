@@ -91,23 +91,23 @@
         'Button17.Image = Image.FromFile(Filename)
 
 
-        Button1.Image = Image.FromFile(My.Settings.setBackgrundThumbnail1)
-        Button2.Image = Image.FromFile(My.Settings.setBackgrundThumbnail2)
-        Button3.Image = Image.FromFile(My.Settings.setBackgrundThumbnail3)
-        Button4.Image = Image.FromFile(My.Settings.setBackgrundThumbnail4)
-        Button5.Image = Image.FromFile(My.Settings.setBackgrundThumbnail5)
-        Button6.Image = Image.FromFile(My.Settings.setBackgrundThumbnail6)
-        Button7.Image = Image.FromFile(My.Settings.setBackgrundThumbnail7)
-        Button8.Image = Image.FromFile(My.Settings.setBackgrundThumbnail8)
-        Button9.Image = Image.FromFile(My.Settings.setBackgrundThumbnail9)
-        Button10.Image = Image.FromFile(My.Settings.setBackgrundThumbnail10)
-        Button11.Image = Image.FromFile(My.Settings.setBackgrundThumbnail11)
-        Button12.Image = Image.FromFile(My.Settings.setBackgrundThumbnail12)
-        Button13.Image = Image.FromFile(My.Settings.setBackgrundThumbnail13)
-        Button14.Image = Image.FromFile(My.Settings.setBackgrundThumbnail14)
-        Button15.Image = Image.FromFile(My.Settings.setBackgrundThumbnail15)
-        Button16.Image = Image.FromFile(My.Settings.setBackgrundThumbnail16)
-        Button17.Image = Image.FromFile(My.Settings.setBackgrundThumbnail17)
+        Button1.Image = Image.FromFile(My.Settings.setBackgroundThumbnail1)
+        Button2.Image = Image.FromFile(My.Settings.setBackgroundThumbnail2)
+        Button3.Image = Image.FromFile(My.Settings.setBackgroundThumbnail3)
+        Button4.Image = Image.FromFile(My.Settings.setBackgroundThumbnail4)
+        Button5.Image = Image.FromFile(My.Settings.setBackgroundThumbnail5)
+        Button6.Image = Image.FromFile(My.Settings.setBackgroundThumbnail6)
+        Button7.Image = Image.FromFile(My.Settings.setBackgroundThumbnail7)
+        Button8.Image = Image.FromFile(My.Settings.setBackgroundThumbnail8)
+        Button9.Image = Image.FromFile(My.Settings.setBackgroundThumbnail9)
+        Button10.Image = Image.FromFile(My.Settings.setBackgroundThumbnail10)
+        Button11.Image = Image.FromFile(My.Settings.setBackgroundThumbnail11)
+        Button12.Image = Image.FromFile(My.Settings.setBackgroundThumbnail12)
+        Button13.Image = Image.FromFile(My.Settings.setBackgroundThumbnail13)
+        Button14.Image = Image.FromFile(My.Settings.setBackgroundThumbnail14)
+        Button15.Image = Image.FromFile(My.Settings.setBackgroundThumbnail15)
+        Button16.Image = Image.FromFile(My.Settings.setBackgroundThumbnail16)
+        Button17.Image = Image.FromFile(My.Settings.setBackgroundThumbnail17)
 
 
 
@@ -210,88 +210,88 @@
                     'My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground1 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
                     'My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground1 & My.Settings.setThumbnailImageSuffix  ' Define source file name.
                     My.Settings.setTempBackgroundImage = My.Settings.setBackground1
-                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgrundThumbnail1
+                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundThumbnail1
                 Case 2
                     'My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground2 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
                     'My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground2 & My.Settings.setThumbnailImageSuffix  ' Define source file name.
                     My.Settings.setTempBackgroundImage = My.Settings.setBackground2
-                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgrundThumbnail2
+                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundThumbnail2
                 Case 3
                     'My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground3 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
                     'My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground3 & My.Settings.setThumbnailImageSuffix  ' Define source file name.
                     My.Settings.setTempBackgroundImage = My.Settings.setBackground3
-                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgrundThumbnail3
+                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundThumbnail3
                 Case 4
                     'My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground4 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
                     'My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground4 & My.Settings.setThumbnailImageSuffix  ' Define source file name.
                     My.Settings.setTempBackgroundImage = My.Settings.setBackground4
-                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgrundThumbnail4
+                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundThumbnail4
                 Case 5
                     'My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground5 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
                     'My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground5 & My.Settings.setThumbnailImageSuffix  ' Define source file name.
                     My.Settings.setTempBackgroundImage = My.Settings.setBackground5
-                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgrundThumbnail5
+                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundThumbnail5
                 Case 6
                     'My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground6 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
                     'My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground6 & My.Settings.setThumbnailImageSuffix  ' Define source file name.
                     My.Settings.setTempBackgroundImage = My.Settings.setBackground6
-                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgrundThumbnail6
+                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundThumbnail6
                 Case 7
                     'My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground7 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
                     'My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground7 & My.Settings.setThumbnailImageSuffix  ' Define source file name.
                     My.Settings.setTempBackgroundImage = My.Settings.setBackground7
-                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgrundThumbnail7
+                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundThumbnail7
                 Case 8
                     'My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground8 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
                     'My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground8 & My.Settings.setThumbnailImageSuffix  ' Define source file name.
                     My.Settings.setTempBackgroundImage = My.Settings.setBackground8
-                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgrundThumbnail8
+                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundThumbnail8
                 Case 9
                     'My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground9 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
                     'My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundImagePath & " \" & My.Settings.setBackground9 & My.Settings.setThumbnailImageSuffix  ' Define source file name.
 
                     My.Settings.setTempBackgroundImage = My.Settings.setBackground9
-                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgrundThumbnail9
+                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundThumbnail9
                 Case 10
                     'My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground10 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
                     'My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground10 & My.Settings.setThumbnailImageSuffix  ' Define source file name.
                     My.Settings.setTempBackgroundImage = My.Settings.setBackground10
-                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgrundThumbnail10
+                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundThumbnail10
                 Case 11
                     'My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground11 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
                     'My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground11 & My.Settings.setThumbnailImageSuffix  ' Define source file name.
                     My.Settings.setTempBackgroundImage = My.Settings.setBackground11
-                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgrundThumbnail11
+                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundThumbnail11
                 Case 12
                     'My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground12 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
                     'My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground12 & My.Settings.setThumbnailImageSuffix  ' Define source file name.
                     My.Settings.setTempBackgroundImage = My.Settings.setBackground12
-                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgrundThumbnail12
+                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundThumbnail12
                 Case 13
                     'My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground13 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
                     'My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground13 & My.Settings.setThumbnailImageSuffix  ' Define source file name.
                     My.Settings.setTempBackgroundImage = My.Settings.setBackground13
-                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgrundThumbnail13
+                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundThumbnail13
                 Case 14
                     'My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground14 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
                     'My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground14 & My.Settings.setThumbnailImageSuffix  ' Define source file name.
                     My.Settings.setTempBackgroundImage = My.Settings.setBackground14
-                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgrundThumbnail14
+                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundThumbnail14
                 Case 15
                     'My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground15 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
                     'My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground15 & My.Settings.setThumbnailImageSuffix  ' Define source file name.
                     My.Settings.setTempBackgroundImage = My.Settings.setBackground15
-                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgrundThumbnail15
+                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundThumbnail15
                 Case 16
                     My.Settings.setTempBackgroundImage = My.Settings.setBackground16
-                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgrundThumbnail16
+                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundThumbnail16
                     'My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground16 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
                     'My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground16 & My.Settings.setThumbnailImageSuffix  ' Define source file name.
                 Case 17
                     'My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground17 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
                     'My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground17 & My.Settings.setThumbnailImageSuffix  ' Define source file name.
                     My.Settings.setTempBackgroundImage = My.Settings.setBackground17
-                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgrundThumbnail7
+                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundThumbnail7
                 Case Else
 
             End Select
@@ -422,55 +422,55 @@
         Select Case Button
             Case 1
                 My.Settings.setBackground1 = x.Hintergrundbild
-                My.Settings.setBackgrundThumbnail1 = x.HintergrundThumbnail
+                My.Settings.setBackgroundThumbnail1 = x.HintergrundThumbnail
             Case 2
                 My.Settings.setBackground2 = x.Hintergrundbild
-                My.Settings.setBackgrundThumbnail2 = x.HintergrundThumbnail
+                My.Settings.setBackgroundThumbnail2 = x.HintergrundThumbnail
             Case 3
                 My.Settings.setBackground3 = x.Hintergrundbild
-                My.Settings.setBackgrundThumbnail3 = x.HintergrundThumbnail
+                My.Settings.setBackgroundThumbnail3 = x.HintergrundThumbnail
             Case 4
                 My.Settings.setBackground4 = x.Hintergrundbild
-                My.Settings.setBackgrundThumbnail4 = x.HintergrundThumbnail
+                My.Settings.setBackgroundThumbnail4 = x.HintergrundThumbnail
             Case 5
                 My.Settings.setBackground5 = x.Hintergrundbild
-                My.Settings.setBackgrundThumbnail5 = x.HintergrundThumbnail
+                My.Settings.setBackgroundThumbnail5 = x.HintergrundThumbnail
             Case 6
                 My.Settings.setBackground6 = x.Hintergrundbild
-                My.Settings.setBackgrundThumbnail6 = x.HintergrundThumbnail
+                My.Settings.setBackgroundThumbnail6 = x.HintergrundThumbnail
             Case 7
                 My.Settings.setBackground7 = x.Hintergrundbild
-                My.Settings.setBackgrundThumbnail7 = x.HintergrundThumbnail
+                My.Settings.setBackgroundThumbnail7 = x.HintergrundThumbnail
             Case 8
                 My.Settings.setBackground8 = x.Hintergrundbild
-                My.Settings.setBackgrundThumbnail8 = x.HintergrundThumbnail
+                My.Settings.setBackgroundThumbnail8 = x.HintergrundThumbnail
             Case 9
                 My.Settings.setBackground9 = x.Hintergrundbild
-                My.Settings.setBackgrundThumbnail9 = x.HintergrundThumbnail
+                My.Settings.setBackgroundThumbnail9 = x.HintergrundThumbnail
             Case 10
                 My.Settings.setBackground10 = x.Hintergrundbild
-                My.Settings.setBackgrundThumbnail10 = x.HintergrundThumbnail
+                My.Settings.setBackgroundThumbnail10 = x.HintergrundThumbnail
             Case 11
                 My.Settings.setBackground11 = x.Hintergrundbild
-                My.Settings.setBackgrundThumbnail11 = x.HintergrundThumbnail
+                My.Settings.setBackgroundThumbnail11 = x.HintergrundThumbnail
             Case 12
                 My.Settings.setBackground12 = x.Hintergrundbild
-                My.Settings.setBackgrundThumbnail12 = x.HintergrundThumbnail
+                My.Settings.setBackgroundThumbnail12 = x.HintergrundThumbnail
             Case 13
                 My.Settings.setBackground13 = x.Hintergrundbild
-                My.Settings.setBackgrundThumbnail13 = x.HintergrundThumbnail
+                My.Settings.setBackgroundThumbnail13 = x.HintergrundThumbnail
             Case 14
                 My.Settings.setBackground14 = x.Hintergrundbild
-                My.Settings.setBackgrundThumbnail14 = x.HintergrundThumbnail
+                My.Settings.setBackgroundThumbnail14 = x.HintergrundThumbnail
             Case 15
                 My.Settings.setBackground15 = x.Hintergrundbild
-                My.Settings.setBackgrundThumbnail15 = x.HintergrundThumbnail
+                My.Settings.setBackgroundThumbnail15 = x.HintergrundThumbnail
             Case 16
                 My.Settings.setBackground16 = x.Hintergrundbild
-                My.Settings.setBackgrundThumbnail16 = x.HintergrundThumbnail
+                My.Settings.setBackgroundThumbnail16 = x.HintergrundThumbnail
             Case 17
                 My.Settings.setBackground17 = x.Hintergrundbild
-                My.Settings.setBackgrundThumbnail17 = x.HintergrundThumbnail
+                My.Settings.setBackgroundThumbnail17 = x.HintergrundThumbnail
         End Select
 
         My.Settings.Save()
@@ -485,7 +485,7 @@
                 Case MouseButtons.Right
                     SelectImageAndStore(1)
 
-                    Button1.Image = Image.FromFile(My.Settings.setBackgrundThumbnail1)
+                    Button1.Image = Image.FromFile(My.Settings.setBackgroundThumbnail1)
                 Case MouseButtons.Left
                     Me.DialogResult = vbOK
                     intImageSelected = 1
@@ -505,7 +505,7 @@
                 Case MouseButtons.Right
                     SelectImageAndStore(2)
 
-                    Button2.Image = Image.FromFile(My.Settings.setBackgrundThumbnail2)
+                    Button2.Image = Image.FromFile(My.Settings.setBackgroundThumbnail2)
                 Case MouseButtons.Left
                     Me.DialogResult = vbOK
                     intImageSelected = 2
@@ -523,7 +523,7 @@
                 Case MouseButtons.Right
                     SelectImageAndStore(3)
 
-                    Button3.Image = Image.FromFile(My.Settings.setBackgrundThumbnail3)
+                    Button3.Image = Image.FromFile(My.Settings.setBackgroundThumbnail3)
                 Case MouseButtons.Left
                     Me.DialogResult = vbOK
                     intImageSelected = 3
@@ -541,7 +541,7 @@
                 Case MouseButtons.Right
                     SelectImageAndStore(4)
 
-                    Button4.Image = Image.FromFile(My.Settings.setBackgrundThumbnail4)
+                    Button4.Image = Image.FromFile(My.Settings.setBackgroundThumbnail4)
                 Case MouseButtons.Left
                     Me.DialogResult = vbOK
                     intImageSelected = 4
@@ -559,7 +559,7 @@
                 Case MouseButtons.Right
                     SelectImageAndStore(5)
 
-                    Button5.Image = Image.FromFile(My.Settings.setBackgrundThumbnail5)
+                    Button5.Image = Image.FromFile(My.Settings.setBackgroundThumbnail5)
                 Case MouseButtons.Left
                     Me.DialogResult = vbOK
                     intImageSelected = 5
@@ -577,7 +577,7 @@
                 Case MouseButtons.Right
                     SelectImageAndStore(6)
 
-                    Button6.Image = Image.FromFile(My.Settings.setBackgrundThumbnail6)
+                    Button6.Image = Image.FromFile(My.Settings.setBackgroundThumbnail6)
                 Case MouseButtons.Left
                     Me.DialogResult = vbOK
                     intImageSelected = 6
@@ -595,7 +595,7 @@
                 Case MouseButtons.Right
                     SelectImageAndStore(7)
 
-                    Button7.Image = Image.FromFile(My.Settings.setBackgrundThumbnail7)
+                    Button7.Image = Image.FromFile(My.Settings.setBackgroundThumbnail7)
                 Case MouseButtons.Left
                     Me.DialogResult = vbOK
                     intImageSelected = 7
@@ -603,6 +603,7 @@
 
             End Select
         Catch ex As Exception
+            MsgBox("Fehler")
 
         End Try
     End Sub
@@ -613,7 +614,7 @@
                 Case MouseButtons.Right
                     SelectImageAndStore(8)
 
-                    Button8.Image = Image.FromFile(My.Settings.setBackgrundThumbnail8)
+                    Button8.Image = Image.FromFile(My.Settings.setBackgroundThumbnail8)
                 Case MouseButtons.Left
                     Me.DialogResult = vbOK
                     intImageSelected = 8
@@ -631,7 +632,7 @@
                 Case MouseButtons.Right
                     SelectImageAndStore(9)
 
-                    Button9.Image = Image.FromFile(My.Settings.setBackgrundThumbnail9)
+                    Button9.Image = Image.FromFile(My.Settings.setBackgroundThumbnail9)
                 Case MouseButtons.Left
                     Me.DialogResult = vbOK
                     intImageSelected = 9
@@ -649,7 +650,7 @@
                 Case MouseButtons.Right
                     SelectImageAndStore(10)
 
-                    Button10.Image = Image.FromFile(My.Settings.setBackgrundThumbnail10)
+                    Button10.Image = Image.FromFile(My.Settings.setBackgroundThumbnail10)
                 Case MouseButtons.Left
                     Me.DialogResult = vbOK
                     intImageSelected = 10
@@ -667,7 +668,7 @@
                 Case MouseButtons.Right
                     SelectImageAndStore(11)
 
-                    Button11.Image = Image.FromFile(My.Settings.setBackgrundThumbnail11)
+                    Button11.Image = Image.FromFile(My.Settings.setBackgroundThumbnail11)
                 Case MouseButtons.Left
                     Me.DialogResult = vbOK
                     intImageSelected = 11
@@ -685,7 +686,7 @@
                 Case MouseButtons.Right
                     SelectImageAndStore(12)
 
-                    Button12.Image = Image.FromFile(My.Settings.setBackgrundThumbnail12)
+                    Button12.Image = Image.FromFile(My.Settings.setBackgroundThumbnail12)
                 Case MouseButtons.Left
                     Me.DialogResult = vbOK
                     intImageSelected = 12
@@ -703,7 +704,7 @@
                 Case MouseButtons.Right
                     SelectImageAndStore(13)
 
-                    Button13.Image = Image.FromFile(My.Settings.setBackgrundThumbnail13)
+                    Button13.Image = Image.FromFile(My.Settings.setBackgroundThumbnail13)
                 Case MouseButtons.Left
                     Me.DialogResult = vbOK
                     intImageSelected = 13
@@ -721,7 +722,7 @@
                 Case MouseButtons.Right
                     SelectImageAndStore(14)
 
-                    Button14.Image = Image.FromFile(My.Settings.setBackgrundThumbnail14)
+                    Button14.Image = Image.FromFile(My.Settings.setBackgroundThumbnail14)
                 Case MouseButtons.Left
                     Me.DialogResult = vbOK
                     intImageSelected = 14
@@ -739,7 +740,7 @@
                 Case MouseButtons.Right
                     SelectImageAndStore(15)
 
-                    Button15.Image = Image.FromFile(My.Settings.setBackgrundThumbnail15)
+                    Button15.Image = Image.FromFile(My.Settings.setBackgroundThumbnail15)
                 Case MouseButtons.Left
                     Me.DialogResult = vbOK
                     intImageSelected = 15
@@ -757,7 +758,7 @@
                 Case MouseButtons.Right
                     SelectImageAndStore(16)
 
-                    Button16.Image = Image.FromFile(My.Settings.setBackgrundThumbnail16)
+                    Button16.Image = Image.FromFile(My.Settings.setBackgroundThumbnail16)
                 Case MouseButtons.Left
                     Me.DialogResult = vbOK
                     intImageSelected = 16
@@ -775,7 +776,7 @@
                 Case MouseButtons.Right
                     SelectImageAndStore(17)
 
-                    Button17.Image = Image.FromFile(My.Settings.setBackgrundThumbnail17)
+                    Button17.Image = Image.FromFile(My.Settings.setBackgroundThumbnail17)
                 Case MouseButtons.Left
                     Me.DialogResult = vbOK
                     intImageSelected = 17

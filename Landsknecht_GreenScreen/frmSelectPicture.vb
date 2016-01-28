@@ -17,9 +17,11 @@ Public Class frmSelectPicture
 
     Private Sub btnHintergrundbild_Click(sender As Object, e As EventArgs) Handles btnHintergrundbild.Click
         Dim openFileDialog1 As New OpenFileDialog()
+        Dim Filterstring As String
+        Filterstring = "Vorgabe (" & My.Settings.setBackgroundImageFileFormat & ")|*." & (My.Settings.setBackgroundImageFileFormat.ToUpper) & "|Photoline (*.PLD)|*.PLD|Photoshop (*.PSD)|*.PSD|Alle Dateien (*.*)|*.*"
 
         openFileDialog1.InitialDirectory = My.Settings.setBackgroundImagePath   ' '"C:\Program Files"
-        openFileDialog1.Filter = "Bilder (*.JPG)|*.jpg|All files (*.*)|*.*|Photoline (*.PLD)|*.PLD"
+        openFileDialog1.Filter = Filterstring
         openFileDialog1.FilterIndex = 1
         openFileDialog1.RestoreDirectory = True
 
@@ -40,8 +42,11 @@ Public Class frmSelectPicture
     Private Sub btnHintergrundThumbnail_Click(sender As Object, e As EventArgs) Handles btnHintergrundThumbnail.Click
         Dim openFileDialog1 As New OpenFileDialog()
 
+        Dim Filterstring As String
+        Filterstring = "Vorgabe (" & My.Settings.setBackgroundImageFileFormat & ")|*." & (My.Settings.setBackgroundImageFileFormat.ToUpper) & "|Photoline (*.PLD)|*.PLD|Photoshop (*.PSD)|*.PSD|Alle Dateien (*.*)|*.*"
+
         openFileDialog1.InitialDirectory = My.Settings.setBackgroundImagePath   ' '"C:\Program Files"
-        openFileDialog1.Filter = "Bilder (*.JPG)|*.jpg|All files (*.*)|*.*|Photoline (*.PLD)|*.PLD"
+        openFileDialog1.Filter = Filterstring
         openFileDialog1.FilterIndex = 1
         openFileDialog1.RestoreDirectory = True
 

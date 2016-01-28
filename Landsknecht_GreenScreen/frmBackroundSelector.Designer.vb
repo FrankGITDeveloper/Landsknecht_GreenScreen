@@ -203,7 +203,8 @@ Partial Class frmBackroundSelector
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Name = "frmBackroundSelector"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmBackroundSelector"
+        Me.Text = "Wählen sie hier den gewünschten Hintergrund        ( Linke Maustaste = auswählen " &
+    " - Rechte Maustaste = Konfigurieren )"
         Me.ResumeLayout(False)
 
     End Sub

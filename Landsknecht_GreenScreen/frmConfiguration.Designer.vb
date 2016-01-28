@@ -40,45 +40,72 @@ Partial Class frmConfiguration
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.txtBackground20 = New System.Windows.Forms.TextBox()
+        Me.txtThumbnail10 = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.txtBackground19 = New System.Windows.Forms.TextBox()
+        Me.txtThumbnail9 = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.txtBackground18 = New System.Windows.Forms.TextBox()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.txtBackground17 = New System.Windows.Forms.TextBox()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.txtBackground16 = New System.Windows.Forms.TextBox()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.txtBackground15 = New System.Windows.Forms.TextBox()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.txtBackground14 = New System.Windows.Forms.TextBox()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.txtBackground13 = New System.Windows.Forms.TextBox()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.txtBackground12 = New System.Windows.Forms.TextBox()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.txtBackground11 = New System.Windows.Forms.TextBox()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.txtThumbnail8 = New System.Windows.Forms.TextBox()
+        Me.txtThumbnail17 = New System.Windows.Forms.TextBox()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.txtThumbnail7 = New System.Windows.Forms.TextBox()
+        Me.txtThumbnail16 = New System.Windows.Forms.TextBox()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.txtThumbnail6 = New System.Windows.Forms.TextBox()
+        Me.txtThumbnail15 = New System.Windows.Forms.TextBox()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.txtThumbnail5 = New System.Windows.Forms.TextBox()
+        Me.txtThumbnail14 = New System.Windows.Forms.TextBox()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.txtThumbnail4 = New System.Windows.Forms.TextBox()
+        Me.txtThumbnail13 = New System.Windows.Forms.TextBox()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.txtThumbnail3 = New System.Windows.Forms.TextBox()
+        Me.txtThumbnail12 = New System.Windows.Forms.TextBox()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.txtThumbnail2 = New System.Windows.Forms.TextBox()
+        Me.txtThumbnail11 = New System.Windows.Forms.TextBox()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.txtThumbnail1 = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.btnHintergrund1 = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.txtBackground10 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.txtBackground9 = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
         Me.txtBackground8 = New System.Windows.Forms.TextBox()
+        Me.txtBackground17 = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.txtBackground7 = New System.Windows.Forms.TextBox()
+        Me.txtBackground16 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.txtBackground6 = New System.Windows.Forms.TextBox()
+        Me.txtBackground15 = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
         Me.txtBackground5 = New System.Windows.Forms.TextBox()
+        Me.txtBackground14 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
         Me.txtBackground4 = New System.Windows.Forms.TextBox()
+        Me.txtBackground13 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
         Me.txtBackground3 = New System.Windows.Forms.TextBox()
+        Me.txtBackground12 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
         Me.txtBackground2 = New System.Windows.Forms.TextBox()
+        Me.txtBackground11 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtBackground1 = New System.Windows.Forms.TextBox()
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
@@ -100,11 +127,12 @@ Partial Class frmConfiguration
         Me.TabControl1.Location = New System.Drawing.Point(12, 11)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1040, 342)
+        Me.TabControl1.Size = New System.Drawing.Size(1022, 447)
         Me.TabControl1.TabIndex = 0
         '
         'TabPage1
         '
+        Me.TabPage1.BackColor = System.Drawing.SystemColors.Control
         Me.TabPage1.Controls.Add(Me.btnBackgroundColorActive2)
         Me.TabPage1.Controls.Add(Me.btnBackgroundColorActive1)
         Me.TabPage1.Controls.Add(Me.txtBackgrundImageFileFormat)
@@ -121,10 +149,9 @@ Partial Class frmConfiguration
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(785, 316)
+        Me.TabPage1.Size = New System.Drawing.Size(1014, 421)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Standard Einstellungen"
-        Me.TabPage1.UseVisualStyleBackColor = True
         '
         'btnBackgroundColorActive2
         '
@@ -156,9 +183,9 @@ Partial Class frmConfiguration
         Me.Label24.AutoSize = True
         Me.Label24.Location = New System.Drawing.Point(6, 233)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(135, 13)
+        Me.Label24.Size = New System.Drawing.Size(264, 13)
         Me.Label24.TabIndex = 33
-        Me.Label24.Text = "Hintergrundbild Dateiformat"
+        Me.Label24.Text = "Hintergrundbild Dateiformat (JPG oder PSD  oder PLD)"
         '
         'txtPLAktion2
         '
@@ -235,248 +262,379 @@ Partial Class frmConfiguration
         '
         'TabPage2
         '
+        Me.TabPage2.BackColor = System.Drawing.SystemColors.Control
         Me.TabPage2.Controls.Add(Me.GroupBox2)
         Me.TabPage2.Controls.Add(Me.GroupBox1)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1032, 316)
+        Me.TabPage2.Size = New System.Drawing.Size(1014, 421)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Hintergrund Bilder"
-        Me.TabPage2.UseVisualStyleBackColor = True
         '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.Label12)
-        Me.GroupBox2.Controls.Add(Me.txtBackground20)
+        Me.GroupBox2.Controls.Add(Me.txtThumbnail10)
         Me.GroupBox2.Controls.Add(Me.Label13)
-        Me.GroupBox2.Controls.Add(Me.txtBackground19)
+        Me.GroupBox2.Controls.Add(Me.txtThumbnail9)
         Me.GroupBox2.Controls.Add(Me.Label14)
-        Me.GroupBox2.Controls.Add(Me.txtBackground18)
-        Me.GroupBox2.Controls.Add(Me.Label15)
-        Me.GroupBox2.Controls.Add(Me.txtBackground17)
-        Me.GroupBox2.Controls.Add(Me.Label16)
-        Me.GroupBox2.Controls.Add(Me.txtBackground16)
-        Me.GroupBox2.Controls.Add(Me.Label17)
-        Me.GroupBox2.Controls.Add(Me.txtBackground15)
-        Me.GroupBox2.Controls.Add(Me.Label18)
-        Me.GroupBox2.Controls.Add(Me.txtBackground14)
-        Me.GroupBox2.Controls.Add(Me.Label19)
-        Me.GroupBox2.Controls.Add(Me.txtBackground13)
-        Me.GroupBox2.Controls.Add(Me.Label20)
-        Me.GroupBox2.Controls.Add(Me.txtBackground12)
-        Me.GroupBox2.Controls.Add(Me.Label21)
-        Me.GroupBox2.Controls.Add(Me.txtBackground11)
-        Me.GroupBox2.Location = New System.Drawing.Point(662, 6)
+        Me.GroupBox2.Controls.Add(Me.Label25)
+        Me.GroupBox2.Controls.Add(Me.txtThumbnail8)
+        Me.GroupBox2.Controls.Add(Me.txtThumbnail17)
+        Me.GroupBox2.Controls.Add(Me.Label26)
+        Me.GroupBox2.Controls.Add(Me.Label27)
+        Me.GroupBox2.Controls.Add(Me.txtThumbnail7)
+        Me.GroupBox2.Controls.Add(Me.txtThumbnail16)
+        Me.GroupBox2.Controls.Add(Me.Label28)
+        Me.GroupBox2.Controls.Add(Me.Label29)
+        Me.GroupBox2.Controls.Add(Me.txtThumbnail6)
+        Me.GroupBox2.Controls.Add(Me.txtThumbnail15)
+        Me.GroupBox2.Controls.Add(Me.Label30)
+        Me.GroupBox2.Controls.Add(Me.Label31)
+        Me.GroupBox2.Controls.Add(Me.txtThumbnail5)
+        Me.GroupBox2.Controls.Add(Me.txtThumbnail14)
+        Me.GroupBox2.Controls.Add(Me.Label32)
+        Me.GroupBox2.Controls.Add(Me.Label33)
+        Me.GroupBox2.Controls.Add(Me.txtThumbnail4)
+        Me.GroupBox2.Controls.Add(Me.txtThumbnail13)
+        Me.GroupBox2.Controls.Add(Me.Label34)
+        Me.GroupBox2.Controls.Add(Me.Label35)
+        Me.GroupBox2.Controls.Add(Me.txtThumbnail3)
+        Me.GroupBox2.Controls.Add(Me.txtThumbnail12)
+        Me.GroupBox2.Controls.Add(Me.Label36)
+        Me.GroupBox2.Controls.Add(Me.Label37)
+        Me.GroupBox2.Controls.Add(Me.txtThumbnail2)
+        Me.GroupBox2.Controls.Add(Me.txtThumbnail11)
+        Me.GroupBox2.Controls.Add(Me.Label38)
+        Me.GroupBox2.Controls.Add(Me.txtThumbnail1)
+        Me.GroupBox2.Location = New System.Drawing.Point(508, 6)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(360, 299)
+        Me.GroupBox2.Size = New System.Drawing.Size(493, 404)
         Me.GroupBox2.TabIndex = 88
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Hintergrund im Querformat"
+        Me.GroupBox2.Text = "Passende Thumbnails für Vorschau "
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(10, 265)
+        Me.Label12.Location = New System.Drawing.Point(16, 220)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(77, 13)
-        Me.Label12.TabIndex = 87
-        Me.Label12.Text = "Hintergrund 20"
+        Me.Label12.Size = New System.Drawing.Size(71, 13)
+        Me.Label12.TabIndex = 122
+        Me.Label12.Text = "Thumbnail 10"
         '
-        'txtBackground20
+        'txtThumbnail10
         '
-        Me.txtBackground20.Location = New System.Drawing.Point(90, 262)
-        Me.txtBackground20.Name = "txtBackground20"
-        Me.txtBackground20.Size = New System.Drawing.Size(250, 20)
-        Me.txtBackground20.TabIndex = 86
+        Me.txtThumbnail10.Location = New System.Drawing.Point(96, 217)
+        Me.txtThumbnail10.Name = "txtThumbnail10"
+        Me.txtThumbnail10.Size = New System.Drawing.Size(391, 20)
+        Me.txtThumbnail10.TabIndex = 121
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(10, 239)
+        Me.Label13.Location = New System.Drawing.Point(16, 199)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(77, 13)
-        Me.Label13.TabIndex = 85
-        Me.Label13.Text = "Hintergrund 19"
+        Me.Label13.Size = New System.Drawing.Size(65, 13)
+        Me.Label13.TabIndex = 120
+        Me.Label13.Text = "Thumbnail 9"
         '
-        'txtBackground19
+        'txtThumbnail9
         '
-        Me.txtBackground19.Location = New System.Drawing.Point(90, 236)
-        Me.txtBackground19.Name = "txtBackground19"
-        Me.txtBackground19.Size = New System.Drawing.Size(250, 20)
-        Me.txtBackground19.TabIndex = 84
+        Me.txtThumbnail9.Location = New System.Drawing.Point(96, 196)
+        Me.txtThumbnail9.Name = "txtThumbnail9"
+        Me.txtThumbnail9.Size = New System.Drawing.Size(391, 20)
+        Me.txtThumbnail9.TabIndex = 119
         '
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(10, 213)
+        Me.Label14.Location = New System.Drawing.Point(16, 178)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(77, 13)
-        Me.Label14.TabIndex = 83
-        Me.Label14.Text = "Hintergrund 18"
+        Me.Label14.Size = New System.Drawing.Size(65, 13)
+        Me.Label14.TabIndex = 118
+        Me.Label14.Text = "Thumbnail 8"
         '
-        'txtBackground18
+        'Label25
         '
-        Me.txtBackground18.Location = New System.Drawing.Point(90, 210)
-        Me.txtBackground18.Name = "txtBackground18"
-        Me.txtBackground18.Size = New System.Drawing.Size(250, 20)
-        Me.txtBackground18.TabIndex = 82
+        Me.Label25.AutoSize = True
+        Me.Label25.Location = New System.Drawing.Point(16, 367)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(71, 13)
+        Me.Label25.TabIndex = 116
+        Me.Label25.Text = "Thumbnail 17"
         '
-        'Label15
+        'txtThumbnail8
         '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(10, 187)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(77, 13)
-        Me.Label15.TabIndex = 81
-        Me.Label15.Text = "Hintergrund 17"
+        Me.txtThumbnail8.Location = New System.Drawing.Point(96, 175)
+        Me.txtThumbnail8.Name = "txtThumbnail8"
+        Me.txtThumbnail8.Size = New System.Drawing.Size(391, 20)
+        Me.txtThumbnail8.TabIndex = 117
         '
-        'txtBackground17
+        'txtThumbnail17
         '
-        Me.txtBackground17.Location = New System.Drawing.Point(90, 184)
-        Me.txtBackground17.Name = "txtBackground17"
-        Me.txtBackground17.Size = New System.Drawing.Size(250, 20)
-        Me.txtBackground17.TabIndex = 80
+        Me.txtThumbnail17.Location = New System.Drawing.Point(96, 364)
+        Me.txtThumbnail17.Name = "txtThumbnail17"
+        Me.txtThumbnail17.Size = New System.Drawing.Size(391, 20)
+        Me.txtThumbnail17.TabIndex = 114
         '
-        'Label16
+        'Label26
         '
-        Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(10, 161)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(77, 13)
-        Me.Label16.TabIndex = 79
-        Me.Label16.Text = "Hintergrund 16"
+        Me.Label26.AutoSize = True
+        Me.Label26.Location = New System.Drawing.Point(16, 157)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(65, 13)
+        Me.Label26.TabIndex = 115
+        Me.Label26.Text = "Thumbnail 7"
         '
-        'txtBackground16
+        'Label27
         '
-        Me.txtBackground16.Location = New System.Drawing.Point(90, 158)
-        Me.txtBackground16.Name = "txtBackground16"
-        Me.txtBackground16.Size = New System.Drawing.Size(250, 20)
-        Me.txtBackground16.TabIndex = 78
+        Me.Label27.AutoSize = True
+        Me.Label27.Location = New System.Drawing.Point(16, 346)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(71, 13)
+        Me.Label27.TabIndex = 112
+        Me.Label27.Text = "Thumbnail 16"
         '
-        'Label17
+        'txtThumbnail7
         '
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(10, 135)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(77, 13)
-        Me.Label17.TabIndex = 77
-        Me.Label17.Text = "Hintergrund 15"
+        Me.txtThumbnail7.Location = New System.Drawing.Point(96, 154)
+        Me.txtThumbnail7.Name = "txtThumbnail7"
+        Me.txtThumbnail7.Size = New System.Drawing.Size(391, 20)
+        Me.txtThumbnail7.TabIndex = 113
         '
-        'txtBackground15
+        'txtThumbnail16
         '
-        Me.txtBackground15.Location = New System.Drawing.Point(90, 132)
-        Me.txtBackground15.Name = "txtBackground15"
-        Me.txtBackground15.Size = New System.Drawing.Size(250, 20)
-        Me.txtBackground15.TabIndex = 76
+        Me.txtThumbnail16.Location = New System.Drawing.Point(96, 343)
+        Me.txtThumbnail16.Name = "txtThumbnail16"
+        Me.txtThumbnail16.Size = New System.Drawing.Size(391, 20)
+        Me.txtThumbnail16.TabIndex = 109
         '
-        'Label18
+        'Label28
         '
-        Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(10, 109)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(77, 13)
-        Me.Label18.TabIndex = 75
-        Me.Label18.Text = "Hintergrund 14"
+        Me.Label28.AutoSize = True
+        Me.Label28.Location = New System.Drawing.Point(16, 136)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(65, 13)
+        Me.Label28.TabIndex = 111
+        Me.Label28.Text = "Thumbnail 6"
         '
-        'txtBackground14
+        'Label29
         '
-        Me.txtBackground14.Location = New System.Drawing.Point(90, 106)
-        Me.txtBackground14.Name = "txtBackground14"
-        Me.txtBackground14.Size = New System.Drawing.Size(250, 20)
-        Me.txtBackground14.TabIndex = 74
+        Me.Label29.AutoSize = True
+        Me.Label29.Location = New System.Drawing.Point(16, 325)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(71, 13)
+        Me.Label29.TabIndex = 108
+        Me.Label29.Text = "Thumbnail 15"
         '
-        'Label19
+        'txtThumbnail6
         '
-        Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(10, 83)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(77, 13)
-        Me.Label19.TabIndex = 73
-        Me.Label19.Text = "Hintergrund 13"
+        Me.txtThumbnail6.Location = New System.Drawing.Point(96, 133)
+        Me.txtThumbnail6.Name = "txtThumbnail6"
+        Me.txtThumbnail6.Size = New System.Drawing.Size(391, 20)
+        Me.txtThumbnail6.TabIndex = 110
         '
-        'txtBackground13
+        'txtThumbnail15
         '
-        Me.txtBackground13.Location = New System.Drawing.Point(90, 80)
-        Me.txtBackground13.Name = "txtBackground13"
-        Me.txtBackground13.Size = New System.Drawing.Size(250, 20)
-        Me.txtBackground13.TabIndex = 72
+        Me.txtThumbnail15.Location = New System.Drawing.Point(96, 322)
+        Me.txtThumbnail15.Name = "txtThumbnail15"
+        Me.txtThumbnail15.Size = New System.Drawing.Size(391, 20)
+        Me.txtThumbnail15.TabIndex = 105
         '
-        'Label20
+        'Label30
         '
-        Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(10, 57)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(77, 13)
-        Me.Label20.TabIndex = 71
-        Me.Label20.Text = "Hintergrund 12"
+        Me.Label30.AutoSize = True
+        Me.Label30.Location = New System.Drawing.Point(16, 115)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(65, 13)
+        Me.Label30.TabIndex = 107
+        Me.Label30.Text = "Thumbnail 5"
         '
-        'txtBackground12
+        'Label31
         '
-        Me.txtBackground12.Location = New System.Drawing.Point(90, 54)
-        Me.txtBackground12.Name = "txtBackground12"
-        Me.txtBackground12.Size = New System.Drawing.Size(250, 20)
-        Me.txtBackground12.TabIndex = 70
+        Me.Label31.AutoSize = True
+        Me.Label31.Location = New System.Drawing.Point(16, 304)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(71, 13)
+        Me.Label31.TabIndex = 104
+        Me.Label31.Text = "Thumbnail 14"
         '
-        'Label21
+        'txtThumbnail5
         '
-        Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(10, 31)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(77, 13)
-        Me.Label21.TabIndex = 69
-        Me.Label21.Text = "Hintergrund 11"
+        Me.txtThumbnail5.Location = New System.Drawing.Point(96, 112)
+        Me.txtThumbnail5.Name = "txtThumbnail5"
+        Me.txtThumbnail5.Size = New System.Drawing.Size(391, 20)
+        Me.txtThumbnail5.TabIndex = 106
         '
-        'txtBackground11
+        'txtThumbnail14
         '
-        Me.txtBackground11.Location = New System.Drawing.Point(90, 28)
-        Me.txtBackground11.Name = "txtBackground11"
-        Me.txtBackground11.Size = New System.Drawing.Size(250, 20)
-        Me.txtBackground11.TabIndex = 68
+        Me.txtThumbnail14.Location = New System.Drawing.Point(96, 301)
+        Me.txtThumbnail14.Name = "txtThumbnail14"
+        Me.txtThumbnail14.Size = New System.Drawing.Size(391, 20)
+        Me.txtThumbnail14.TabIndex = 102
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Location = New System.Drawing.Point(16, 94)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(65, 13)
+        Me.Label32.TabIndex = 103
+        Me.Label32.Text = "Thumbnail 4"
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.Location = New System.Drawing.Point(16, 283)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(71, 13)
+        Me.Label33.TabIndex = 99
+        Me.Label33.Text = "Thumbnail 13"
+        '
+        'txtThumbnail4
+        '
+        Me.txtThumbnail4.Location = New System.Drawing.Point(96, 91)
+        Me.txtThumbnail4.Name = "txtThumbnail4"
+        Me.txtThumbnail4.Size = New System.Drawing.Size(391, 20)
+        Me.txtThumbnail4.TabIndex = 101
+        '
+        'txtThumbnail13
+        '
+        Me.txtThumbnail13.Location = New System.Drawing.Point(96, 280)
+        Me.txtThumbnail13.Name = "txtThumbnail13"
+        Me.txtThumbnail13.Size = New System.Drawing.Size(391, 20)
+        Me.txtThumbnail13.TabIndex = 98
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Location = New System.Drawing.Point(16, 73)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(65, 13)
+        Me.Label34.TabIndex = 100
+        Me.Label34.Text = "Thumbnail 3"
+        '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.Location = New System.Drawing.Point(16, 262)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(71, 13)
+        Me.Label35.TabIndex = 96
+        Me.Label35.Text = "Thumbnail 12"
+        '
+        'txtThumbnail3
+        '
+        Me.txtThumbnail3.Location = New System.Drawing.Point(96, 70)
+        Me.txtThumbnail3.Name = "txtThumbnail3"
+        Me.txtThumbnail3.Size = New System.Drawing.Size(391, 20)
+        Me.txtThumbnail3.TabIndex = 97
+        '
+        'txtThumbnail12
+        '
+        Me.txtThumbnail12.Location = New System.Drawing.Point(96, 259)
+        Me.txtThumbnail12.Name = "txtThumbnail12"
+        Me.txtThumbnail12.Size = New System.Drawing.Size(391, 20)
+        Me.txtThumbnail12.TabIndex = 93
+        '
+        'Label36
+        '
+        Me.Label36.AutoSize = True
+        Me.Label36.Location = New System.Drawing.Point(16, 52)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(65, 13)
+        Me.Label36.TabIndex = 95
+        Me.Label36.Text = "Thumbnail 2"
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Location = New System.Drawing.Point(16, 241)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(71, 13)
+        Me.Label37.TabIndex = 91
+        Me.Label37.Text = "Thumbnail 11"
+        '
+        'txtThumbnail2
+        '
+        Me.txtThumbnail2.Location = New System.Drawing.Point(96, 49)
+        Me.txtThumbnail2.Name = "txtThumbnail2"
+        Me.txtThumbnail2.Size = New System.Drawing.Size(391, 20)
+        Me.txtThumbnail2.TabIndex = 94
+        '
+        'txtThumbnail11
+        '
+        Me.txtThumbnail11.Location = New System.Drawing.Point(96, 238)
+        Me.txtThumbnail11.Name = "txtThumbnail11"
+        Me.txtThumbnail11.Size = New System.Drawing.Size(391, 20)
+        Me.txtThumbnail11.TabIndex = 90
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.Location = New System.Drawing.Point(16, 31)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(65, 13)
+        Me.Label38.TabIndex = 92
+        Me.Label38.Text = "Thumbnail 1"
+        '
+        'txtThumbnail1
+        '
+        Me.txtThumbnail1.Location = New System.Drawing.Point(96, 28)
+        Me.txtThumbnail1.Name = "txtThumbnail1"
+        Me.txtThumbnail1.Size = New System.Drawing.Size(391, 20)
+        Me.txtThumbnail1.TabIndex = 89
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.btnHintergrund1)
         Me.GroupBox1.Controls.Add(Me.Label11)
         Me.GroupBox1.Controls.Add(Me.txtBackground10)
         Me.GroupBox1.Controls.Add(Me.Label10)
         Me.GroupBox1.Controls.Add(Me.txtBackground9)
         Me.GroupBox1.Controls.Add(Me.Label9)
+        Me.GroupBox1.Controls.Add(Me.Label15)
         Me.GroupBox1.Controls.Add(Me.txtBackground8)
+        Me.GroupBox1.Controls.Add(Me.txtBackground17)
         Me.GroupBox1.Controls.Add(Me.Label8)
+        Me.GroupBox1.Controls.Add(Me.Label16)
         Me.GroupBox1.Controls.Add(Me.txtBackground7)
+        Me.GroupBox1.Controls.Add(Me.txtBackground16)
         Me.GroupBox1.Controls.Add(Me.Label7)
+        Me.GroupBox1.Controls.Add(Me.Label17)
         Me.GroupBox1.Controls.Add(Me.txtBackground6)
+        Me.GroupBox1.Controls.Add(Me.txtBackground15)
         Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.Label18)
         Me.GroupBox1.Controls.Add(Me.txtBackground5)
+        Me.GroupBox1.Controls.Add(Me.txtBackground14)
         Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.Label19)
         Me.GroupBox1.Controls.Add(Me.txtBackground4)
+        Me.GroupBox1.Controls.Add(Me.txtBackground13)
         Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.Label20)
         Me.GroupBox1.Controls.Add(Me.txtBackground3)
+        Me.GroupBox1.Controls.Add(Me.txtBackground12)
         Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.Label21)
         Me.GroupBox1.Controls.Add(Me.txtBackground2)
+        Me.GroupBox1.Controls.Add(Me.txtBackground11)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.txtBackground1)
         Me.GroupBox1.Location = New System.Drawing.Point(6, 6)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(517, 299)
+        Me.GroupBox1.Size = New System.Drawing.Size(496, 404)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Hintergrund im Querformat"
-        '
-        'btnHintergrund1
-        '
-        Me.btnHintergrund1.Location = New System.Drawing.Point(487, 28)
-        Me.btnHintergrund1.Name = "btnHintergrund1"
-        Me.btnHintergrund1.Size = New System.Drawing.Size(22, 21)
-        Me.btnHintergrund1.TabIndex = 88
-        Me.btnHintergrund1.Text = "..."
-        Me.btnHintergrund1.UseVisualStyleBackColor = True
+        Me.GroupBox1.Text = "Pfade und Dateiname für Hintergrund (Setup im Filder Dialog mit rechter Maustaste" &
+    ")"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(10, 265)
+        Me.Label11.Location = New System.Drawing.Point(10, 220)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(77, 13)
         Me.Label11.TabIndex = 87
@@ -484,7 +642,7 @@ Partial Class frmConfiguration
         '
         'txtBackground10
         '
-        Me.txtBackground10.Location = New System.Drawing.Point(90, 262)
+        Me.txtBackground10.Location = New System.Drawing.Point(90, 217)
         Me.txtBackground10.Name = "txtBackground10"
         Me.txtBackground10.Size = New System.Drawing.Size(391, 20)
         Me.txtBackground10.TabIndex = 86
@@ -492,7 +650,7 @@ Partial Class frmConfiguration
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(10, 239)
+        Me.Label10.Location = New System.Drawing.Point(10, 199)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(71, 13)
         Me.Label10.TabIndex = 85
@@ -500,7 +658,7 @@ Partial Class frmConfiguration
         '
         'txtBackground9
         '
-        Me.txtBackground9.Location = New System.Drawing.Point(90, 236)
+        Me.txtBackground9.Location = New System.Drawing.Point(90, 196)
         Me.txtBackground9.Name = "txtBackground9"
         Me.txtBackground9.Size = New System.Drawing.Size(391, 20)
         Me.txtBackground9.TabIndex = 84
@@ -508,114 +666,226 @@ Partial Class frmConfiguration
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(10, 213)
+        Me.Label9.Location = New System.Drawing.Point(10, 178)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(71, 13)
         Me.Label9.TabIndex = 83
         Me.Label9.Text = "Hintergrund 8"
         '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(10, 367)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(77, 13)
+        Me.Label15.TabIndex = 81
+        Me.Label15.Text = "Hintergrund 17"
+        '
         'txtBackground8
         '
-        Me.txtBackground8.Location = New System.Drawing.Point(90, 210)
+        Me.txtBackground8.Location = New System.Drawing.Point(90, 175)
         Me.txtBackground8.Name = "txtBackground8"
         Me.txtBackground8.Size = New System.Drawing.Size(391, 20)
         Me.txtBackground8.TabIndex = 82
         '
+        'txtBackground17
+        '
+        Me.txtBackground17.Location = New System.Drawing.Point(90, 364)
+        Me.txtBackground17.Name = "txtBackground17"
+        Me.txtBackground17.Size = New System.Drawing.Size(391, 20)
+        Me.txtBackground17.TabIndex = 80
+        '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(10, 187)
+        Me.Label8.Location = New System.Drawing.Point(10, 157)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(71, 13)
         Me.Label8.TabIndex = 81
         Me.Label8.Text = "Hintergrund 7"
         '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(10, 346)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(77, 13)
+        Me.Label16.TabIndex = 79
+        Me.Label16.Text = "Hintergrund 16"
+        '
         'txtBackground7
         '
-        Me.txtBackground7.Location = New System.Drawing.Point(90, 184)
+        Me.txtBackground7.Location = New System.Drawing.Point(90, 154)
         Me.txtBackground7.Name = "txtBackground7"
         Me.txtBackground7.Size = New System.Drawing.Size(391, 20)
         Me.txtBackground7.TabIndex = 80
         '
+        'txtBackground16
+        '
+        Me.txtBackground16.Location = New System.Drawing.Point(90, 343)
+        Me.txtBackground16.Name = "txtBackground16"
+        Me.txtBackground16.Size = New System.Drawing.Size(391, 20)
+        Me.txtBackground16.TabIndex = 78
+        '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(10, 161)
+        Me.Label7.Location = New System.Drawing.Point(10, 136)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(71, 13)
         Me.Label7.TabIndex = 79
         Me.Label7.Text = "Hintergrund 6"
         '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(10, 325)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(77, 13)
+        Me.Label17.TabIndex = 77
+        Me.Label17.Text = "Hintergrund 15"
+        '
         'txtBackground6
         '
-        Me.txtBackground6.Location = New System.Drawing.Point(90, 158)
+        Me.txtBackground6.Location = New System.Drawing.Point(90, 133)
         Me.txtBackground6.Name = "txtBackground6"
         Me.txtBackground6.Size = New System.Drawing.Size(391, 20)
         Me.txtBackground6.TabIndex = 78
         '
+        'txtBackground15
+        '
+        Me.txtBackground15.Location = New System.Drawing.Point(90, 322)
+        Me.txtBackground15.Name = "txtBackground15"
+        Me.txtBackground15.Size = New System.Drawing.Size(391, 20)
+        Me.txtBackground15.TabIndex = 76
+        '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(10, 135)
+        Me.Label6.Location = New System.Drawing.Point(10, 115)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(71, 13)
         Me.Label6.TabIndex = 77
         Me.Label6.Text = "Hintergrund 5"
         '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(10, 304)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(77, 13)
+        Me.Label18.TabIndex = 75
+        Me.Label18.Text = "Hintergrund 14"
+        '
         'txtBackground5
         '
-        Me.txtBackground5.Location = New System.Drawing.Point(90, 132)
+        Me.txtBackground5.Location = New System.Drawing.Point(90, 112)
         Me.txtBackground5.Name = "txtBackground5"
         Me.txtBackground5.Size = New System.Drawing.Size(391, 20)
         Me.txtBackground5.TabIndex = 76
         '
+        'txtBackground14
+        '
+        Me.txtBackground14.Location = New System.Drawing.Point(90, 301)
+        Me.txtBackground14.Name = "txtBackground14"
+        Me.txtBackground14.Size = New System.Drawing.Size(391, 20)
+        Me.txtBackground14.TabIndex = 74
+        '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(10, 109)
+        Me.Label5.Location = New System.Drawing.Point(10, 94)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(71, 13)
         Me.Label5.TabIndex = 75
         Me.Label5.Text = "Hintergrund 4"
         '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(10, 283)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(77, 13)
+        Me.Label19.TabIndex = 73
+        Me.Label19.Text = "Hintergrund 13"
+        '
         'txtBackground4
         '
-        Me.txtBackground4.Location = New System.Drawing.Point(90, 106)
+        Me.txtBackground4.Location = New System.Drawing.Point(90, 91)
         Me.txtBackground4.Name = "txtBackground4"
         Me.txtBackground4.Size = New System.Drawing.Size(391, 20)
         Me.txtBackground4.TabIndex = 74
         '
+        'txtBackground13
+        '
+        Me.txtBackground13.Location = New System.Drawing.Point(90, 280)
+        Me.txtBackground13.Name = "txtBackground13"
+        Me.txtBackground13.Size = New System.Drawing.Size(391, 20)
+        Me.txtBackground13.TabIndex = 72
+        '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(10, 83)
+        Me.Label4.Location = New System.Drawing.Point(10, 73)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(71, 13)
         Me.Label4.TabIndex = 73
         Me.Label4.Text = "Hintergrund 3"
         '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(10, 262)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(77, 13)
+        Me.Label20.TabIndex = 71
+        Me.Label20.Text = "Hintergrund 12"
+        '
         'txtBackground3
         '
-        Me.txtBackground3.Location = New System.Drawing.Point(90, 80)
+        Me.txtBackground3.Location = New System.Drawing.Point(90, 70)
         Me.txtBackground3.Name = "txtBackground3"
         Me.txtBackground3.Size = New System.Drawing.Size(391, 20)
         Me.txtBackground3.TabIndex = 72
         '
+        'txtBackground12
+        '
+        Me.txtBackground12.Location = New System.Drawing.Point(90, 259)
+        Me.txtBackground12.Name = "txtBackground12"
+        Me.txtBackground12.Size = New System.Drawing.Size(391, 20)
+        Me.txtBackground12.TabIndex = 70
+        '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(10, 57)
+        Me.Label3.Location = New System.Drawing.Point(10, 52)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(71, 13)
         Me.Label3.TabIndex = 71
         Me.Label3.Text = "Hintergrund 2"
         '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(10, 241)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(77, 13)
+        Me.Label21.TabIndex = 69
+        Me.Label21.Text = "Hintergrund 11"
+        '
         'txtBackground2
         '
-        Me.txtBackground2.Location = New System.Drawing.Point(90, 54)
+        Me.txtBackground2.Location = New System.Drawing.Point(90, 49)
         Me.txtBackground2.Name = "txtBackground2"
         Me.txtBackground2.Size = New System.Drawing.Size(391, 20)
         Me.txtBackground2.TabIndex = 70
+        '
+        'txtBackground11
+        '
+        Me.txtBackground11.Location = New System.Drawing.Point(90, 238)
+        Me.txtBackground11.Name = "txtBackground11"
+        Me.txtBackground11.Size = New System.Drawing.Size(391, 20)
+        Me.txtBackground11.TabIndex = 68
         '
         'Label2
         '
@@ -639,7 +909,8 @@ Partial Class frmConfiguration
         '
         'btnSave
         '
-        Me.btnSave.Location = New System.Drawing.Point(678, 386)
+        Me.btnSave.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnSave.Location = New System.Drawing.Point(903, 469)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(127, 31)
         Me.btnSave.TabIndex = 1
@@ -648,8 +919,9 @@ Partial Class frmConfiguration
         '
         'btnCancel
         '
+        Me.btnCancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnCancel.Location = New System.Drawing.Point(523, 386)
+        Me.btnCancel.Location = New System.Drawing.Point(760, 469)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(127, 31)
         Me.btnCancel.TabIndex = 2
@@ -662,11 +934,13 @@ Partial Class frmConfiguration
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnCancel
-        Me.ClientSize = New System.Drawing.Size(1064, 425)
+        Me.ClientSize = New System.Drawing.Size(1046, 512)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.TabControl1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "frmConfiguration"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Einstellungen"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
@@ -688,13 +962,6 @@ Partial Class frmConfiguration
     Friend WithEvents txtPLAktion1 As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents Label12 As Label
-    Friend WithEvents txtBackground20 As TextBox
-    Friend WithEvents Label13 As Label
-    Friend WithEvents txtBackground19 As TextBox
-    Friend WithEvents Label14 As Label
-    Friend WithEvents txtBackground18 As TextBox
     Friend WithEvents Label15 As Label
     Friend WithEvents txtBackground17 As TextBox
     Friend WithEvents Label16 As Label
@@ -743,5 +1010,39 @@ Partial Class frmConfiguration
     Friend WithEvents btnBackgroundColorActive1 As Button
     Friend WithEvents ColorDialog1 As ColorDialog
     Friend WithEvents btnBackgroundColorActive2 As Button
-    Friend WithEvents btnHintergrund1 As Button
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents txtThumbnail10 As TextBox
+    Friend WithEvents Label13 As Label
+    Friend WithEvents txtThumbnail9 As TextBox
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label25 As Label
+    Friend WithEvents txtThumbnail8 As TextBox
+    Friend WithEvents txtThumbnail17 As TextBox
+    Friend WithEvents Label26 As Label
+    Friend WithEvents Label27 As Label
+    Friend WithEvents txtThumbnail7 As TextBox
+    Friend WithEvents txtThumbnail16 As TextBox
+    Friend WithEvents Label28 As Label
+    Friend WithEvents Label29 As Label
+    Friend WithEvents txtThumbnail6 As TextBox
+    Friend WithEvents txtThumbnail15 As TextBox
+    Friend WithEvents Label30 As Label
+    Friend WithEvents Label31 As Label
+    Friend WithEvents txtThumbnail5 As TextBox
+    Friend WithEvents txtThumbnail14 As TextBox
+    Friend WithEvents Label32 As Label
+    Friend WithEvents Label33 As Label
+    Friend WithEvents txtThumbnail4 As TextBox
+    Friend WithEvents txtThumbnail13 As TextBox
+    Friend WithEvents Label34 As Label
+    Friend WithEvents Label35 As Label
+    Friend WithEvents txtThumbnail3 As TextBox
+    Friend WithEvents txtThumbnail12 As TextBox
+    Friend WithEvents Label36 As Label
+    Friend WithEvents Label37 As Label
+    Friend WithEvents txtThumbnail2 As TextBox
+    Friend WithEvents txtThumbnail11 As TextBox
+    Friend WithEvents Label38 As Label
+    Friend WithEvents txtThumbnail1 As TextBox
 End Class

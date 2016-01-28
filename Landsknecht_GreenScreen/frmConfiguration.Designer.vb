@@ -113,6 +113,7 @@ Partial Class frmConfiguration
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
+        Me.chkLoadLastBackgroundOnStart = New System.Windows.Forms.CheckBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -133,6 +134,7 @@ Partial Class frmConfiguration
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.SystemColors.Control
+        Me.TabPage1.Controls.Add(Me.chkLoadLastBackgroundOnStart)
         Me.TabPage1.Controls.Add(Me.btnBackgroundColorActive2)
         Me.TabPage1.Controls.Add(Me.btnBackgroundColorActive1)
         Me.TabPage1.Controls.Add(Me.txtBackgrundImageFileFormat)
@@ -928,6 +930,16 @@ Partial Class frmConfiguration
         Me.btnCancel.Text = "Änderungen &verwerfen"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
+        'chkLoadLastBackgroundOnStart
+        '
+        Me.chkLoadLastBackgroundOnStart.AutoSize = True
+        Me.chkLoadLastBackgroundOnStart.Location = New System.Drawing.Point(9, 301)
+        Me.chkLoadLastBackgroundOnStart.Name = "chkLoadLastBackgroundOnStart"
+        Me.chkLoadLastBackgroundOnStart.Size = New System.Drawing.Size(226, 17)
+        Me.chkLoadLastBackgroundOnStart.TabIndex = 37
+        Me.chkLoadLastBackgroundOnStart.Text = "Den letzten Hintergrund beim Start merken"
+        Me.chkLoadLastBackgroundOnStart.UseVisualStyleBackColor = True
+        '
         'frmConfiguration
         '
         Me.AcceptButton = Me.btnSave
@@ -1045,4 +1057,5 @@ Partial Class frmConfiguration
     Friend WithEvents txtThumbnail11 As TextBox
     Friend WithEvents Label38 As Label
     Friend WithEvents txtThumbnail1 As TextBox
+    Friend WithEvents chkLoadLastBackgroundOnStart As CheckBox
 End Class

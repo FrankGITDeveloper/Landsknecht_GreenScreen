@@ -8,14 +8,14 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("Landsknecht_GreenScreen")> 
-<Assembly: AssemblyDescription("Software zum automatischen freistellen")> 
-<Assembly: AssemblyCompany("VoCoTec")> 
-<Assembly: AssemblyProduct("Landsknecht_GreenScreen")> 
+<Assembly: AssemblyTitle("Landsknecht_GreenScreen")>
+<Assembly: AssemblyDescription("Software zum automatischen freistellen von GreenScreen Shootings und sofortiger Verarbeitung durch Bildbearbeitungssoftware")>
+<Assembly: AssemblyCompany("VoCoTec - IT Solutions")>
+<Assembly: AssemblyProduct("Landsknecht - Location Beamer")>
 <Assembly: AssemblyCopyright("Copyright ©  2016")> 
 <Assembly: AssemblyTrademark("")>
 
-<Assembly: ComVisible(True)>
+<Assembly: ComVisible(False)>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
 <Assembly: Guid("83c1e964-9523-4a49-a5e1-9f90fa602e23")> 

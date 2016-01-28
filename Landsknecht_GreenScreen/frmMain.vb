@@ -20,12 +20,12 @@
             chkPhotolineArtguments.Checked = My.Settings.setPhotolineArguments
             chkPhotolineArtguments2.Checked = My.Settings.setPhotolineArguments2
 
+
             Me.Location = New Point(My.Settings.setPositionX, My.Settings.setPositionY)
 
-            'Leer starten
-            My.Settings.setTempBackgroundImagePreview = ""
-            My.Settings.setTempBackgroundImage = ""
-            'picPreview.Image = Image.FromFile(My.Settings.setTempBackgroundImagePreview)
+            If My.Settings.setLoadLastBackgroundOnStart = True Then
+                picPreview.Image = Image.FromFile(My.Settings.setTempBackgroundImagePreview)
+            End If
 
 
             bolChanges = False  'Zurücksetzen
@@ -65,6 +65,11 @@
                             My.Settings.setPhotolineArguments2 = chkPhotolineArtguments2.Checked
                             My.Settings.setPositionX = Me.Location.X
                             My.Settings.setPositionY = Me.Location.Y
+
+
+
+
+
                             My.Settings.Save()
 
                         End If
@@ -102,7 +107,15 @@
             '    MsgBox("Bild nicht da")
             'End If
 
-            '            frmBackroundSelector.ShowDialog() Then
+
+            Try
+                If picPreview.Image.Size.Width > 0 Then
+                    'nichts tun
+                End If
+            Catch ex As Exception
+                frmBackroundSelector.ShowDialog()
+            End Try
+
 
             If txtApplication1Filter.TextLength > 0 And txtScanPath1.TextLength > 0 Then
                 FileSystemWatcher1.Filter = txtApplication1Filter.Text
@@ -123,7 +136,7 @@
         End Try
 
 
-        'Start Event 1
+        'Start Event 2
         Try
             If txtApplication2Filter.TextLength > 0 And txtScanPath2.TextLength > 0 Then
                 FileSystemWatcher2.Filter = txtApplication2Filter.Text
@@ -166,9 +179,12 @@
 
     Private Sub btnScanPath1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnScanPath1.Click
         Try
-            FolderBrowserDialog1.ShowDialog()
+            Dim Verzeichnis As New FolderBrowserDialog
+            ' Verzeichnis.RootFolder. = specialfolder. txtScanPath1.Text.ToString
 
-            txtScanPath1.Text = FolderBrowserDialog1.SelectedPath
+            Verzeichnis.ShowDialog()
+
+            txtScanPath1.Text = Verzeichnis.SelectedPath
         Catch
             MessageBox.Show(Err.Number & " - " & Err.Description, "Es ist ein Fehler aufgetreten! btnScanPath1_Click")
         End Try
@@ -313,6 +329,9 @@
 
         My.Computer.Audio.PlaySystemSound(System.Media.SystemSounds.Beep)
 
+        'Vorschau
+        'Datei wahrscheinlich zu groß. Es kommt ne Fehlöermeldung
+        ' Me.picLastScan.Image = Image.FromFile(e.FullPath.ToString)
         Dim SourceFile As String = ""
         Dim DestinationFile As String = ""
         Dim strCommandstring As String = ""

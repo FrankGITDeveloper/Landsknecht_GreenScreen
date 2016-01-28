@@ -13,9 +13,9 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyCompany("VoCoTec")> 
 <Assembly: AssemblyProduct("Landsknecht_GreenScreen")> 
 <Assembly: AssemblyCopyright("Copyright ©  2016")> 
-<Assembly: AssemblyTrademark("")> 
+<Assembly: AssemblyTrademark("")>
 
-<Assembly: ComVisible(False)>
+<Assembly: ComVisible(True)>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
 <Assembly: Guid("83c1e964-9523-4a49-a5e1-9f90fa602e23")> 

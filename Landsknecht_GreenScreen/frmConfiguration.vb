@@ -82,7 +82,7 @@
             Dim MyDialog As New ColorDialog()
 
             ' Update the text box color if the user clicks OK 
-            If (MyDialog.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+            If (MyDialog.ShowDialog() = DialogResult.OK) Then
                 btnBackgroundColorActive1.BackColor = MyDialog.Color
             End If
         Catch ex As Exception
@@ -98,7 +98,7 @@
             Dim MyDialog As New ColorDialog()
 
             ' Update the text box color if the user clicks OK 
-            If (MyDialog.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+            If (MyDialog.ShowDialog() = DialogResult.OK) Then
                 btnBackgroundColorActive2.BackColor = MyDialog.Color
             End If
         Catch ex As Exception

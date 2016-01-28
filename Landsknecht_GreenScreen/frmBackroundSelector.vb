@@ -195,6 +195,81 @@
         Try
             Select Case intImageSelected
                 Case 1
+                    My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground1 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
+                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground1 & My.Settings.setThumbnailImageSuffix  ' Define source file name.
+
+                Case 2
+                    My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground2 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
+                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground2 & My.Settings.setThumbnailImageSuffix  ' Define source file name.
+
+                Case 3
+                    My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground3 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
+                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground3 & My.Settings.setThumbnailImageSuffix  ' Define source file name.
+
+                Case 4
+                    My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground4 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
+                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground4 & My.Settings.setThumbnailImageSuffix  ' Define source file name.
+
+                Case 5
+                    My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground5 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
+                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground5 & My.Settings.setThumbnailImageSuffix  ' Define source file name.
+
+                Case 6
+                    My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground6 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
+                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground6 & My.Settings.setThumbnailImageSuffix  ' Define source file name.
+
+                Case 7
+                    My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground7 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
+                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground7 & My.Settings.setThumbnailImageSuffix  ' Define source file name.
+
+                Case 8
+                    My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground8 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
+                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground8 & My.Settings.setThumbnailImageSuffix  ' Define source file name.
+
+                Case 9
+                    My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground9 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
+                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground9 & My.Settings.setThumbnailImageSuffix  ' Define source file name.
+
+
+                Case 10
+                    My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground10 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
+                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground10 & My.Settings.setThumbnailImageSuffix  ' Define source file name.
+
+                Case 11
+                    My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground11 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
+                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground11 & My.Settings.setThumbnailImageSuffix  ' Define source file name.
+
+                Case 12
+                    My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground12 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
+                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground12 & My.Settings.setThumbnailImageSuffix  ' Define source file name.
+
+                Case 13
+                    My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground13 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
+                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground13 & My.Settings.setThumbnailImageSuffix  ' Define source file name.
+
+                Case 14
+                    My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground14 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
+                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground14 & My.Settings.setThumbnailImageSuffix  ' Define source file name.
+
+                Case 15
+                    My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground15 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
+                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground15 & My.Settings.setThumbnailImageSuffix  ' Define source file name.
+
+                Case 16
+
+                    My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground16 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
+                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground16 & My.Settings.setThumbnailImageSuffix  ' Define source file name.
+                Case 17
+                    My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground17 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
+                    My.Settings.setTempBackgroundImagePreview = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground17 & My.Settings.setThumbnailImageSuffix  ' Define source file name.
+
+                Case Else
+
+            End Select
+
+
+
+
 
 
 
@@ -203,24 +278,23 @@
         End Try
 
 
-        End Select
         Me.Dispose()
 
         Dim Ergebnis As Integer = Me.DialogResult
         MsgBox("Disposed", 0, Ergebnis.ToString)
 
-        Select Case ImageSelected
-        Try
-            My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground1 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
-            Me.DialogResult = vbOK
+        'Select Case ImageSelected
+        'Try
+        '    My.Settings.setTempBackgroundImage = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground1 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
+        '    Me.DialogResult = vbOK
 
-            frmMain.btnPreview.Image = Image.FromFile(My.Settings.setTempBackgroundImage)
+        '    frmMain.btnPreview.Image = Image.FromFile(My.Settings.setTempBackgroundImage)
 
-            Me.Dispose()
-        Catch ex As Exception
-            MessageBox.Show(Err.Number & " - " & Err.Description, "Es ist ein Fehler aufgetreten!")
-            Me.DialogResult = vbQuestion
-        End Try
+        '    Me.Dispose()
+        'Catch ex As Exception
+        '    MessageBox.Show(Err.Number & " - " & Err.Description, "Es ist ein Fehler aufgetreten!")
+        '    Me.DialogResult = vbQuestion
+        'End Try
 
 
 

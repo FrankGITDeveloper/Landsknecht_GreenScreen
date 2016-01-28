@@ -238,10 +238,11 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
-  <ItemGroup>
+    <None Include="Resources\RZ_Landsnecht_RGB_man.jpg" />
+    <None Include="Resources\RZ_Landsnecht_RGB_transparent.png" />
+    <None Include="Resources\Ich_klein_sw.jpg" />
     <Content Include="RZ_Landsnecht_RGB_man.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

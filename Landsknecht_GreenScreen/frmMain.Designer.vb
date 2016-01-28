@@ -70,7 +70,10 @@ Partial Class frmMain
         Me.BeendenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HilfeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ÜberToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.btnPreview = New System.Windows.Forms.Button()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.picPreview = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.chkPhotolineArtguments2 = New System.Windows.Forms.CheckBox()
         CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FileSystemWatcher2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -81,6 +84,9 @@ Partial Class frmMain
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picPreview, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'FileSystemWatcher1
@@ -92,9 +98,9 @@ Partial Class frmMain
         '
         Me.btnEnd.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.btnEnd.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnEnd.Location = New System.Drawing.Point(417, 329)
+        Me.btnEnd.Location = New System.Drawing.Point(519, 360)
         Me.btnEnd.Name = "btnEnd"
-        Me.btnEnd.Size = New System.Drawing.Size(92, 36)
+        Me.btnEnd.Size = New System.Drawing.Size(202, 36)
         Me.btnEnd.TabIndex = 10
         Me.btnEnd.Text = "Programm beenden"
         Me.btnEnd.UseVisualStyleBackColor = True
@@ -102,7 +108,7 @@ Partial Class frmMain
         'btnStop
         '
         Me.btnStop.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnStop.Location = New System.Drawing.Point(111, 329)
+        Me.btnStop.Location = New System.Drawing.Point(111, 364)
         Me.btnStop.Name = "btnStop"
         Me.btnStop.Size = New System.Drawing.Size(93, 36)
         Me.btnStop.TabIndex = 9
@@ -112,7 +118,7 @@ Partial Class frmMain
         'btnStart
         '
         Me.btnStart.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnStart.Location = New System.Drawing.Point(12, 329)
+        Me.btnStart.Location = New System.Drawing.Point(12, 364)
         Me.btnStart.Name = "btnStart"
         Me.btnStart.Size = New System.Drawing.Size(93, 36)
         Me.btnStart.TabIndex = 8
@@ -302,6 +308,7 @@ Partial Class frmMain
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox2.Controls.Add(Me.chkPhotolineArtguments2)
         Me.GroupBox2.Controls.Add(Me.txtApplication2Arguments)
         Me.GroupBox2.Controls.Add(Me.txtApplication2)
         Me.GroupBox2.Controls.Add(Me.Label3)
@@ -425,7 +432,7 @@ Partial Class frmMain
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DateiToolStripMenuItem, Me.HilfeToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(748, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(730, 24)
         Me.MenuStrip1.TabIndex = 37
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -469,24 +476,53 @@ Partial Class frmMain
         'ÜberToolStripMenuItem
         '
         Me.ÜberToolStripMenuItem.Name = "ÜberToolStripMenuItem"
-        Me.ÜberToolStripMenuItem.Size = New System.Drawing.Size(99, 22)
+        Me.ÜberToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ÜberToolStripMenuItem.Text = "Über"
         '
-        'btnPreview
+        'PictureBox2
         '
-        Me.btnPreview.Location = New System.Drawing.Point(519, 49)
-        Me.btnPreview.Name = "btnPreview"
-        Me.btnPreview.Size = New System.Drawing.Size(218, 227)
-        Me.btnPreview.TabIndex = 39
-        Me.btnPreview.Text = "Vorschau"
-        Me.btnPreview.UseVisualStyleBackColor = True
+        Me.PictureBox2.Location = New System.Drawing.Point(516, 188)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(202, 132)
+        Me.PictureBox2.TabIndex = 42
+        Me.PictureBox2.TabStop = False
+        '
+        'picPreview
+        '
+        Me.picPreview.Location = New System.Drawing.Point(516, 49)
+        Me.picPreview.Name = "picPreview"
+        Me.picPreview.Size = New System.Drawing.Size(202, 132)
+        Me.picPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picPreview.TabIndex = 41
+        Me.picPreview.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Landsknecht_GreenScreen.My.Resources.Resources.RZ_Landsnecht_RGB_transparent
+        Me.PictureBox1.Location = New System.Drawing.Point(263, 292)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(229, 108)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 40
+        Me.PictureBox1.TabStop = False
+        '
+        'chkPhotolineArtguments2
+        '
+        Me.chkPhotolineArtguments2.Location = New System.Drawing.Point(238, 67)
+        Me.chkPhotolineArtguments2.Name = "chkPhotolineArtguments2"
+        Me.chkPhotolineArtguments2.Size = New System.Drawing.Size(216, 17)
+        Me.chkPhotolineArtguments2.TabIndex = 45
+        Me.chkPhotolineArtguments2.Text = "Photoline Übergabeargumente nutzen"
+        Me.chkPhotolineArtguments2.UseVisualStyleBackColor = True
         '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(748, 377)
-        Me.Controls.Add(Me.btnPreview)
+        Me.ClientSize = New System.Drawing.Size(730, 412)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.picPreview)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.btnEnd)
         Me.Controls.Add(Me.btnStop)
@@ -513,6 +549,9 @@ Partial Class frmMain
         Me.GroupBox1.PerformLayout()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picPreview, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -563,5 +602,8 @@ Partial Class frmMain
     Friend WithEvents BeendenToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HilfeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ÜberToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents btnPreview As Button
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents picPreview As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents chkPhotolineArtguments2 As CheckBox
 End Class

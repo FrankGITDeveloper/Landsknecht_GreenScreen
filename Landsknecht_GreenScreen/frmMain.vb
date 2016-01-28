@@ -87,7 +87,14 @@
         'Start Event 1
         Try
             'zuerst ein Bild laden
-            frmBackroundSelector.ShowDialog()
+
+            'If picPreview.Image.Size.Width.ToString > "" Then 'Ist ein Bild schon vorgegeben
+            '    MsgBox("Bild da")
+            'Else
+            '    MsgBox("Bild nicht da")
+            'End If
+
+            '            frmBackroundSelector.ShowDialog() Then
 
             If txtApplication1Filter.TextLength > 0 And txtScanPath1.TextLength > 0 Then
                 FileSystemWatcher1.Filter = txtApplication1Filter.Text
@@ -406,6 +413,10 @@
     Private Sub HintergrundAuswahlToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HintergrundAuswahlToolStripMenuItem.Click
         Try
             frmBackroundSelector.ShowDialog()
+
+            picPreview.Image = Image.FromFile(My.Settings.setTempBackgroundImagePreview)
+            picPreview.SizeMode = PictureBoxSizeMode.Zoom
+
         Catch ex As Exception
 
         End Try
@@ -436,5 +447,10 @@
         End Try
     End Sub
 
-
+    Private Sub chkPhotolineArtguments2_CheckedChanged(sender As Object, e As EventArgs) Handles chkPhotolineArtguments2.CheckedChanged
+        bolChanges = True
+        '  If chkPhotolineArtguments.Checked = True Then
+        txtApplication2Arguments.Enabled = Not chkPhotolineArtguments2.Checked
+        ' End If
+    End Sub
 End Class

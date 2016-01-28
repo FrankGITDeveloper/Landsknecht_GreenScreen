@@ -24,6 +24,8 @@ Partial Class frmConfiguration
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.txtBackgrundImageFileFormat = New System.Windows.Forms.TextBox()
+        Me.Label24 = New System.Windows.Forms.Label()
         Me.txtPLAktion2 = New System.Windows.Forms.TextBox()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.txtThumbnailSuffix = New System.Windows.Forms.TextBox()
@@ -80,8 +82,8 @@ Partial Class frmConfiguration
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
-        Me.txtBackgrundImageFileFormat = New System.Windows.Forms.TextBox()
-        Me.Label24 = New System.Windows.Forms.Label()
+        Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
+        Me.btnBackgroundColorActive1 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -101,6 +103,7 @@ Partial Class frmConfiguration
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.btnBackgroundColorActive1)
         Me.TabPage1.Controls.Add(Me.txtBackgrundImageFileFormat)
         Me.TabPage1.Controls.Add(Me.Label24)
         Me.TabPage1.Controls.Add(Me.txtPLAktion2)
@@ -119,6 +122,22 @@ Partial Class frmConfiguration
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Standard Einstellungen"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'txtBackgrundImageFileFormat
+        '
+        Me.txtBackgrundImageFileFormat.Location = New System.Drawing.Point(9, 250)
+        Me.txtBackgrundImageFileFormat.Name = "txtBackgrundImageFileFormat"
+        Me.txtBackgrundImageFileFormat.Size = New System.Drawing.Size(430, 20)
+        Me.txtBackgrundImageFileFormat.TabIndex = 34
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Location = New System.Drawing.Point(6, 233)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(135, 13)
+        Me.Label24.TabIndex = 33
+        Me.Label24.Text = "Hintergrundbild Dateiformat"
         '
         'txtPLAktion2
         '
@@ -606,21 +625,14 @@ Partial Class frmConfiguration
         Me.btnCancel.Text = "Änderungen &verwerfen"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
-        'txtBackgrundImageFileFormat
+        'btnBackgroundColorActive1
         '
-        Me.txtBackgrundImageFileFormat.Location = New System.Drawing.Point(9, 250)
-        Me.txtBackgrundImageFileFormat.Name = "txtBackgrundImageFileFormat"
-        Me.txtBackgrundImageFileFormat.Size = New System.Drawing.Size(430, 20)
-        Me.txtBackgrundImageFileFormat.TabIndex = 34
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(6, 233)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(135, 13)
-        Me.Label24.TabIndex = 33
-        Me.Label24.Text = "Hintergrundbild Dateiformat"
+        Me.btnBackgroundColorActive1.Location = New System.Drawing.Point(555, 30)
+        Me.btnBackgroundColorActive1.Name = "btnBackgroundColorActive1"
+        Me.btnBackgroundColorActive1.Size = New System.Drawing.Size(153, 27)
+        Me.btnBackgroundColorActive1.TabIndex = 35
+        Me.btnBackgroundColorActive1.Text = "Event 1 Farbe"
+        Me.btnBackgroundColorActive1.UseVisualStyleBackColor = True
         '
         'frmConfiguration
         '
@@ -706,4 +718,6 @@ Partial Class frmConfiguration
     Friend WithEvents Label23 As Label
     Friend WithEvents txtBackgrundImageFileFormat As TextBox
     Friend WithEvents Label24 As Label
+    Friend WithEvents btnBackgroundColorActive1 As Button
+    Friend WithEvents ColorDialog1 As ColorDialog
 End Class

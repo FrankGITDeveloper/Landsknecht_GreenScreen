@@ -47,7 +47,7 @@
     <Setting Name="setBackgroundColorActive2" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)">128, 255, 128</Value>
     </Setting>
-    <Setting Name="setPhotolineArguments" Type="System.String" Scope="User">
+    <Setting Name="setPhotolineArguments" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="setBackgroundImagePath" Type="System.String" Scope="User">
@@ -130,6 +130,9 @@
     </Setting>
     <Setting Name="setTempBackgroundImagePreview" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="setPhotolineArguments2" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

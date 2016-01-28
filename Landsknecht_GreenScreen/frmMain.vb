@@ -18,6 +18,8 @@
             txtApplication2Filter.Text = My.Settings.setApplication2Filter
             txtApplication2Arguments.Text = My.Settings.setApplication2Argument
             chkPhotolineArtguments.Checked = My.Settings.setPhotolineArguments
+            chkPhotolineArtguments2.Checked = My.Settings.setPhotolineArguments2
+
             Me.Location = New Point(My.Settings.setPositionX, My.Settings.setPositionY)
 
             'Leer starten
@@ -60,6 +62,7 @@
                             My.Settings.setApplication2Filter = txtApplication2Filter.Text
                             My.Settings.setApplication2Argument = txtApplication2Arguments.Text
                             My.Settings.setPhotolineArguments = chkPhotolineArtguments.Checked
+                            My.Settings.setPhotolineArguments2 = chkPhotolineArtguments2.Checked
                             My.Settings.setPositionX = Me.Location.X
                             My.Settings.setPositionY = Me.Location.Y
                             My.Settings.Save()
@@ -352,60 +355,63 @@
     End Sub
 
     Private Sub FileSystemWatcher2_Created(sender As Object, e As IO.FileSystemEventArgs) Handles FileSystemWatcher2.Created
+        Dim strCommandstring As String = ""
+        Dim PhotolineAktionsname As String = My.Settings.setPLAktion2
+
         Try
 
             My.Computer.Audio.PlaySystemSound(System.Media.SystemSounds.Beep)
             frmBackroundSelector.Visible = False
             ' ShowDialog(frmBackroundSelector)
-            Dim x As Integer = frmBackroundSelector.ShowDialog()
+            '   Dim x As Integer = frmBackroundSelector.ShowDialog()
 
             Dim SourceFile As String = My.Settings.setTempBackgroundImage
             Dim DestinationFile As String = My.Settings.setBackgroundImagePath & "\Background_temp.jpg"
 
-            MsgBox(SourceFile, 0, "Sourcefile")
-            MsgBox(DestinationFile, 0, "DestinationFile")
-            'Background1q.jpg
-            'Msgbox in echtem Programm muss der Pfad in eine Configdatei
+            'MsgBox(SourceFile, 0, "Sourcefile")
+            'MsgBox(DestinationFile, 0, "DestinationFile")
+            ''Background1q.jpg
+            ''Msgbox in echtem Programm muss der Pfad in eine Configdatei
 
 
-            Select Case x
-                Case 1
-                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground1 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
-                Case 2
-                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground2 & My.Settings.setBackgroundImageFileFormat' Define source file name.
-                Case 3
-                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground3 & My.Settings.setBackgroundImageFileFormat' Define source file name.
-                Case 4
-                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground4 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
-                Case 5
-                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground5 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
-                Case 6
-                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground6 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
-                Case 7
-                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground7 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
-                Case 8
-                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground8 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
-                Case 9
-                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground9 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
-                Case 10
-                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground10 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
-                Case 11
-                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground11 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
-                Case 12
-                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground12 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
-                Case 13
-                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground13 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
-                Case 14
-                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground14 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
-                Case 15
-                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground15 & My.Settings.setBackgroundImageFileFormat' Define source file name.
-                Case 16
-                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground16 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
-                Case 17
-                    SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground17 & My.Settings.setBackgroundImageFileFormat  ' Define source file name.
-                Case Else
+            'Select Case x
+            '    Case 1
+            '        SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground1 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
+            '    Case 2
+            '        SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground2 & My.Settings.setBackgroundImageFileFormat' Define source file name.
+            '    Case 3
+            '        SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground3 & My.Settings.setBackgroundImageFileFormat' Define source file name.
+            '    Case 4
+            '        SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground4 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
+            '    Case 5
+            '        SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground5 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
+            '    Case 6
+            '        SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground6 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
+            '    Case 7
+            '        SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground7 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
+            '    Case 8
+            '        SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground8 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
+            '    Case 9
+            '        SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground9 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
+            '    Case 10
+            '        SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground10 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
+            '    Case 11
+            '        SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground11 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
+            '    Case 12
+            '        SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground12 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
+            '    Case 13
+            '        SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground13 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
+            '    Case 14
+            '        SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground14 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
+            '    Case 15
+            '        SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground15 & My.Settings.setBackgroundImageFileFormat' Define source file name.
+            '    Case 16
+            '        SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground16 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
+            '    Case 17
+            '        SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground17 & My.Settings.setBackgroundImageFileFormat  ' Define source file name.
+            '    Case Else
 
-            End Select
+            'End Select
 
             '     MsgBox(SourceFile)
 
@@ -413,16 +419,30 @@
             '    DestinationFile = My.Settings.setBackgroundImagePath & "\Background_temp.jpg"   ' Define target file name.
             'DestinationFile = txtScanPath2.Text & "\Background_temp.jpg"   ' Define target file name.
 
-            FileCopy(SourceFile, DestinationFile)   ' Copy source to target.
+            '   FileCopy(SourceFile, DestinationFile)   ' Copy source to target.
 
 
             '    MsgBox("File: " & e.FullPath & " " & e.ChangeType)
             '       MsgBox(txtApplication2.Text, 0, e.FullPath.ToString)
 
-            Process.Start(txtApplication2.Text, e.FullPath.ToString)
+
+
+            'Prüfe auf Photoline Argumente Checkbox
+            If chkPhotolineArtguments2.Checked = True Then
+                strCommandstring = "-Convert " & e.FullPath.ToString & " " & e.FullPath.ToString & ".PLD " & PhotolineAktionsname
+            Else
+                strCommandstring = e.FullPath.ToString & txtApplication2Arguments.Text
+
+            End If
+            MsgBox(txtApplication2.Text, 0, strCommandstring)
+
+
+            Process.Start(txtApplication2.Text, strCommandstring)
+
+            '      Process.Start(txtApplication2.Text, e.FullPath.ToString)
 
         Catch
-            MessageBox.Show(Err.Number & " - " & Err.Description, "Es ist ein Fehler aufgetreten!")
+            MessageBox.Show(Err.Number & " - " & Err.Description, "Es ist ein Fehler aufgetreten! ileSystemWatcher2_Created")
         End Try
     End Sub
 

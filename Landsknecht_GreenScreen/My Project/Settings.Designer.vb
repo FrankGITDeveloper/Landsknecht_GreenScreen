@@ -235,9 +235,9 @@ Namespace My
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
-        Public Property setPhotolineArguments() As String
+        Public Property setPhotolineArguments() As Boolean
             Get
-                Return CType(Me("setPhotolineArguments"),String)
+                Return CType(Me("setPhotolineArguments"),Boolean)
             End Get
             Set
                 Me("setPhotolineArguments") = value
@@ -565,6 +565,18 @@ Namespace My
             End Get
             Set
                 Me("setTempBackgroundImagePreview") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property setPhotolineArguments2() As Boolean
+            Get
+                Return CType(Me("setPhotolineArguments2"),Boolean)
+            End Get
+            Set
+                Me("setPhotolineArguments2") = value
             End Set
         End Property
     End Class

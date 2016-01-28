@@ -280,8 +280,8 @@
 
         Me.Dispose()
 
-        Dim Ergebnis As Integer = Me.DialogResult
-        MsgBox("Disposed", 0, Ergebnis.ToString)
+        'Dim Ergebnis As Integer = Me.DialogResult
+        'MsgBox("Disposed", 0, Ergebnis.ToString)
 
         'Select Case ImageSelected
         'Try

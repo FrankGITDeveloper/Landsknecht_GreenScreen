@@ -27,6 +27,9 @@
         txtBackground19.Text = My.Settings.setBackground19
         txtBackground20.Text = My.Settings.setBackground20
 
+        btnBackgroundColorActive1.BackColor = My.Settings.setBackgroundColorActive1
+        btnBackgroundColorActive2.BackColor = My.Settings.setBackgroundColorActive2
+
 
     End Sub
 
@@ -68,31 +71,38 @@
         My.Settings.setBackground18 = txtBackground18.Text
         My.Settings.setBackground19 = txtBackground19.Text
         My.Settings.setBackground20 = txtBackground20.Text
-
+        My.Settings.setBackgroundColorActive1 = btnBackgroundColorActive1.BackColor
+        My.Settings.setBackgroundColorActive2 = btnBackgroundColorActive2.BackColor
         My.Settings.Save()
         Me.Dispose()
     End Sub
 
     Private Sub btnBackgroundColorActive1_Click(sender As Object, e As EventArgs) Handles btnBackgroundColorActive1.Click
-        Dim x As Color
+        Try
+            Dim MyDialog As New ColorDialog()
+
+            ' Update the text box color if the user clicks OK 
+            If (MyDialog.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+                btnBackgroundColorActive1.BackColor = MyDialog.Color
+            End If
+        Catch ex As Exception
+
+        End Try
 
 
 
-        Dim MyDialog As New ColorDialog()
-        '' Keeps the user from selecting a custom color.
-        'MyDialog.AllowFullOpen = False
-        '' Allows the user to get help. (The default is false.)
-        'MyDialog.ShowHelp = True
-        '' Sets the initial color select to the current text color,
-        'Me.BackColor = MyDialog.Color
-        ''
-        ''MyDialog.Color = TextBox1.ForeColor
+    End Sub
 
-        ' Update the text box color if the user clicks OK 
-        If (MyDialog.ShowDialog() = Windows.Forms.DialogResult.OK) Then
-            btnBackgroundColorActive1.BackColor = MyDialog.Color
-        End If
+    Private Sub btnBackgroundColorActive2_Click(sender As Object, e As EventArgs) Handles btnBackgroundColorActive2.Click
+        Try
+            Dim MyDialog As New ColorDialog()
 
+            ' Update the text box color if the user clicks OK 
+            If (MyDialog.ShowDialog() = Windows.Forms.DialogResult.OK) Then
+                btnBackgroundColorActive2.BackColor = MyDialog.Color
+            End If
+        Catch ex As Exception
 
+        End Try
     End Sub
 End Class

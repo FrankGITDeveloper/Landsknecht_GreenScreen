@@ -84,6 +84,7 @@ Partial Class frmConfiguration
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
         Me.btnBackgroundColorActive1 = New System.Windows.Forms.Button()
+        Me.btnBackgroundColorActive2 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -103,6 +104,7 @@ Partial Class frmConfiguration
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.btnBackgroundColorActive2)
         Me.TabPage1.Controls.Add(Me.btnBackgroundColorActive1)
         Me.TabPage1.Controls.Add(Me.txtBackgrundImageFileFormat)
         Me.TabPage1.Controls.Add(Me.Label24)
@@ -634,6 +636,15 @@ Partial Class frmConfiguration
         Me.btnBackgroundColorActive1.Text = "Event 1 Farbe"
         Me.btnBackgroundColorActive1.UseVisualStyleBackColor = True
         '
+        'btnBackgroundColorActive2
+        '
+        Me.btnBackgroundColorActive2.Location = New System.Drawing.Point(555, 63)
+        Me.btnBackgroundColorActive2.Name = "btnBackgroundColorActive2"
+        Me.btnBackgroundColorActive2.Size = New System.Drawing.Size(153, 27)
+        Me.btnBackgroundColorActive2.TabIndex = 36
+        Me.btnBackgroundColorActive2.Text = "Event 2 Farbe"
+        Me.btnBackgroundColorActive2.UseVisualStyleBackColor = True
+        '
         'frmConfiguration
         '
         Me.AcceptButton = Me.btnSave
@@ -720,4 +731,5 @@ Partial Class frmConfiguration
     Friend WithEvents Label24 As Label
     Friend WithEvents btnBackgroundColorActive1 As Button
     Friend WithEvents ColorDialog1 As ColorDialog
+    Friend WithEvents btnBackgroundColorActive2 As Button
 End Class

@@ -22,7 +22,6 @@ Partial Class frmBackroundSelector
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmBackroundSelector))
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -44,7 +43,6 @@ Partial Class frmBackroundSelector
         '
         'Button1
         '
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.Location = New System.Drawing.Point(12, 12)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(206, 147)
@@ -53,7 +51,6 @@ Partial Class frmBackroundSelector
         '
         'Button2
         '
-        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.Location = New System.Drawing.Point(228, 12)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(206, 147)
@@ -62,7 +59,7 @@ Partial Class frmBackroundSelector
         '
         'Button3
         '
-        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
+        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Button3.Location = New System.Drawing.Point(444, 12)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(206, 147)
@@ -71,7 +68,6 @@ Partial Class frmBackroundSelector
         '
         'Button4
         '
-        Me.Button4.Image = CType(resources.GetObject("Button4.Image"), System.Drawing.Image)
         Me.Button4.Location = New System.Drawing.Point(660, 12)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(206, 147)
@@ -80,7 +76,6 @@ Partial Class frmBackroundSelector
         '
         'Button5
         '
-        Me.Button5.Image = CType(resources.GetObject("Button5.Image"), System.Drawing.Image)
         Me.Button5.Location = New System.Drawing.Point(876, 12)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(206, 147)
@@ -89,7 +84,7 @@ Partial Class frmBackroundSelector
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(876, 165)
+        Me.Button6.Location = New System.Drawing.Point(12, 165)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(206, 147)
         Me.Button6.TabIndex = 9
@@ -97,7 +92,7 @@ Partial Class frmBackroundSelector
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(660, 165)
+        Me.Button7.Location = New System.Drawing.Point(228, 165)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(206, 147)
         Me.Button7.TabIndex = 8
@@ -113,7 +108,7 @@ Partial Class frmBackroundSelector
         '
         'Button9
         '
-        Me.Button9.Location = New System.Drawing.Point(228, 165)
+        Me.Button9.Location = New System.Drawing.Point(660, 165)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(206, 147)
         Me.Button9.TabIndex = 6
@@ -121,8 +116,7 @@ Partial Class frmBackroundSelector
         '
         'Button10
         '
-        Me.Button10.Image = CType(resources.GetObject("Button10.Image"), System.Drawing.Image)
-        Me.Button10.Location = New System.Drawing.Point(12, 165)
+        Me.Button10.Location = New System.Drawing.Point(877, 165)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(206, 147)
         Me.Button10.TabIndex = 5
@@ -130,7 +124,6 @@ Partial Class frmBackroundSelector
         '
         'Button11
         '
-        Me.Button11.Image = CType(resources.GetObject("Button11.Image"), System.Drawing.Image)
         Me.Button11.Location = New System.Drawing.Point(12, 318)
         Me.Button11.Name = "Button11"
         Me.Button11.Size = New System.Drawing.Size(147, 206)
@@ -139,7 +132,6 @@ Partial Class frmBackroundSelector
         '
         'Button12
         '
-        Me.Button12.Image = CType(resources.GetObject("Button12.Image"), System.Drawing.Image)
         Me.Button12.Location = New System.Drawing.Point(166, 318)
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(147, 206)
@@ -190,7 +182,7 @@ Partial Class frmBackroundSelector
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1097, 532)
+        Me.ClientSize = New System.Drawing.Size(1097, 549)
         Me.Controls.Add(Me.Button17)
         Me.Controls.Add(Me.Button16)
         Me.Controls.Add(Me.Button15)

@@ -531,6 +531,42 @@ Namespace My
                 Me("setBackground20") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute(".JPG")>  _
+        Public Property setBackgroundImageFileFormat() As String
+            Get
+                Return CType(Me("setBackgroundImageFileFormat"),String)
+            End Get
+            Set
+                Me("setBackgroundImageFileFormat") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property setTempBackgroundImage() As String
+            Get
+                Return CType(Me("setTempBackgroundImage"),String)
+            End Get
+            Set
+                Me("setTempBackgroundImage") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property setTempBackgroundImagePreview() As String
+            Get
+                Return CType(Me("setTempBackgroundImagePreview"),String)
+            End Get
+            Set
+                Me("setTempBackgroundImagePreview") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

@@ -122,5 +122,14 @@
     <Setting Name="setBackground20" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="setBackgroundImageFileFormat" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.JPG</Value>
+    </Setting>
+    <Setting Name="setTempBackgroundImage" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="setTempBackgroundImagePreview" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

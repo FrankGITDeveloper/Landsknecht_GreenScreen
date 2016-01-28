@@ -62,7 +62,6 @@ Partial Class frmMain
         Me.btnScanPath2 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtApplication2Filter = New System.Windows.Forms.TextBox()
-        Me.btnBackgrounds = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.DateiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.KonfigurationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -71,6 +70,7 @@ Partial Class frmMain
         Me.BeendenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HilfeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ÜberToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btnPreview = New System.Windows.Forms.Button()
         CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FileSystemWatcher2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -90,9 +90,9 @@ Partial Class frmMain
         '
         'btnEnd
         '
-        Me.btnEnd.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnEnd.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.btnEnd.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnEnd.Location = New System.Drawing.Point(406, 329)
+        Me.btnEnd.Location = New System.Drawing.Point(417, 329)
         Me.btnEnd.Name = "btnEnd"
         Me.btnEnd.Size = New System.Drawing.Size(92, 36)
         Me.btnEnd.TabIndex = 10
@@ -420,21 +420,12 @@ Partial Class frmMain
         Me.txtApplication2Filter.Size = New System.Drawing.Size(43, 20)
         Me.txtApplication2Filter.TabIndex = 14
         '
-        'btnBackgrounds
-        '
-        Me.btnBackgrounds.Location = New System.Drawing.Point(275, 329)
-        Me.btnBackgrounds.Name = "btnBackgrounds"
-        Me.btnBackgrounds.Size = New System.Drawing.Size(94, 36)
-        Me.btnBackgrounds.TabIndex = 36
-        Me.btnBackgrounds.Text = "Hintergründe"
-        Me.btnBackgrounds.UseVisualStyleBackColor = True
-        '
         'MenuStrip1
         '
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DateiToolStripMenuItem, Me.HilfeToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(522, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(748, 24)
         Me.MenuStrip1.TabIndex = 37
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -481,12 +472,21 @@ Partial Class frmMain
         Me.ÜberToolStripMenuItem.Size = New System.Drawing.Size(99, 22)
         Me.ÜberToolStripMenuItem.Text = "Über"
         '
+        'btnPreview
+        '
+        Me.btnPreview.Location = New System.Drawing.Point(519, 49)
+        Me.btnPreview.Name = "btnPreview"
+        Me.btnPreview.Size = New System.Drawing.Size(218, 227)
+        Me.btnPreview.TabIndex = 39
+        Me.btnPreview.Text = "Vorschau"
+        Me.btnPreview.UseVisualStyleBackColor = True
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(522, 377)
-        Me.Controls.Add(Me.btnBackgrounds)
+        Me.ClientSize = New System.Drawing.Size(748, 377)
+        Me.Controls.Add(Me.btnPreview)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.btnEnd)
         Me.Controls.Add(Me.btnStop)
@@ -554,7 +554,6 @@ Partial Class frmMain
     Friend WithEvents btnScanPath2 As Button
     Private WithEvents Label2 As Label
     Private WithEvents txtApplication2Filter As TextBox
-    Friend WithEvents btnBackgrounds As Button
     Friend WithEvents chkPhotolineArtguments As CheckBox
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents DateiToolStripMenuItem As ToolStripMenuItem
@@ -564,4 +563,5 @@ Partial Class frmMain
     Friend WithEvents BeendenToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HilfeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ÜberToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents btnPreview As Button
 End Class

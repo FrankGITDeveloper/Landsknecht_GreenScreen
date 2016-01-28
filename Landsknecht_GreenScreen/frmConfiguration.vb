@@ -5,7 +5,7 @@
         txtPLAktion1.Text = My.Settings.setPLAktion1
         txtPLAktion2.Text = My.Settings.setPLAktion2
         txtThumbnailSuffix.Text = My.Settings.setThumbnailImageSuffix
-
+        txtBackgrundImageFileFormat.Text = My.Settings.setBackgroundImageFileFormat
         txtBackground1.Text = My.Settings.setBackground1
         txtBackground2.Text = My.Settings.setBackground2
         txtBackground3.Text = My.Settings.setBackground3
@@ -46,6 +46,7 @@
         My.Settings.setPLAktion1 = txtPLAktion1.Text
         My.Settings.setPLAktion2 = txtPLAktion2.Text
         My.Settings.setThumbnailImageSuffix = txtThumbnailSuffix.Text
+        My.Settings.setBackgroundImageFileFormat = txtBackgrundImageFileFormat.Text
 
         My.Settings.setBackground1 = txtBackground1.Text
         My.Settings.setBackground2 = txtBackground2.Text

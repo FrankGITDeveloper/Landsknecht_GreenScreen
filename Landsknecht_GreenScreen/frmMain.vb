@@ -20,12 +20,18 @@
             chkPhotolineArtguments.Checked = My.Settings.setPhotolineArguments
             Me.Location = New Point(My.Settings.setPositionX, My.Settings.setPositionY)
 
+            'Leer starten
+            My.Settings.setTempBackgroundImagePreview = ""
+            My.Settings.setTempBackgroundImage = ""
+            'picPreview.Image = Image.FromFile(My.Settings.setTempBackgroundImagePreview)
+
+
             bolChanges = False
 
 
         Catch
 
-            MessageBox.Show(Err.Number & " - " & Err.Description, "Es Ist Ein Fehler Aufgetreten!")
+            MessageBox.Show(Err.Number & " - " & Err.Description, "Es Ist Ein Fehler Aufgetreten! frmMain_Load")
         End Try
 
     End Sub
@@ -84,7 +90,6 @@
     End Sub
 
     Private Sub btnStart_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnStart.Click
-        'Start Event 1
         Try
             'zuerst ein Bild laden
 
@@ -108,8 +113,6 @@
 
             End If
             Timer1.Enabled = False   'Blinken ausschalten (Nur 1 Folder wird gescannt)
-
-
             btnStop.Enabled = True
 
         Catch ex As Exception
@@ -138,7 +141,7 @@
             btnStop.Enabled = True
 
         Catch ex As Exception
-            MessageBox.Show(Err.Number & " - " & Err.Description, "Es Ist Ein Fehler Aufgetreten!")
+            MessageBox.Show(Err.Number & " - " & Err.Description, "Es Ist Ein Fehler Aufgetreten!  btnStart_Click")
         End Try
 
     End Sub
@@ -164,7 +167,7 @@
 
             txtScanPath1.Text = FolderBrowserDialog1.SelectedPath
         Catch
-            MessageBox.Show(Err.Number & " - " & Err.Description, "Es ist ein Fehler aufgetreten!")
+            MessageBox.Show(Err.Number & " - " & Err.Description, "Es ist ein Fehler aufgetreten! btnScanPath1_Click")
         End Try
     End Sub
 
@@ -199,8 +202,8 @@
                 '    ' Insert code to read the stream here.
                 'End If
             Catch Ex As Exception
-                MessageBox.Show(Err.Number & " - " & Err.Description, "Es Ist Ein Fehler Aufgetreten!")
-                MessageBox.Show("Cannot read file from disk. Original error: " & Ex.Message)
+                MessageBox.Show(Err.Number & " - " & Err.Description, "Es Ist Ein Fehler Aufgetreten! btnApplication2_Click")
+                ' MessageBox.Show("Cannot read file from disk. Original error: " & Ex.Message)
             Finally
                 '' Check this again, since we need to make sure we didn't throw an exception on open.
                 'If (myStream IsNot Nothing) Then
@@ -229,8 +232,8 @@
                 '    ' Insert code to read the stream here.
                 'End If
             Catch Ex As Exception
-                MessageBox.Show(Err.Number & " - " & Err.Description, "Es Ist Ein Fehler Aufgetreten!")
-                MessageBox.Show("Cannot read file from disk. Original error: " & Ex.Message)
+                MessageBox.Show(Err.Number & " - " & Err.Description, "Es Ist Ein Fehler Aufgetreten! btnApplication1_Click")
+                '     MessageBox.Show("Cannot read file from disk. Original error: " & Ex.Message)
             Finally
                 '' Check this again, since we need to make sure we didn't throw an exception on open.
                 'If (myStream IsNot Nothing) Then
@@ -307,9 +310,10 @@
 
         My.Computer.Audio.PlaySystemSound(System.Media.SystemSounds.Beep)
 
-
-        Dim strCommandstring As String
-        Dim PhotolineAktionsname As String = "GreenScreen"
+        Dim SourceFile As String = ""
+        Dim DestinationFile As String = ""
+        Dim strCommandstring As String = ""
+        Dim PhotolineAktionsname As String = My.Settings.setPLAktion1
         Try
             'Prüfe auf Photoline Argumente Checkbox
             If chkPhotolineArtguments.Checked = True Then
@@ -318,16 +322,32 @@
                 strCommandstring = e.FullPath.ToString & txtApplication1Arguments.Text
 
             End If
-            'MsgBox("File: " & e.FullPath & " " & e.ChangeType)
-            'MsgBox(txtApplication1.Text)
-            '       MsgBox(strCommandstring)
+
+
+
+            'Hintergrund
+            If My.Settings.setTempBackgroundImage = "" Then
+                MsgBox("Hintergrundbild nicht angegeben")
+
+                Dim x As DialogResult = frmBackroundSelector.ShowDialog()
+
+            End If
+
+            SourceFile = My.Settings.setTempBackgroundImage ' .setBackgroundImagePath & "\" & My.Settings.setBackground17 & My.Settings.setBackgroundImageFileFormat  ' Define source file name.
+            DestinationFile = My.Settings.setBackgroundImagePath & "\Background_temp.jpg"   ' Define target file name.
+            'DestinationFile = txtScanPath2.Text & "\Background_temp.jpg"   ' Define target file name.
+
+            FileCopy(SourceFile, DestinationFile)   ' Copy source to target.
+
+
+
 
             Process.Start(txtApplication1.Text, strCommandstring)
 
 
 
         Catch
-            MessageBox.Show(Err.Number & " - " & Err.Description, "Es ist ein Fehler aufgetreten!")
+            MessageBox.Show(Err.Number & " - " & Err.Description, "Es ist ein Fehler aufgetreten!  FileSystemWatcher1_Created")
         End Try
     End Sub
 
@@ -339,8 +359,11 @@
             ' ShowDialog(frmBackroundSelector)
             Dim x As Integer = frmBackroundSelector.ShowDialog()
 
-            Dim SourceFile As String = ""
-            Dim DestinationFile As String = ""
+            Dim SourceFile As String = My.Settings.setTempBackgroundImage
+            Dim DestinationFile As String = My.Settings.setBackgroundImagePath & "\Background_temp.jpg"
+
+            MsgBox(SourceFile, 0, "Sourcefile")
+            MsgBox(DestinationFile, 0, "DestinationFile")
             'Background1q.jpg
             'Msgbox in echtem Programm muss der Pfad in eine Configdatei
 
@@ -384,17 +407,17 @@
 
             End Select
 
-            MsgBox(SourceFile)
+            '     MsgBox(SourceFile)
 
 
-            DestinationFile = My.Settings.setBackgroundImagePath & "\Background_temp.jpg"   ' Define target file name.
+            '    DestinationFile = My.Settings.setBackgroundImagePath & "\Background_temp.jpg"   ' Define target file name.
             'DestinationFile = txtScanPath2.Text & "\Background_temp.jpg"   ' Define target file name.
 
             FileCopy(SourceFile, DestinationFile)   ' Copy source to target.
 
 
             '    MsgBox("File: " & e.FullPath & " " & e.ChangeType)
-            MsgBox(txtApplication2.Text, 0, e.FullPath.ToString)
+            '       MsgBox(txtApplication2.Text, 0, e.FullPath.ToString)
 
             Process.Start(txtApplication2.Text, e.FullPath.ToString)
 
@@ -453,4 +476,15 @@
         txtApplication2Arguments.Enabled = Not chkPhotolineArtguments2.Checked
         ' End If
     End Sub
+
+    Private Sub picPreview_Click(sender As Object, e As EventArgs) Handles picPreview.Click
+        Try
+            frmBackroundSelector.ShowDialog()
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+
 End Class

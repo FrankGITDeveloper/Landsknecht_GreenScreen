@@ -50,6 +50,7 @@ Partial Class frmMain
         Me.txtApplication1Filter = New System.Windows.Forms.TextBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.chkPhotolineArtguments2 = New System.Windows.Forms.CheckBox()
         Me.txtApplication2Arguments = New System.Windows.Forms.TextBox()
         Me.txtApplication2 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -73,7 +74,6 @@ Partial Class frmMain
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.picPreview = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.chkPhotolineArtguments2 = New System.Windows.Forms.CheckBox()
         CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FileSystemWatcher2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -320,6 +320,15 @@ Partial Class frmMain
         Me.GroupBox2.TabIndex = 42
         Me.GroupBox2.TabStop = False
         '
+        'chkPhotolineArtguments2
+        '
+        Me.chkPhotolineArtguments2.Location = New System.Drawing.Point(238, 67)
+        Me.chkPhotolineArtguments2.Name = "chkPhotolineArtguments2"
+        Me.chkPhotolineArtguments2.Size = New System.Drawing.Size(216, 17)
+        Me.chkPhotolineArtguments2.TabIndex = 45
+        Me.chkPhotolineArtguments2.Text = "Photoline Übergabeargumente nutzen"
+        Me.chkPhotolineArtguments2.UseVisualStyleBackColor = True
+        '
         'txtApplication2Arguments
         '
         Me.txtApplication2Arguments.Location = New System.Drawing.Point(6, 85)
@@ -476,7 +485,7 @@ Partial Class frmMain
         'ÜberToolStripMenuItem
         '
         Me.ÜberToolStripMenuItem.Name = "ÜberToolStripMenuItem"
-        Me.ÜberToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ÜberToolStripMenuItem.Size = New System.Drawing.Size(99, 22)
         Me.ÜberToolStripMenuItem.Text = "Über"
         '
         'PictureBox2
@@ -505,15 +514,6 @@ Partial Class frmMain
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 40
         Me.PictureBox1.TabStop = False
-        '
-        'chkPhotolineArtguments2
-        '
-        Me.chkPhotolineArtguments2.Location = New System.Drawing.Point(238, 67)
-        Me.chkPhotolineArtguments2.Name = "chkPhotolineArtguments2"
-        Me.chkPhotolineArtguments2.Size = New System.Drawing.Size(216, 17)
-        Me.chkPhotolineArtguments2.TabIndex = 45
-        Me.chkPhotolineArtguments2.Text = "Photoline Übergabeargumente nutzen"
-        Me.chkPhotolineArtguments2.UseVisualStyleBackColor = True
         '
         'frmMain
         '

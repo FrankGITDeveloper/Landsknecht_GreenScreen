@@ -277,6 +277,7 @@
 
         End Try
 
+        frmMain.picPreview.Image = Image.FromFile(My.Settings.setTempBackgroundImagePreview)
 
         Me.Dispose()
 

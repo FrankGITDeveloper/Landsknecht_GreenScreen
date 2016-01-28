@@ -204,7 +204,6 @@ Partial Class frmBackroundSelector
         Me.Name = "frmBackroundSelector"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmBackroundSelector"
-        Me.TopMost = True
         Me.ResumeLayout(False)
 
     End Sub

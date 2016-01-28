@@ -166,6 +166,12 @@
     <Compile Include="frmConfiguration.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmSelectPicture.Designer.vb">
+      <DependentUpon>frmSelectPicture.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectPicture.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -194,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmConfiguration.resx">
       <DependentUpon>frmConfiguration.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectPicture.resx">
+      <DependentUpon>frmSelectPicture.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

@@ -24,6 +24,8 @@ Partial Class frmConfiguration
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.btnBackgroundColorActive2 = New System.Windows.Forms.Button()
+        Me.btnBackgroundColorActive1 = New System.Windows.Forms.Button()
         Me.txtBackgrundImageFileFormat = New System.Windows.Forms.TextBox()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.txtPLAktion2 = New System.Windows.Forms.TextBox()
@@ -58,6 +60,7 @@ Partial Class frmConfiguration
         Me.Label21 = New System.Windows.Forms.Label()
         Me.txtBackground11 = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnHintergrund1 = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.txtBackground10 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -83,8 +86,6 @@ Partial Class frmConfiguration
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
-        Me.btnBackgroundColorActive1 = New System.Windows.Forms.Button()
-        Me.btnBackgroundColorActive2 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -99,7 +100,7 @@ Partial Class frmConfiguration
         Me.TabControl1.Location = New System.Drawing.Point(12, 11)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(793, 342)
+        Me.TabControl1.Size = New System.Drawing.Size(1040, 342)
         Me.TabControl1.TabIndex = 0
         '
         'TabPage1
@@ -124,6 +125,24 @@ Partial Class frmConfiguration
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Standard Einstellungen"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'btnBackgroundColorActive2
+        '
+        Me.btnBackgroundColorActive2.Location = New System.Drawing.Point(555, 63)
+        Me.btnBackgroundColorActive2.Name = "btnBackgroundColorActive2"
+        Me.btnBackgroundColorActive2.Size = New System.Drawing.Size(153, 27)
+        Me.btnBackgroundColorActive2.TabIndex = 36
+        Me.btnBackgroundColorActive2.Text = "Event 2 Farbe"
+        Me.btnBackgroundColorActive2.UseVisualStyleBackColor = True
+        '
+        'btnBackgroundColorActive1
+        '
+        Me.btnBackgroundColorActive1.Location = New System.Drawing.Point(555, 30)
+        Me.btnBackgroundColorActive1.Name = "btnBackgroundColorActive1"
+        Me.btnBackgroundColorActive1.Size = New System.Drawing.Size(153, 27)
+        Me.btnBackgroundColorActive1.TabIndex = 35
+        Me.btnBackgroundColorActive1.Text = "Event 1 Farbe"
+        Me.btnBackgroundColorActive1.UseVisualStyleBackColor = True
         '
         'txtBackgrundImageFileFormat
         '
@@ -221,7 +240,7 @@ Partial Class frmConfiguration
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(785, 316)
+        Me.TabPage2.Size = New System.Drawing.Size(1032, 316)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Hintergrund Bilder"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -248,7 +267,7 @@ Partial Class frmConfiguration
         Me.GroupBox2.Controls.Add(Me.txtBackground12)
         Me.GroupBox2.Controls.Add(Me.Label21)
         Me.GroupBox2.Controls.Add(Me.txtBackground11)
-        Me.GroupBox2.Location = New System.Drawing.Point(407, 6)
+        Me.GroupBox2.Location = New System.Drawing.Point(662, 6)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(360, 299)
         Me.GroupBox2.TabIndex = 88
@@ -417,6 +436,7 @@ Partial Class frmConfiguration
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.btnHintergrund1)
         Me.GroupBox1.Controls.Add(Me.Label11)
         Me.GroupBox1.Controls.Add(Me.txtBackground10)
         Me.GroupBox1.Controls.Add(Me.Label10)
@@ -439,10 +459,19 @@ Partial Class frmConfiguration
         Me.GroupBox1.Controls.Add(Me.txtBackground1)
         Me.GroupBox1.Location = New System.Drawing.Point(6, 6)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(362, 299)
+        Me.GroupBox1.Size = New System.Drawing.Size(517, 299)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Hintergrund im Querformat"
+        '
+        'btnHintergrund1
+        '
+        Me.btnHintergrund1.Location = New System.Drawing.Point(487, 28)
+        Me.btnHintergrund1.Name = "btnHintergrund1"
+        Me.btnHintergrund1.Size = New System.Drawing.Size(22, 21)
+        Me.btnHintergrund1.TabIndex = 88
+        Me.btnHintergrund1.Text = "..."
+        Me.btnHintergrund1.UseVisualStyleBackColor = True
         '
         'Label11
         '
@@ -457,7 +486,7 @@ Partial Class frmConfiguration
         '
         Me.txtBackground10.Location = New System.Drawing.Point(90, 262)
         Me.txtBackground10.Name = "txtBackground10"
-        Me.txtBackground10.Size = New System.Drawing.Size(250, 20)
+        Me.txtBackground10.Size = New System.Drawing.Size(391, 20)
         Me.txtBackground10.TabIndex = 86
         '
         'Label10
@@ -473,7 +502,7 @@ Partial Class frmConfiguration
         '
         Me.txtBackground9.Location = New System.Drawing.Point(90, 236)
         Me.txtBackground9.Name = "txtBackground9"
-        Me.txtBackground9.Size = New System.Drawing.Size(250, 20)
+        Me.txtBackground9.Size = New System.Drawing.Size(391, 20)
         Me.txtBackground9.TabIndex = 84
         '
         'Label9
@@ -489,7 +518,7 @@ Partial Class frmConfiguration
         '
         Me.txtBackground8.Location = New System.Drawing.Point(90, 210)
         Me.txtBackground8.Name = "txtBackground8"
-        Me.txtBackground8.Size = New System.Drawing.Size(250, 20)
+        Me.txtBackground8.Size = New System.Drawing.Size(391, 20)
         Me.txtBackground8.TabIndex = 82
         '
         'Label8
@@ -505,7 +534,7 @@ Partial Class frmConfiguration
         '
         Me.txtBackground7.Location = New System.Drawing.Point(90, 184)
         Me.txtBackground7.Name = "txtBackground7"
-        Me.txtBackground7.Size = New System.Drawing.Size(250, 20)
+        Me.txtBackground7.Size = New System.Drawing.Size(391, 20)
         Me.txtBackground7.TabIndex = 80
         '
         'Label7
@@ -521,7 +550,7 @@ Partial Class frmConfiguration
         '
         Me.txtBackground6.Location = New System.Drawing.Point(90, 158)
         Me.txtBackground6.Name = "txtBackground6"
-        Me.txtBackground6.Size = New System.Drawing.Size(250, 20)
+        Me.txtBackground6.Size = New System.Drawing.Size(391, 20)
         Me.txtBackground6.TabIndex = 78
         '
         'Label6
@@ -537,7 +566,7 @@ Partial Class frmConfiguration
         '
         Me.txtBackground5.Location = New System.Drawing.Point(90, 132)
         Me.txtBackground5.Name = "txtBackground5"
-        Me.txtBackground5.Size = New System.Drawing.Size(250, 20)
+        Me.txtBackground5.Size = New System.Drawing.Size(391, 20)
         Me.txtBackground5.TabIndex = 76
         '
         'Label5
@@ -553,7 +582,7 @@ Partial Class frmConfiguration
         '
         Me.txtBackground4.Location = New System.Drawing.Point(90, 106)
         Me.txtBackground4.Name = "txtBackground4"
-        Me.txtBackground4.Size = New System.Drawing.Size(250, 20)
+        Me.txtBackground4.Size = New System.Drawing.Size(391, 20)
         Me.txtBackground4.TabIndex = 74
         '
         'Label4
@@ -569,7 +598,7 @@ Partial Class frmConfiguration
         '
         Me.txtBackground3.Location = New System.Drawing.Point(90, 80)
         Me.txtBackground3.Name = "txtBackground3"
-        Me.txtBackground3.Size = New System.Drawing.Size(250, 20)
+        Me.txtBackground3.Size = New System.Drawing.Size(391, 20)
         Me.txtBackground3.TabIndex = 72
         '
         'Label3
@@ -585,7 +614,7 @@ Partial Class frmConfiguration
         '
         Me.txtBackground2.Location = New System.Drawing.Point(90, 54)
         Me.txtBackground2.Name = "txtBackground2"
-        Me.txtBackground2.Size = New System.Drawing.Size(250, 20)
+        Me.txtBackground2.Size = New System.Drawing.Size(391, 20)
         Me.txtBackground2.TabIndex = 70
         '
         'Label2
@@ -601,7 +630,7 @@ Partial Class frmConfiguration
         '
         Me.txtBackground1.Location = New System.Drawing.Point(90, 28)
         Me.txtBackground1.Name = "txtBackground1"
-        Me.txtBackground1.Size = New System.Drawing.Size(250, 20)
+        Me.txtBackground1.Size = New System.Drawing.Size(391, 20)
         Me.txtBackground1.TabIndex = 68
         '
         'OpenFileDialog1
@@ -627,31 +656,13 @@ Partial Class frmConfiguration
         Me.btnCancel.Text = "Änderungen &verwerfen"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
-        'btnBackgroundColorActive1
-        '
-        Me.btnBackgroundColorActive1.Location = New System.Drawing.Point(555, 30)
-        Me.btnBackgroundColorActive1.Name = "btnBackgroundColorActive1"
-        Me.btnBackgroundColorActive1.Size = New System.Drawing.Size(153, 27)
-        Me.btnBackgroundColorActive1.TabIndex = 35
-        Me.btnBackgroundColorActive1.Text = "Event 1 Farbe"
-        Me.btnBackgroundColorActive1.UseVisualStyleBackColor = True
-        '
-        'btnBackgroundColorActive2
-        '
-        Me.btnBackgroundColorActive2.Location = New System.Drawing.Point(555, 63)
-        Me.btnBackgroundColorActive2.Name = "btnBackgroundColorActive2"
-        Me.btnBackgroundColorActive2.Size = New System.Drawing.Size(153, 27)
-        Me.btnBackgroundColorActive2.TabIndex = 36
-        Me.btnBackgroundColorActive2.Text = "Event 2 Farbe"
-        Me.btnBackgroundColorActive2.UseVisualStyleBackColor = True
-        '
         'frmConfiguration
         '
         Me.AcceptButton = Me.btnSave
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnCancel
-        Me.ClientSize = New System.Drawing.Size(817, 425)
+        Me.ClientSize = New System.Drawing.Size(1064, 425)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.TabControl1)
@@ -732,4 +743,5 @@ Partial Class frmConfiguration
     Friend WithEvents btnBackgroundColorActive1 As Button
     Friend WithEvents ColorDialog1 As ColorDialog
     Friend WithEvents btnBackgroundColorActive2 As Button
+    Friend WithEvents btnHintergrund1 As Button
 End Class

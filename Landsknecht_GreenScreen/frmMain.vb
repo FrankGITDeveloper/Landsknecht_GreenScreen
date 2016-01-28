@@ -129,7 +129,7 @@
                 FileSystemWatcher2.Filter = txtApplication2Filter.Text
                 FileSystemWatcher2.Path = txtScanPath2.Text
                 FileSystemWatcher2.IncludeSubdirectories = chkScanSubDir2.Checked
-                Me.BackColor = My.Settings.setBackgroundColorActive2
+                ' Me.BackColor = My.Settings.setBackgroundColorActive2
 
 
                 FileSystemWatcher2.EnableRaisingEvents = True
@@ -330,7 +330,7 @@
 
             'Hintergrund
             If My.Settings.setTempBackgroundImage = "" Then
-                MsgBox("Hintergrundbild nicht angegeben")
+                ' MsgBox("Hintergrundbild nicht angegeben")
 
                 Dim x As DialogResult = frmBackroundSelector.ShowDialog()
 

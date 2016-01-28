@@ -498,42 +498,6 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property setBackground18() As String
-            Get
-                Return CType(Me("setBackground18"),String)
-            End Get
-            Set
-                Me("setBackground18") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property setBackground19() As String
-            Get
-                Return CType(Me("setBackground19"),String)
-            End Get
-            Set
-                Me("setBackground19") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property setBackground20() As String
-            Get
-                Return CType(Me("setBackground20"),String)
-            End Get
-            Set
-                Me("setBackground20") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute(".JPG")>  _
         Public Property setBackgroundImageFileFormat() As String
             Get
@@ -577,6 +541,210 @@ Namespace My
             End Get
             Set
                 Me("setPhotolineArguments2") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property setBackgrundThumbnail1() As String
+            Get
+                Return CType(Me("setBackgrundThumbnail1"),String)
+            End Get
+            Set
+                Me("setBackgrundThumbnail1") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property setBackgrundThumbnail2() As String
+            Get
+                Return CType(Me("setBackgrundThumbnail2"),String)
+            End Get
+            Set
+                Me("setBackgrundThumbnail2") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property setBackgrundThumbnail3() As String
+            Get
+                Return CType(Me("setBackgrundThumbnail3"),String)
+            End Get
+            Set
+                Me("setBackgrundThumbnail3") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property setBackgrundThumbnail4() As String
+            Get
+                Return CType(Me("setBackgrundThumbnail4"),String)
+            End Get
+            Set
+                Me("setBackgrundThumbnail4") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property setBackgrundThumbnail5() As String
+            Get
+                Return CType(Me("setBackgrundThumbnail5"),String)
+            End Get
+            Set
+                Me("setBackgrundThumbnail5") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property setBackgrundThumbnail6() As String
+            Get
+                Return CType(Me("setBackgrundThumbnail6"),String)
+            End Get
+            Set
+                Me("setBackgrundThumbnail6") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property setBackgrundThumbnail7() As String
+            Get
+                Return CType(Me("setBackgrundThumbnail7"),String)
+            End Get
+            Set
+                Me("setBackgrundThumbnail7") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property setBackgrundThumbnail8() As String
+            Get
+                Return CType(Me("setBackgrundThumbnail8"),String)
+            End Get
+            Set
+                Me("setBackgrundThumbnail8") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property setBackgrundThumbnail9() As String
+            Get
+                Return CType(Me("setBackgrundThumbnail9"),String)
+            End Get
+            Set
+                Me("setBackgrundThumbnail9") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property setBackgrundThumbnail10() As String
+            Get
+                Return CType(Me("setBackgrundThumbnail10"),String)
+            End Get
+            Set
+                Me("setBackgrundThumbnail10") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property setBackgrundThumbnail11() As String
+            Get
+                Return CType(Me("setBackgrundThumbnail11"),String)
+            End Get
+            Set
+                Me("setBackgrundThumbnail11") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property setBackgrundThumbnail12() As String
+            Get
+                Return CType(Me("setBackgrundThumbnail12"),String)
+            End Get
+            Set
+                Me("setBackgrundThumbnail12") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property setBackgrundThumbnail13() As String
+            Get
+                Return CType(Me("setBackgrundThumbnail13"),String)
+            End Get
+            Set
+                Me("setBackgrundThumbnail13") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property setBackgrundThumbnail14() As String
+            Get
+                Return CType(Me("setBackgrundThumbnail14"),String)
+            End Get
+            Set
+                Me("setBackgrundThumbnail14") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property setBackgrundThumbnail15() As String
+            Get
+                Return CType(Me("setBackgrundThumbnail15"),String)
+            End Get
+            Set
+                Me("setBackgrundThumbnail15") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property setBackgrundThumbnail16() As String
+            Get
+                Return CType(Me("setBackgrundThumbnail16"),String)
+            End Get
+            Set
+                Me("setBackgrundThumbnail16") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property setBackgrundThumbnail17() As String
+            Get
+                Return CType(Me("setBackgrundThumbnail17"),String)
+            End Get
+            Set
+                Me("setBackgrundThumbnail17") = value
             End Set
         End Property
     End Class

@@ -367,22 +367,6 @@
 
         My.Computer.Audio.PlaySystemSound(System.Media.SystemSounds.Beep)
 
-        'Try
-        '    'Vorschau
-        '    'Datei wahrscheinlich zu groß. Es kommt ne Fehlöermeldung
-        '    ' Me.ImageBox1.Image.GetThumbnailImage(Image.FromFile(e.FullPath.ToString))
-        '    Me.ImageBox1.Image = Nothing
-        '    Me.picLastScan.Image = Nothing
-        '    Me.ImageBox1.Image = Image.FromFile(e.FullPath.ToString)
-        '    Me.picLastScan.Image = Image.FromFile(e.FullPath.ToString)
-        'Catch ex As Exception
-        '    MsgBox(ex.Message)
-
-        '    MessageBox.Show(Err.Number & " - " & Err.Description, "Es ist ein Fehler aufgetreten!  FileSystemWatcher1_Created")
-        'End Try
-
-
-
 
         Dim SourceFile As String = ""
         Dim DestinationFile As String = ""
@@ -391,13 +375,6 @@
 
         Dim strOutputDateiName As String
 
-
-
-        '  System.IO.Path.GetFileName(Dateiname))
-        'Dim strOutputname As String = ""
-
-        '    MsgBox(System.IO.Path.GetDirectoryName(e.FullPath))
-        '   MsgBox(System.IO.Path.GetFileName(e.FullPath))
 
 
         If Trim(My.Settings.SetOutPutDirectoryEvent1) <> "" Then
@@ -411,12 +388,16 @@
         Try
             'Prüfe auf Photoline Argumente Checkbox
             If chkPhotolineArtguments.Checked = True Then
-                strCommandstring = "-Convert '" & e.FullPath.ToString & "'  '" & strOutputDateiName & "' " & PhotolineAktionsname
+                strCommandstring = "-Convert " & Chr(34) & e.FullPath.ToString & Chr(34) & " " & Chr(34) & strOutputDateiName & Chr(34) & " " & PhotolineAktionsname
             Else
-                strCommandstring = "-Convert '" & e.FullPath.ToString & "' " & txtApplication1Arguments.Text
+                strCommandstring = Chr(34) & e.FullPath.ToString & Chr(34) & " " & txtApplication1Arguments.Text
 
             End If
 
+
+        Catch ex As Exception
+
+            End Try
 
             Try
                 'Hintergrund immer im gleichen Namen speichern, damit die Aktion danach programmiert werden kann
@@ -434,108 +415,111 @@
 
             End Try
 
-
-
-
+        Try
 
             Process.Start(txtApplication1.Text, strCommandstring)
 
 
-
         Catch
-            MessageBox.Show(Err.Number & " - " & Err.Description, "Es ist ein Fehler aufgetreten!  FileSystemWatcher1_Created")
+            MessageBox.Show(Err.Number & " - " & Err.Description, "Es ist ein Fehler aufgetreten!  FileSystemWatcher1_Created Process.Start")
         End Try
     End Sub
 
     Private Sub FileSystemWatcher2_Created(sender As Object, e As IO.FileSystemEventArgs) Handles FileSystemWatcher2.Created
+        'Dim strCommandstring As String = ""
+        'Dim PhotolineAktionsname As String = My.Settings.setPLAktion2
+
+        'Try
+
+        '    My.Computer.Audio.PlaySystemSound(System.Media.SystemSounds.Beep)
+        '    frmBackroundSelector.Visible = False
+        '    ' ShowDialog(frmBackroundSelector)
+        '    '   Dim x As Integer = frmBackroundSelector.ShowDialog()
+
+        '    Dim SourceFile As String = My.Settings.setTempBackgroundImage
+        '    Dim DestinationFile As String = My.Settings.setBackgroundImagePath & "\Background_temp.jpg"
+
+
+
+        '    'Prüfe auf Photoline Argumente Checkbox
+        '    If chkPhotolineArtguments2.Checked = True Then
+        '        strCommandstring = "-Convert " & e.FullPath.ToString & " " & e.FullPath.ToString & ".PLD " & PhotolineAktionsname
+        '    Else
+        '        strCommandstring = e.FullPath.ToString & txtApplication2Arguments.Text
+
+        '    End If
+        '    MsgBox(txtApplication2.Text, 0, strCommandstring)
+
+
+        '    Process.Start(txtApplication2.Text, strCommandstring)
+
+        '    '      Process.Start(txtApplication2.Text, e.FullPath.ToString)
+
+        'Catch
+        '    MessageBox.Show(Err.Number & " - " & Err.Description, "Es ist ein Fehler aufgetreten! ileSystemWatcher2_Created")
+        'End Try
+
+
+
+        'Sound abspielen bei Event
+
+        My.Computer.Audio.PlaySystemSound(System.Media.SystemSounds.Beep)
+
+
+        Dim SourceFile As String = ""
+        Dim DestinationFile As String = ""
         Dim strCommandstring As String = ""
         Dim PhotolineAktionsname As String = My.Settings.setPLAktion2
 
+        Dim strOutputDateiName As String
+
+
+
+        If Trim(My.Settings.SetOutPutDirectoryEvent2) <> "" Then
+            strOutputDateiName = My.Settings.SetOutPutDirectoryEvent2 & "\" & System.IO.Path.GetFileName(e.FullPath) & "." & My.Settings.SetOutputFormat2
+        Else
+            strOutputDateiName = e.FullPath & "." & My.Settings.SetOutputFormat2
+
+        End If
+
+
         Try
-
-            My.Computer.Audio.PlaySystemSound(System.Media.SystemSounds.Beep)
-            frmBackroundSelector.Visible = False
-            ' ShowDialog(frmBackroundSelector)
-            '   Dim x As Integer = frmBackroundSelector.ShowDialog()
-
-            Dim SourceFile As String = My.Settings.setTempBackgroundImage
-            Dim DestinationFile As String = My.Settings.setBackgroundImagePath & "\Background_temp.jpg"
-
-            'MsgBox(SourceFile, 0, "Sourcefile")
-            'MsgBox(DestinationFile, 0, "DestinationFile")
-            ''Background1q.jpg
-            ''Msgbox in echtem Programm muss der Pfad in eine Configdatei
-
-
-            'Select Case x
-            '    Case 1
-            '        SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground1 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
-            '    Case 2
-            '        SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground2 & My.Settings.setBackgroundImageFileFormat' Define source file name.
-            '    Case 3
-            '        SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground3 & My.Settings.setBackgroundImageFileFormat' Define source file name.
-            '    Case 4
-            '        SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground4 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
-            '    Case 5
-            '        SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground5 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
-            '    Case 6
-            '        SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground6 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
-            '    Case 7
-            '        SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground7 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
-            '    Case 8
-            '        SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground8 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
-            '    Case 9
-            '        SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground9 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
-            '    Case 10
-            '        SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground10 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
-            '    Case 11
-            '        SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground11 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
-            '    Case 12
-            '        SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground12 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
-            '    Case 13
-            '        SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground13 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
-            '    Case 14
-            '        SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground14 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
-            '    Case 15
-            '        SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground15 & My.Settings.setBackgroundImageFileFormat' Define source file name.
-            '    Case 16
-            '        SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground16 & My.Settings.setBackgroundImageFileFormat ' Define source file name.
-            '    Case 17
-            '        SourceFile = My.Settings.setBackgroundImagePath & "\" & My.Settings.setBackground17 & My.Settings.setBackgroundImageFileFormat  ' Define source file name.
-            '    Case Else
-
-            'End Select
-
-            '     MsgBox(SourceFile)
-
-
-            '    DestinationFile = My.Settings.setBackgroundImagePath & "\Background_temp.jpg"   ' Define target file name.
-            'DestinationFile = txtScanPath2.Text & "\Background_temp.jpg"   ' Define target file name.
-
-            '   FileCopy(SourceFile, DestinationFile)   ' Copy source to target.
-
-
-            '    MsgBox("File: " & e.FullPath & " " & e.ChangeType)
-            '       MsgBox(txtApplication2.Text, 0, e.FullPath.ToString)
-
-
-
             'Prüfe auf Photoline Argumente Checkbox
-            If chkPhotolineArtguments2.Checked = True Then
-                strCommandstring = "-Convert " & e.FullPath.ToString & " " & e.FullPath.ToString & ".PLD " & PhotolineAktionsname
+            If chkPhotolineArtguments.Checked = True Then
+                strCommandstring = "-Convert " & Chr(34) & e.FullPath.ToString & Chr(34) & " " & Chr(34) & strOutputDateiName & Chr(34) & " " & PhotolineAktionsname
             Else
-                strCommandstring = e.FullPath.ToString & txtApplication2Arguments.Text
+                strCommandstring = Chr(34) & e.FullPath.ToString & Chr(34) & " " & txtApplication2Arguments.Text
 
             End If
-            MsgBox(txtApplication2.Text, 0, strCommandstring)
 
+
+        Catch ex As Exception
+
+        End Try
+
+        Try
+            'Hintergrund immer im gleichen Namen speichern, damit die Aktion danach programmiert werden kann
+            If My.Settings.setTempBackgroundImage = "" Then
+                ' MsgBox("Hintergrundbild nicht angegeben")
+                Dim x As DialogResult = frmBackroundSelector.ShowDialog()
+
+            End If
+            SourceFile = My.Settings.setTempBackgroundImage ' .setBackgroundImagePath & "\" & My.Settings.setBackground27 & My.Settings.setBackgroundImageFileFormat  ' Define source file name.
+            DestinationFile = My.Settings.setBackgroundImagePath & "\Background_temp.jpg"   ' Define target file name.
+            'DestinationFile = txtScanPath2.Text & "\Background_temp.jpg"   ' Define target file name.
+
+            FileCopy(SourceFile, DestinationFile)   ' Copy source to target.
+        Catch ex As Exception
+
+        End Try
+
+        Try
 
             Process.Start(txtApplication2.Text, strCommandstring)
 
-            '      Process.Start(txtApplication2.Text, e.FullPath.ToString)
 
         Catch
-            MessageBox.Show(Err.Number & " - " & Err.Description, "Es ist ein Fehler aufgetreten! ileSystemWatcher2_Created")
+            MessageBox.Show(Err.Number & " - " & Err.Description, "Es ist ein Fehler aufgetreten!  FileSystemWatcher2_Created Process.Start")
         End Try
     End Sub
 

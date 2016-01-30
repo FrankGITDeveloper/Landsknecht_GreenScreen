@@ -114,6 +114,8 @@ Partial Class frmConfiguration
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
+        Me.txtPauseForProcessing = New System.Windows.Forms.TextBox()
+        Me.Label39 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -134,6 +136,8 @@ Partial Class frmConfiguration
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.SystemColors.Control
+        Me.TabPage1.Controls.Add(Me.txtPauseForProcessing)
+        Me.TabPage1.Controls.Add(Me.Label39)
         Me.TabPage1.Controls.Add(Me.chkLoadLastBackgroundOnStart)
         Me.TabPage1.Controls.Add(Me.btnBackgroundColorActive2)
         Me.TabPage1.Controls.Add(Me.btnBackgroundColorActive1)
@@ -158,7 +162,7 @@ Partial Class frmConfiguration
         'chkLoadLastBackgroundOnStart
         '
         Me.chkLoadLastBackgroundOnStart.AutoSize = True
-        Me.chkLoadLastBackgroundOnStart.Location = New System.Drawing.Point(9, 335)
+        Me.chkLoadLastBackgroundOnStart.Location = New System.Drawing.Point(9, 326)
         Me.chkLoadLastBackgroundOnStart.Name = "chkLoadLastBackgroundOnStart"
         Me.chkLoadLastBackgroundOnStart.Size = New System.Drawing.Size(226, 17)
         Me.chkLoadLastBackgroundOnStart.TabIndex = 37
@@ -940,6 +944,22 @@ Partial Class frmConfiguration
         Me.btnCancel.Text = "Änderungen &verwerfen"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
+        'txtPauseForProcessing
+        '
+        Me.txtPauseForProcessing.Location = New System.Drawing.Point(9, 383)
+        Me.txtPauseForProcessing.Name = "txtPauseForProcessing"
+        Me.txtPauseForProcessing.Size = New System.Drawing.Size(430, 20)
+        Me.txtPauseForProcessing.TabIndex = 39
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.Location = New System.Drawing.Point(6, 366)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(269, 13)
+        Me.Label39.TabIndex = 38
+        Me.Label39.Text = "Pause, um Bildbearbeitungssoftware  arbeiten zu lassen"
+        '
         'frmConfiguration
         '
         Me.AcceptButton = Me.btnSave
@@ -1058,4 +1078,6 @@ Partial Class frmConfiguration
     Friend WithEvents Label38 As Label
     Friend WithEvents txtThumbnail1 As TextBox
     Friend WithEvents chkLoadLastBackgroundOnStart As CheckBox
+    Friend WithEvents txtPauseForProcessing As TextBox
+    Friend WithEvents Label39 As Label
 End Class

@@ -47,6 +47,10 @@
 
         chkLoadLastBackgroundOnStart.Checked = My.Settings.setLoadLastBackgroundOnStart
 
+        txtPauseForProcessing.Text = My.Settings.SetPauseForProcessing
+
+
+
 
     End Sub
 
@@ -108,6 +112,7 @@
         My.Settings.setBackgroundColorActive2 = btnBackgroundColorActive2.BackColor
 
         My.Settings.setLoadLastBackgroundOnStart = chkLoadLastBackgroundOnStart.Checked
+        My.Settings.SetPauseForProcessing = txtPauseForProcessing.Text
 
         My.Settings.Save()
         Me.Dispose()

@@ -366,7 +366,9 @@
         'Sound abspielen bei Event
 
         My.Computer.Audio.PlaySystemSound(System.Media.SystemSounds.Beep)
+        MsgBox("Fehler")
 
+        '     System.Threading.Thread.Sleep(System.Threading.Thread.Sleep(My.Settings.SetPauseForProcessing)
 
         Dim SourceFile As String = ""
         Dim DestinationFile As String = ""
@@ -426,6 +428,8 @@
     End Sub
 
     Private Sub FileSystemWatcher2_Created(sender As Object, e As IO.FileSystemEventArgs) Handles FileSystemWatcher2.Created
+
+
         'Dim strCommandstring As String = ""
         'Dim PhotolineAktionsname As String = My.Settings.setPLAktion2
 
@@ -463,7 +467,9 @@
 
         'Sound abspielen bei Event
 
-        My.Computer.Audio.PlaySystemSound(System.Media.SystemSounds.Beep)
+        My.Computer.Audio.PlaySystemSound(System.Media.SystemSounds.Asterisk)
+        System.Threading.Thread.Sleep(6000)
+        My.Computer.Audio.PlaySystemSound(System.Media.SystemSounds.Asterisk)
 
 
         Dim SourceFile As String = ""
@@ -497,21 +503,7 @@
 
         End Try
 
-        Try
-            'Hintergrund immer im gleichen Namen speichern, damit die Aktion danach programmiert werden kann
-            If My.Settings.setTempBackgroundImage = "" Then
-                ' MsgBox("Hintergrundbild nicht angegeben")
-                Dim x As DialogResult = frmBackroundSelector.ShowDialog()
 
-            End If
-            SourceFile = My.Settings.setTempBackgroundImage ' .setBackgroundImagePath & "\" & My.Settings.setBackground27 & My.Settings.setBackgroundImageFileFormat  ' Define source file name.
-            DestinationFile = My.Settings.setBackgroundImagePath & "\Background_temp.jpg"   ' Define target file name.
-            'DestinationFile = txtScanPath2.Text & "\Background_temp.jpg"   ' Define target file name.
-
-            FileCopy(SourceFile, DestinationFile)   ' Copy source to target.
-        Catch ex As Exception
-
-        End Try
 
         Try
 

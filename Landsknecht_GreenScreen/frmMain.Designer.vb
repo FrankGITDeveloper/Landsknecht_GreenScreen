@@ -35,6 +35,11 @@ Partial Class frmMain
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.grpApp1 = New System.Windows.Forms.GroupBox()
+        Me.lblOutputformat1 = New System.Windows.Forms.Label()
+        Me.txtOutputFormat1 = New System.Windows.Forms.TextBox()
+        Me.txtOutPutDirectoryEvent1 = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.btnOutPutDirectoryEvent1 = New System.Windows.Forms.Button()
         Me.chkPhotolineArtguments = New System.Windows.Forms.CheckBox()
         Me.txtApplication1Arguments = New System.Windows.Forms.TextBox()
         Me.txtApplication1 = New System.Windows.Forms.TextBox()
@@ -50,6 +55,11 @@ Partial Class frmMain
         Me.txtApplication1Filter = New System.Windows.Forms.TextBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.txtOutputFormat2 = New System.Windows.Forms.TextBox()
+        Me.txtOutPutDirectoryEvent2 = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.btnOutPutDirectoryEvent2 = New System.Windows.Forms.Button()
         Me.chkPhotolineArtguments2 = New System.Windows.Forms.CheckBox()
         Me.txtApplication2Arguments = New System.Windows.Forms.TextBox()
         Me.txtApplication2 = New System.Windows.Forms.TextBox()
@@ -98,7 +108,7 @@ Partial Class frmMain
         '
         Me.btnEnd.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.btnEnd.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnEnd.Location = New System.Drawing.Point(323, 327)
+        Me.btnEnd.Location = New System.Drawing.Point(346, 388)
         Me.btnEnd.Name = "btnEnd"
         Me.btnEnd.Size = New System.Drawing.Size(129, 36)
         Me.btnEnd.TabIndex = 10
@@ -108,7 +118,7 @@ Partial Class frmMain
         'btnStop
         '
         Me.btnStop.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnStop.Location = New System.Drawing.Point(147, 327)
+        Me.btnStop.Location = New System.Drawing.Point(147, 388)
         Me.btnStop.Name = "btnStop"
         Me.btnStop.Size = New System.Drawing.Size(129, 36)
         Me.btnStop.TabIndex = 9
@@ -118,7 +128,7 @@ Partial Class frmMain
         'btnStart
         '
         Me.btnStart.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnStart.Location = New System.Drawing.Point(12, 327)
+        Me.btnStart.Location = New System.Drawing.Point(12, 388)
         Me.btnStart.Name = "btnStart"
         Me.btnStart.Size = New System.Drawing.Size(129, 36)
         Me.btnStart.TabIndex = 8
@@ -146,7 +156,7 @@ Partial Class frmMain
         Me.TabControl1.Location = New System.Drawing.Point(12, 27)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(501, 255)
+        Me.TabControl1.Size = New System.Drawing.Size(501, 338)
         Me.TabControl1.TabIndex = 35
         '
         'TabPage1
@@ -157,13 +167,18 @@ Partial Class frmMain
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(493, 229)
+        Me.TabPage1.Size = New System.Drawing.Size(493, 312)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Anwendung 1"
         '
         'grpApp1
         '
         Me.grpApp1.BackColor = System.Drawing.Color.Transparent
+        Me.grpApp1.Controls.Add(Me.lblOutputformat1)
+        Me.grpApp1.Controls.Add(Me.txtOutputFormat1)
+        Me.grpApp1.Controls.Add(Me.txtOutPutDirectoryEvent1)
+        Me.grpApp1.Controls.Add(Me.Label5)
+        Me.grpApp1.Controls.Add(Me.btnOutPutDirectoryEvent1)
         Me.grpApp1.Controls.Add(Me.chkPhotolineArtguments)
         Me.grpApp1.Controls.Add(Me.txtApplication1Arguments)
         Me.grpApp1.Controls.Add(Me.txtApplication1)
@@ -172,9 +187,51 @@ Partial Class frmMain
         Me.grpApp1.Controls.Add(Me.lblArgumentApp1)
         Me.grpApp1.Location = New System.Drawing.Point(9, 104)
         Me.grpApp1.Name = "grpApp1"
-        Me.grpApp1.Size = New System.Drawing.Size(474, 118)
+        Me.grpApp1.Size = New System.Drawing.Size(474, 202)
         Me.grpApp1.TabIndex = 41
         Me.grpApp1.TabStop = False
+        '
+        'lblOutputformat1
+        '
+        Me.lblOutputformat1.AutoSize = True
+        Me.lblOutputformat1.Location = New System.Drawing.Point(6, 165)
+        Me.lblOutputformat1.Name = "lblOutputformat1"
+        Me.lblOutputformat1.Size = New System.Drawing.Size(384, 13)
+        Me.lblOutputformat1.TabIndex = 50
+        Me.lblOutputformat1.Text = "Ausgabeformat - Muss Transparenzen und Ebenen speichern können z.B.  PSD"
+        '
+        'txtOutputFormat1
+        '
+        Me.txtOutputFormat1.Location = New System.Drawing.Point(393, 162)
+        Me.txtOutputFormat1.Name = "txtOutputFormat1"
+        Me.txtOutputFormat1.Size = New System.Drawing.Size(43, 20)
+        Me.txtOutputFormat1.TabIndex = 48
+        '
+        'txtOutPutDirectoryEvent1
+        '
+        Me.txtOutPutDirectoryEvent1.Location = New System.Drawing.Point(6, 135)
+        Me.txtOutPutDirectoryEvent1.Name = "txtOutPutDirectoryEvent1"
+        Me.txtOutPutDirectoryEvent1.Size = New System.Drawing.Size(430, 20)
+        Me.txtOutPutDirectoryEvent1.TabIndex = 45
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.ForeColor = System.Drawing.Color.Black
+        Me.Label5.Location = New System.Drawing.Point(6, 119)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(339, 13)
+        Me.Label5.TabIndex = 47
+        Me.Label5.Text = "Ausgabepfad für bearbeitete Bilder - Wenn leer, dann = Ursprungspfad"
+        '
+        'btnOutPutDirectoryEvent1
+        '
+        Me.btnOutPutDirectoryEvent1.Location = New System.Drawing.Point(442, 135)
+        Me.btnOutPutDirectoryEvent1.Name = "btnOutPutDirectoryEvent1"
+        Me.btnOutPutDirectoryEvent1.Size = New System.Drawing.Size(25, 20)
+        Me.btnOutPutDirectoryEvent1.TabIndex = 46
+        Me.btnOutPutDirectoryEvent1.Text = "..."
+        Me.btnOutPutDirectoryEvent1.UseVisualStyleBackColor = True
         '
         'chkPhotolineArtguments
         '
@@ -300,7 +357,7 @@ Partial Class frmMain
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(493, 229)
+        Me.TabPage2.Size = New System.Drawing.Size(493, 312)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Anwendung 2"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -308,6 +365,11 @@ Partial Class frmMain
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox2.Controls.Add(Me.Label7)
+        Me.GroupBox2.Controls.Add(Me.txtOutputFormat2)
+        Me.GroupBox2.Controls.Add(Me.txtOutPutDirectoryEvent2)
+        Me.GroupBox2.Controls.Add(Me.Label6)
+        Me.GroupBox2.Controls.Add(Me.btnOutPutDirectoryEvent2)
         Me.GroupBox2.Controls.Add(Me.chkPhotolineArtguments2)
         Me.GroupBox2.Controls.Add(Me.txtApplication2Arguments)
         Me.GroupBox2.Controls.Add(Me.txtApplication2)
@@ -316,9 +378,51 @@ Partial Class frmMain
         Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Location = New System.Drawing.Point(9, 104)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(474, 118)
+        Me.GroupBox2.Size = New System.Drawing.Size(474, 202)
         Me.GroupBox2.TabIndex = 42
         Me.GroupBox2.TabStop = False
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(6, 167)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(384, 13)
+        Me.Label7.TabIndex = 52
+        Me.Label7.Text = "Ausgabeformat - Muss Transparenzen und Ebenen speichern können z.B.  PSD"
+        '
+        'txtOutputFormat2
+        '
+        Me.txtOutputFormat2.Location = New System.Drawing.Point(393, 164)
+        Me.txtOutputFormat2.Name = "txtOutputFormat2"
+        Me.txtOutputFormat2.Size = New System.Drawing.Size(43, 20)
+        Me.txtOutputFormat2.TabIndex = 51
+        '
+        'txtOutPutDirectoryEvent2
+        '
+        Me.txtOutPutDirectoryEvent2.Location = New System.Drawing.Point(6, 135)
+        Me.txtOutPutDirectoryEvent2.Name = "txtOutPutDirectoryEvent2"
+        Me.txtOutPutDirectoryEvent2.Size = New System.Drawing.Size(430, 20)
+        Me.txtOutPutDirectoryEvent2.TabIndex = 48
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.ForeColor = System.Drawing.Color.Black
+        Me.Label6.Location = New System.Drawing.Point(6, 119)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(339, 13)
+        Me.Label6.TabIndex = 50
+        Me.Label6.Text = "Ausgabepfad für bearbeitete Bilder - Wenn leer, dann = Ursprungspfad"
+        '
+        'btnOutPutDirectoryEvent2
+        '
+        Me.btnOutPutDirectoryEvent2.Location = New System.Drawing.Point(442, 135)
+        Me.btnOutPutDirectoryEvent2.Name = "btnOutPutDirectoryEvent2"
+        Me.btnOutPutDirectoryEvent2.Size = New System.Drawing.Size(25, 20)
+        Me.btnOutPutDirectoryEvent2.TabIndex = 49
+        Me.btnOutPutDirectoryEvent2.Text = "..."
+        Me.btnOutPutDirectoryEvent2.UseVisualStyleBackColor = True
         '
         'chkPhotolineArtguments2
         '
@@ -441,7 +545,7 @@ Partial Class frmMain
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DateiToolStripMenuItem, Me.HilfeToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(683, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(729, 24)
         Me.MenuStrip1.TabIndex = 37
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -490,26 +594,27 @@ Partial Class frmMain
         '
         'picLastScan
         '
-        Me.picLastScan.Location = New System.Drawing.Point(519, 153)
+        Me.picLastScan.Location = New System.Drawing.Point(520, 188)
         Me.picLastScan.Name = "picLastScan"
-        Me.picLastScan.Size = New System.Drawing.Size(155, 110)
+        Me.picLastScan.Size = New System.Drawing.Size(197, 136)
         Me.picLastScan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.picLastScan.TabIndex = 42
         Me.picLastScan.TabStop = False
         '
         'picPreview
         '
-        Me.picPreview.Location = New System.Drawing.Point(519, 38)
+        Me.picPreview.Location = New System.Drawing.Point(520, 49)
         Me.picPreview.Name = "picPreview"
-        Me.picPreview.Size = New System.Drawing.Size(154, 109)
+        Me.picPreview.Size = New System.Drawing.Size(197, 136)
         Me.picPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.picPreview.TabIndex = 41
         Me.picPreview.TabStop = False
         '
         'PictureBox1
         '
+        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.PictureBox1.Image = Global.Landsknecht_GreenScreen.My.Resources.Resources.RZ_Landsnecht_RGB_transparent
-        Me.PictureBox1.Location = New System.Drawing.Point(467, 269)
+        Me.PictureBox1.Location = New System.Drawing.Point(520, 330)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(203, 94)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -520,7 +625,7 @@ Partial Class frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(683, 375)
+        Me.ClientSize = New System.Drawing.Size(729, 436)
         Me.Controls.Add(Me.picLastScan)
         Me.Controls.Add(Me.picPreview)
         Me.Controls.Add(Me.TabControl1)
@@ -534,7 +639,7 @@ Partial Class frmMain
         Me.MaximizeBox = False
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
-        Me.Text = "Partyhaus Landsknecht -  Traumreise - Location Beamer - GreenScreen Shooting"
+        Me.Text = "Partyhaus Landsknecht -  Location Beamer - GreenScreen Shooting Software"
         CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FileSystemWatcher2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
@@ -607,4 +712,15 @@ Partial Class frmMain
     Friend WithEvents picPreview As PictureBox
     Friend WithEvents picLastScan As PictureBox
     Friend WithEvents chkPhotolineArtguments2 As CheckBox
+    Private WithEvents txtOutPutDirectoryEvent1 As TextBox
+    Friend WithEvents Label5 As Label
+    Private WithEvents btnOutPutDirectoryEvent1 As Button
+    Private WithEvents txtOutPutDirectoryEvent2 As TextBox
+    Friend WithEvents Label6 As Label
+    Private WithEvents btnOutPutDirectoryEvent2 As Button
+    Friend WithEvents ColorEditorManager1 As Cyotek.Windows.Forms.ColorEditorManager
+    Private WithEvents txtOutputFormat1 As TextBox
+    Private WithEvents lblOutputformat1 As Label
+    Private WithEvents Label7 As Label
+    Private WithEvents txtOutputFormat2 As TextBox
 End Class

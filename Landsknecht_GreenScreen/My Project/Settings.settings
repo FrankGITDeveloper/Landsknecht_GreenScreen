@@ -6,19 +6,19 @@
       <Value Profile="(Default)">D:\Eye-Fi</Value>
     </Setting>
     <Setting Name="setSubFolders1" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="setApplication1" Type="System.String" Scope="User">
       <Value Profile="(Default)">D:\PortableApps\Photoline\PhotoLine64.exe</Value>
     </Setting>
     <Setting Name="setApplication2" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">D:\PortableApps\Photoline\PhotoLine64.exe</Value>
     </Setting>
     <Setting Name="setApplication1Filter" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">*.JPG</Value>
     </Setting>
     <Setting Name="setApplication2Filter" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">*.PLD</Value>
     </Setting>
     <Setting Name="setApplication1Argument" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
@@ -57,7 +57,7 @@
       <Value Profile="(Default)">Thumbnail</Value>
     </Setting>
     <Setting Name="setPLAktion1" Type="System.String" Scope="User">
-      <Value Profile="(Default)">GreenScreenKomplett</Value>
+      <Value Profile="(Default)">GreenScreen</Value>
     </Setting>
     <Setting Name="setPLAktion2" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
@@ -177,7 +177,19 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="setLoadLastBackgroundOnStart" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="SetOutPutDirectoryEvent1" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SetOutPutDirectoryEvent2" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SetOutputFormat1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">PLD</Value>
+    </Setting>
+    <Setting Name="SetOutputFormat2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">PLD</Value>
     </Setting>
   </Settings>
 </SettingsFile>

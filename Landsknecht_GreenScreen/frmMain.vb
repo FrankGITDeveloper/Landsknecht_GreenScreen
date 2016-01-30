@@ -4,6 +4,7 @@
 
     Private Sub frmMain_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Try
+
             txtScanPath1.Text = My.Settings.setScanPath1
             chkScanSubDir1.Checked = My.Settings.setSubFolders1
             txtScanPath2.Text = My.Settings.setScanPath2
@@ -20,6 +21,16 @@
             chkPhotolineArtguments.Checked = My.Settings.setPhotolineArguments
             chkPhotolineArtguments2.Checked = My.Settings.setPhotolineArguments2
 
+            txtOutPutDirectoryEvent1.Text = My.Settings.SetOutPutDirectoryEvent1
+            txtOutPutDirectoryEvent2.Text = My.Settings.SetOutPutDirectoryEvent2
+
+
+            txtOutputFormat1.Text = My.Settings.SetOutputFormat1
+            txtOutputFormat2.Text = My.Settings.SetOutputFormat2
+
+
+
+
 
             Me.Location = New Point(My.Settings.setPositionX, My.Settings.setPositionY)
 
@@ -28,14 +39,17 @@
             End If
 
 
-            bolChanges = False  'Zurücksetzen
+
 
 
         Catch
+            If Err.Number <> 5 Then  'Kein Hintergrundbild gespeichert
+                MessageBox.Show(Err.Number & " - " & Err.Description, "Es Ist Ein Fehler Aufgetreten! frmMain_Load")
+            End If
 
-            MessageBox.Show(Err.Number & " - " & Err.Description, "Es Ist Ein Fehler Aufgetreten! frmMain_Load")
         End Try
 
+        bolChanges = False  'Zurücksetzen
     End Sub
 
 
@@ -65,7 +79,11 @@
                             My.Settings.setPhotolineArguments2 = chkPhotolineArtguments2.Checked
                             My.Settings.setPositionX = Me.Location.X
                             My.Settings.setPositionY = Me.Location.Y
+                            My.Settings.SetOutPutDirectoryEvent1 = txtOutPutDirectoryEvent1.Text
+                            My.Settings.SetOutPutDirectoryEvent2 = txtOutPutDirectoryEvent2.Text
 
+                            My.Settings.SetOutputFormat1 = txtOutputFormat1.Text
+                            My.Settings.SetOutputFormat2 = txtOutputFormat2.Text
 
 
 
@@ -194,7 +212,6 @@
     Private Sub btnScanPath2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnScanPath2.Click
         Try
             FolderBrowserDialog1.ShowDialog()
-
             txtScanPath2.Text = FolderBrowserDialog1.SelectedPath
         Catch
             MessageBox.Show(Err.Number & " - " & Err.Description, "Es ist ein Fehler aufgetreten!")
@@ -268,8 +285,10 @@
     End Sub
 
     Private Sub txtScanPath1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtScanPath1.TextChanged
+        My.Settings.setScanPath1 = txtScanPath1.Text
+        My.Settings.Save()
+        bolChanges = False
 
-        bolChanges = True
     End Sub
 
     Private Sub txtApplication1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtApplication1.TextChanged
@@ -289,7 +308,10 @@
     End Sub
 
     Private Sub txtScanPath2_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtScanPath2.TextChanged
-        bolChanges = True
+        My.Settings.setScanPath2 = txtScanPath2.Text
+        My.Settings.Save()
+        bolChanges = False
+
     End Sub
 
 
@@ -300,6 +322,22 @@
 
     Private Sub txtApplication2Arguments_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtApplication2Arguments.TextChanged
         bolChanges = True
+    End Sub
+
+    Private Sub txtOutPutDirectoryEvent1_TextChanged(sender As Object, e As EventArgs) Handles txtOutPutDirectoryEvent1.TextChanged
+        'Direkt speichern, da ansonsten das ERgebnis nicht stimmt wenn direkt gerstartet wird
+        My.Settings.SetOutPutDirectoryEvent1 = txtOutPutDirectoryEvent1.Text
+        My.Settings.Save()
+        bolChanges = False
+
+        ' bolChanges = True
+    End Sub
+
+    Private Sub txtOutPutDirectoryEvent2_TextChanged(sender As Object, e As EventArgs) Handles txtOutPutDirectoryEvent2.TextChanged
+        'Direkt speichern, da ansonsten das ERgebnis nicht stimmt wenn direkt gerstartet wird
+        My.Settings.SetOutPutDirectoryEvent2 = txtOutPutDirectoryEvent2.Text
+        My.Settings.Save()
+        bolChanges = False
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -329,37 +367,73 @@
 
         My.Computer.Audio.PlaySystemSound(System.Media.SystemSounds.Beep)
 
-        'Vorschau
-        'Datei wahrscheinlich zu groß. Es kommt ne Fehlöermeldung
-        ' Me.picLastScan.Image = Image.FromFile(e.FullPath.ToString)
+        'Try
+        '    'Vorschau
+        '    'Datei wahrscheinlich zu groß. Es kommt ne Fehlöermeldung
+        '    ' Me.ImageBox1.Image.GetThumbnailImage(Image.FromFile(e.FullPath.ToString))
+        '    Me.ImageBox1.Image = Nothing
+        '    Me.picLastScan.Image = Nothing
+        '    Me.ImageBox1.Image = Image.FromFile(e.FullPath.ToString)
+        '    Me.picLastScan.Image = Image.FromFile(e.FullPath.ToString)
+        'Catch ex As Exception
+        '    MsgBox(ex.Message)
+
+        '    MessageBox.Show(Err.Number & " - " & Err.Description, "Es ist ein Fehler aufgetreten!  FileSystemWatcher1_Created")
+        'End Try
+
+
+
+
         Dim SourceFile As String = ""
         Dim DestinationFile As String = ""
         Dim strCommandstring As String = ""
         Dim PhotolineAktionsname As String = My.Settings.setPLAktion1
+
+        Dim strOutputDateiName As String
+
+
+
+        '  System.IO.Path.GetFileName(Dateiname))
+        'Dim strOutputname As String = ""
+
+        '    MsgBox(System.IO.Path.GetDirectoryName(e.FullPath))
+        '   MsgBox(System.IO.Path.GetFileName(e.FullPath))
+
+
+        If Trim(My.Settings.SetOutPutDirectoryEvent1) <> "" Then
+            strOutputDateiName = My.Settings.SetOutPutDirectoryEvent1 & "\" & System.IO.Path.GetFileName(e.FullPath) & "." & My.Settings.SetOutputFormat1
+        Else
+            strOutputDateiName = e.FullPath & "." & My.Settings.SetOutputFormat1
+
+        End If
+
+
         Try
             'Prüfe auf Photoline Argumente Checkbox
             If chkPhotolineArtguments.Checked = True Then
-                strCommandstring = "-Convert " & e.FullPath.ToString & " " & e.FullPath.ToString & ".PLD " & PhotolineAktionsname
+                strCommandstring = "-Convert '" & e.FullPath.ToString & "'  '" & strOutputDateiName & "' " & PhotolineAktionsname
             Else
-                strCommandstring = e.FullPath.ToString & txtApplication1Arguments.Text
+                strCommandstring = "-Convert '" & e.FullPath.ToString & "' " & txtApplication1Arguments.Text
 
             End If
 
 
+            Try
+                'Hintergrund immer im gleichen Namen speichern, damit die Aktion danach programmiert werden kann
+                If My.Settings.setTempBackgroundImage = "" Then
+                    ' MsgBox("Hintergrundbild nicht angegeben")
+                    Dim x As DialogResult = frmBackroundSelector.ShowDialog()
 
-            'Hintergrund
-            If My.Settings.setTempBackgroundImage = "" Then
-                ' MsgBox("Hintergrundbild nicht angegeben")
+                End If
+                SourceFile = My.Settings.setTempBackgroundImage ' .setBackgroundImagePath & "\" & My.Settings.setBackground17 & My.Settings.setBackgroundImageFileFormat  ' Define source file name.
+                DestinationFile = My.Settings.setBackgroundImagePath & "\Background_temp.jpg"   ' Define target file name.
+                'DestinationFile = txtScanPath2.Text & "\Background_temp.jpg"   ' Define target file name.
 
-                Dim x As DialogResult = frmBackroundSelector.ShowDialog()
+                FileCopy(SourceFile, DestinationFile)   ' Copy source to target.
+            Catch ex As Exception
 
-            End If
+            End Try
 
-            SourceFile = My.Settings.setTempBackgroundImage ' .setBackgroundImagePath & "\" & My.Settings.setBackground17 & My.Settings.setBackgroundImageFileFormat  ' Define source file name.
-            DestinationFile = My.Settings.setBackgroundImagePath & "\Background_temp.jpg"   ' Define target file name.
-            'DestinationFile = txtScanPath2.Text & "\Background_temp.jpg"   ' Define target file name.
-
-            FileCopy(SourceFile, DestinationFile)   ' Copy source to target.
 
 
 
@@ -522,6 +596,42 @@
 
         Catch ex As Exception
 
+        End Try
+    End Sub
+
+    Private Sub btnOutPutDirectoryEvent1_Click(sender As Object, e As EventArgs) Handles btnOutPutDirectoryEvent1.Click
+        Try
+            Dim Verzeichnis As New FolderBrowserDialog
+            '  Verzeichnis.RootFolder = System.Environment.SpecialFolder.MyComputer ' SpecialFolder.txtScanPath1.Text.ToString
+
+            Verzeichnis.ShowDialog()
+            txtOutPutDirectoryEvent1.Text = Verzeichnis.SelectedPath
+
+            'Direkt speichern, da ansonsten das ERgebnis nicht stimmt wenn direkt gerstartet wird
+
+            My.Settings.SetOutPutDirectoryEvent1 = txtOutPutDirectoryEvent1.Text
+
+            My.Settings.Save()
+            bolChanges = False
+
+
+        Catch
+            MessageBox.Show(Err.Number & " - " & Err.Description, "Es ist ein Fehler aufgetreten! btnScanPath1_Click")
+        End Try
+    End Sub
+
+    Private Sub btnOutPutDirectoryEvent2_Click(sender As Object, e As EventArgs) Handles btnOutPutDirectoryEvent2.Click
+        Try
+            Dim Verzeichnis As New FolderBrowserDialog
+            '  Verzeichnis.RootFolder = System.Environment.SpecialFolder.MyComputer ' SpecialFolder.txtScanPath1.Text.ToString
+
+            Verzeichnis.ShowDialog()
+            txtOutPutDirectoryEvent2.Text = Verzeichnis.SelectedPath
+
+
+
+        Catch
+            MessageBox.Show(Err.Number & " - " & Err.Description, "Es ist ein Fehler aufgetreten! btnScanPath1_Click")
         End Try
     End Sub
 

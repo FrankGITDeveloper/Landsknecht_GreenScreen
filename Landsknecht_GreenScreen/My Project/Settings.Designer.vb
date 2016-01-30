@@ -17,7 +17,7 @@ Namespace My
     <Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "14.0.0.0"),  _
      Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)>  _
-    Partial Friend NotInheritable Class MySettings
+    Partial Public NotInheritable Class MySettings
         Inherits Global.System.Configuration.ApplicationSettingsBase
         
         Private Shared defaultInstance As MySettings = CType(Global.System.Configuration.ApplicationSettingsBase.Synchronized(New MySettings()),MySettings)
@@ -67,7 +67,8 @@ Namespace My
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
         Public Property setSubFolders1() As Boolean
             Get
                 Return CType(Me("setSubFolders1"),Boolean)
@@ -91,7 +92,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("D:\PortableApps\Photoline\PhotoLine64.exe")>  _
         Public Property setApplication2() As String
             Get
                 Return CType(Me("setApplication2"),String)
@@ -103,7 +104,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("*.JPG")>  _
         Public Property setApplication1Filter() As String
             Get
                 Return CType(Me("setApplication1Filter"),String)
@@ -115,7 +116,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("*.PLD")>  _
         Public Property setApplication2Filter() As String
             Get
                 Return CType(Me("setApplication2Filter"),String)
@@ -270,7 +271,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("GreenScreenKomplett")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("GreenScreen")>  _
         Public Property setPLAktion1() As String
             Get
                 Return CType(Me("setPLAktion1"),String)
@@ -750,13 +751,61 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
         Public Property setLoadLastBackgroundOnStart() As Boolean
             Get
                 Return CType(Me("setLoadLastBackgroundOnStart"),Boolean)
             End Get
             Set
                 Me("setLoadLastBackgroundOnStart") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property SetOutPutDirectoryEvent1() As String
+            Get
+                Return CType(Me("SetOutPutDirectoryEvent1"),String)
+            End Get
+            Set
+                Me("SetOutPutDirectoryEvent1") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property SetOutPutDirectoryEvent2() As String
+            Get
+                Return CType(Me("SetOutPutDirectoryEvent2"),String)
+            End Get
+            Set
+                Me("SetOutPutDirectoryEvent2") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("PLD")>  _
+        Public Property SetOutputFormat1() As String
+            Get
+                Return CType(Me("SetOutputFormat1"),String)
+            End Get
+            Set
+                Me("SetOutputFormat1") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("PLD")>  _
+        Public Property SetOutputFormat2() As String
+            Get
+                Return CType(Me("SetOutputFormat2"),String)
+            End Get
+            Set
+                Me("SetOutputFormat2") = value
             End Set
         End Property
     End Class

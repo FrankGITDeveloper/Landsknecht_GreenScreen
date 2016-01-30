@@ -49,6 +49,10 @@
 
         txtPauseForProcessing.Text = My.Settings.SetPauseForProcessing
 
+        chkSettingsAlwaysSave.Checked = My.Settings.setSettingsAlwaysSave
+
+
+
 
 
 
@@ -114,6 +118,9 @@
         My.Settings.setLoadLastBackgroundOnStart = chkLoadLastBackgroundOnStart.Checked
         My.Settings.SetPauseForProcessing = txtPauseForProcessing.Text
 
+        My.Settings.setSettingsAlwaysSave = chkSettingsAlwaysSave.Checked
+
+
         My.Settings.Save()
         Me.Dispose()
     End Sub
@@ -158,7 +165,5 @@
         End Try
     End Sub
 
-    Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles TabPage1.Click
 
-    End Sub
 End Class

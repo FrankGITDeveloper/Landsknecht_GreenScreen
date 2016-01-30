@@ -57,42 +57,56 @@
     Private Sub btnEnd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEnd.Click
 
         Try
+
             Dim answer As MsgBoxResult
             answer = MsgBox("Programm beenden?", MsgBoxStyle.YesNo)
+
+
             If answer = MsgBoxResult.Yes Then
-                Try
-                    If bolChanges = True Then
-                        Dim speichern As Integer = MsgBox("Sollen die Änderungen als Vorgabe gespeichert werden", MsgBoxStyle.Exclamation + MsgBoxStyle.YesNo, "Einstellungen übernehmen?")
 
-                        If speichern = vbYes Then
-                            My.Settings.setScanPath1 = txtScanPath1.Text
-                            My.Settings.setSubFolders1 = chkScanSubDir1.Checked
-                            My.Settings.setScanPath2 = txtScanPath2.Text
-                            My.Settings.setSubFolders2 = chkScanSubDir2.Checked
-                            My.Settings.setApplication1 = txtApplication1.Text
-                            My.Settings.setApplication1Filter = txtApplication1Filter.Text
-                            My.Settings.setApplication1Argument = txtApplication1Arguments.Text
-                            My.Settings.setApplication2 = txtApplication2.Text
-                            My.Settings.setApplication2Filter = txtApplication2Filter.Text
-                            My.Settings.setApplication2Argument = txtApplication2Arguments.Text
-                            My.Settings.setPhotolineArguments = chkPhotolineArtguments.Checked
-                            My.Settings.setPhotolineArguments2 = chkPhotolineArtguments2.Checked
-                            My.Settings.setPositionX = Me.Location.X
-                            My.Settings.setPositionY = Me.Location.Y
-                            My.Settings.SetOutPutDirectoryEvent1 = txtOutPutDirectoryEvent1.Text
-                            My.Settings.SetOutPutDirectoryEvent2 = txtOutPutDirectoryEvent2.Text
+                Dim speichern As MsgBoxResult
 
-                            My.Settings.SetOutputFormat1 = txtOutputFormat1.Text
-                            My.Settings.SetOutputFormat2 = txtOutputFormat2.Text
-
-
-
-
-                            My.Settings.Save()
-
-                        End If
+                    If My.Settings.setSettingsAlwaysSave <> True Then
+                        speichern = MsgBox("Sollen die Änderungen als Vorgabe gespeichert werden", MsgBoxStyle.Exclamation + MsgBoxStyle.YesNo, "Einstellungen übernehmen?")
+                    Else
+                        speichern = MsgBoxResult.Yes
                     End If
-                    Try
+
+
+                If speichern = vbYes Then
+                    My.Settings.setScanPath1 = txtScanPath1.Text
+                    My.Settings.setSubFolders1 = chkScanSubDir1.Checked
+                    My.Settings.setScanPath2 = txtScanPath2.Text
+                    My.Settings.setSubFolders2 = chkScanSubDir2.Checked
+                    My.Settings.setApplication1 = txtApplication1.Text
+                    My.Settings.setApplication1Filter = txtApplication1Filter.Text
+                    My.Settings.setApplication1Argument = txtApplication1Arguments.Text
+                    My.Settings.setApplication2 = txtApplication2.Text
+                    My.Settings.setApplication2Filter = txtApplication2Filter.Text
+                    My.Settings.setApplication2Argument = txtApplication2Arguments.Text
+                    My.Settings.setPhotolineArguments = chkPhotolineArtguments.Checked
+                    My.Settings.setPhotolineArguments2 = chkPhotolineArtguments2.Checked
+                    My.Settings.setPositionX = Me.Location.X
+                    My.Settings.setPositionY = Me.Location.Y
+                    My.Settings.SetOutPutDirectoryEvent1 = txtOutPutDirectoryEvent1.Text
+                    My.Settings.SetOutPutDirectoryEvent2 = txtOutPutDirectoryEvent2.Text
+
+                    My.Settings.SetOutputFormat1 = txtOutputFormat1.Text
+                    My.Settings.SetOutputFormat2 = txtOutputFormat2.Text
+
+
+                    My.Settings.Save()
+
+                End If
+            End If
+
+
+
+        Catch ex As Exception
+
+        End Try
+
+        Try
                         'Überwachung stoppen
                         FileSystemWatcher1.EnableRaisingEvents = False
                         FileSystemWatcher2.EnableRaisingEvents = False
@@ -100,19 +114,11 @@
                         End
 
                     Catch ex As Exception
-                        MsgBox("fehler")
-                    End Try
+                MessageBox.Show(Err.Number & " - " & Err.Description, "Es Ist Ein Fehler beim stoppen der Überwachung aufgetreten!")
+            End Try
 
 
-                Catch ex As Exception
-                    MessageBox.Show(Err.Number & " - " & Err.Description, "Es Ist Ein Fehler Aufgetreten!")
-                End Try
-            End If
 
-        Catch ex As Exception
-
-        End Try
-        
     End Sub
 
     Private Sub btnStart_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnStart.Click
@@ -419,7 +425,16 @@
 
         Try
 
-            Process.Start(txtApplication1.Text, strCommandstring)
+            '            Process.Start(txtApplication1.Text, strCommandstring)
+            Beep()
+
+            Dim ExterneAnwendung As New System.Diagnostics.Process()
+            ExterneAnwendung.StartInfo.FileName = txtApplication1.Text
+            ExterneAnwendung.StartInfo.Arguments = strCommandstring
+            ExterneAnwendung.Start()
+
+            ExterneAnwendung.WaitForExit()
+            Beep()
 
 
         Catch

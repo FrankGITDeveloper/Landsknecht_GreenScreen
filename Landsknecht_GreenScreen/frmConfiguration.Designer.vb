@@ -24,6 +24,9 @@ Partial Class frmConfiguration
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.chkSettingsAlwaysSave = New System.Windows.Forms.CheckBox()
+        Me.txtPauseForProcessing = New System.Windows.Forms.TextBox()
+        Me.Label39 = New System.Windows.Forms.Label()
         Me.chkLoadLastBackgroundOnStart = New System.Windows.Forms.CheckBox()
         Me.btnBackgroundColorActive2 = New System.Windows.Forms.Button()
         Me.btnBackgroundColorActive1 = New System.Windows.Forms.Button()
@@ -114,8 +117,6 @@ Partial Class frmConfiguration
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
-        Me.txtPauseForProcessing = New System.Windows.Forms.TextBox()
-        Me.Label39 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -136,6 +137,7 @@ Partial Class frmConfiguration
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.SystemColors.Control
+        Me.TabPage1.Controls.Add(Me.chkSettingsAlwaysSave)
         Me.TabPage1.Controls.Add(Me.txtPauseForProcessing)
         Me.TabPage1.Controls.Add(Me.Label39)
         Me.TabPage1.Controls.Add(Me.chkLoadLastBackgroundOnStart)
@@ -158,6 +160,32 @@ Partial Class frmConfiguration
         Me.TabPage1.Size = New System.Drawing.Size(1014, 421)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Standard Einstellungen"
+        '
+        'chkSettingsAlwaysSave
+        '
+        Me.chkSettingsAlwaysSave.AutoSize = True
+        Me.chkSettingsAlwaysSave.Location = New System.Drawing.Point(556, 34)
+        Me.chkSettingsAlwaysSave.Name = "chkSettingsAlwaysSave"
+        Me.chkSettingsAlwaysSave.Size = New System.Drawing.Size(268, 17)
+        Me.chkSettingsAlwaysSave.TabIndex = 40
+        Me.chkSettingsAlwaysSave.Text = "Einstellungen beim beenden automatisch speichern"
+        Me.chkSettingsAlwaysSave.UseVisualStyleBackColor = True
+        '
+        'txtPauseForProcessing
+        '
+        Me.txtPauseForProcessing.Location = New System.Drawing.Point(9, 383)
+        Me.txtPauseForProcessing.Name = "txtPauseForProcessing"
+        Me.txtPauseForProcessing.Size = New System.Drawing.Size(430, 20)
+        Me.txtPauseForProcessing.TabIndex = 39
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.Location = New System.Drawing.Point(6, 366)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(269, 13)
+        Me.Label39.TabIndex = 38
+        Me.Label39.Text = "Pause, um Bildbearbeitungssoftware  arbeiten zu lassen"
         '
         'chkLoadLastBackgroundOnStart
         '
@@ -944,22 +972,6 @@ Partial Class frmConfiguration
         Me.btnCancel.Text = "Änderungen &verwerfen"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
-        'txtPauseForProcessing
-        '
-        Me.txtPauseForProcessing.Location = New System.Drawing.Point(9, 383)
-        Me.txtPauseForProcessing.Name = "txtPauseForProcessing"
-        Me.txtPauseForProcessing.Size = New System.Drawing.Size(430, 20)
-        Me.txtPauseForProcessing.TabIndex = 39
-        '
-        'Label39
-        '
-        Me.Label39.AutoSize = True
-        Me.Label39.Location = New System.Drawing.Point(6, 366)
-        Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(269, 13)
-        Me.Label39.TabIndex = 38
-        Me.Label39.Text = "Pause, um Bildbearbeitungssoftware  arbeiten zu lassen"
-        '
         'frmConfiguration
         '
         Me.AcceptButton = Me.btnSave
@@ -1080,4 +1092,5 @@ Partial Class frmConfiguration
     Friend WithEvents chkLoadLastBackgroundOnStart As CheckBox
     Friend WithEvents txtPauseForProcessing As TextBox
     Friend WithEvents Label39 As Label
+    Friend WithEvents chkSettingsAlwaysSave As CheckBox
 End Class

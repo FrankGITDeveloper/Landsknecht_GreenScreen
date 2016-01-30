@@ -820,6 +820,18 @@ Namespace My
                 Me("SetPauseForProcessing") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property setSettingsAlwaysSave() As String
+            Get
+                Return CType(Me("setSettingsAlwaysSave"),String)
+            End Get
+            Set
+                Me("setSettingsAlwaysSave") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

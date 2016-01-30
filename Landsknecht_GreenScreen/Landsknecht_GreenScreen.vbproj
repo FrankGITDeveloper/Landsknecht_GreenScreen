@@ -247,7 +247,16 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Cyotek.Windows.Forms.ColorPicker\Cyotek.Windows.Forms.ColorPicker.csproj">
+      <Project>{fb2a5786-cd2e-42ce-bc5d-0fce90034221}</Project>
+      <Name>Cyotek.Windows.Forms.ColorPicker</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cyotek.Windows.Forms.ImageBox\Cyotek.Windows.Forms.ImageBox.csproj">
+      <Project>{4159c8d3-c18d-4bed-8be6-9bad1b0ca4f6}</Project>
+      <Name>Cyotek.Windows.Forms.ImageBox</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\RZ_Landsnecht_RGB_man.jpg" />
     <None Include="Resources\RZ_Landsnecht_RGB_transparent.png" />

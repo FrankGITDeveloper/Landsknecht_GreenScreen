@@ -115,12 +115,17 @@
 
     Private Sub btnBackgroundColorActive1_Click(sender As Object, e As EventArgs) Handles btnBackgroundColorActive1.Click
         Try
-            Dim MyDialog As New ColorDialog()
+            Dim x As New Cyotek.Windows.Forms.ColorPickerDialog
+            x.Text = "Bitte wählen sie die Hintergrundfarbe  für Anzeige von Event 1 aus:"
+            x.ShowDialog()
 
-            ' Update the text box color if the user clicks OK 
-            If (MyDialog.ShowDialog() = DialogResult.OK) Then
-                btnBackgroundColorActive1.BackColor = MyDialog.Color
-            End If
+            btnBackgroundColorActive1.BackColor = x.Color
+            '    Dim MyDialog As New ColorDialog()
+
+            '    ' Update the text box color if the user clicks OK 
+            '    If (MyDialog.ShowDialog() = DialogResult.OK) Then
+            '        btnBackgroundColorActive1.BackColor = MyDialog.Color
+            '    End If
         Catch ex As Exception
 
         End Try
@@ -131,12 +136,18 @@
 
     Private Sub btnBackgroundColorActive2_Click(sender As Object, e As EventArgs) Handles btnBackgroundColorActive2.Click
         Try
-            Dim MyDialog As New ColorDialog()
+            'Dim MyDialog As New ColorDialog()
 
-            ' Update the text box color if the user clicks OK 
-            If (MyDialog.ShowDialog() = DialogResult.OK) Then
-                btnBackgroundColorActive2.BackColor = MyDialog.Color
-            End If
+            Dim x As New Cyotek.Windows.Forms.ColorPickerDialog
+            x.Text = "Bitte wählen sie die Hintergrundfarbe  für Anzeige von Event 2 aus:"
+            x.ShowDialog()
+
+            btnBackgroundColorActive2.BackColor = x.Color
+
+            '' Update the text box color if the user clicks OK 
+            'If (MyDialog.ShowDialog() = DialogResult.OK) Then
+            '    btnBackgroundColorActive2.BackColor = MyDialog.Color
+            'End If
         Catch ex As Exception
 
         End Try

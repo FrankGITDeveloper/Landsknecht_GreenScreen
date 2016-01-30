@@ -24,6 +24,7 @@ Partial Class frmConfiguration
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.chkLoadLastBackgroundOnStart = New System.Windows.Forms.CheckBox()
         Me.btnBackgroundColorActive2 = New System.Windows.Forms.Button()
         Me.btnBackgroundColorActive1 = New System.Windows.Forms.Button()
         Me.txtBackgrundImageFileFormat = New System.Windows.Forms.TextBox()
@@ -113,7 +114,6 @@ Partial Class frmConfiguration
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
-        Me.chkLoadLastBackgroundOnStart = New System.Windows.Forms.CheckBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -155,27 +155,37 @@ Partial Class frmConfiguration
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Standard Einstellungen"
         '
+        'chkLoadLastBackgroundOnStart
+        '
+        Me.chkLoadLastBackgroundOnStart.AutoSize = True
+        Me.chkLoadLastBackgroundOnStart.Location = New System.Drawing.Point(9, 335)
+        Me.chkLoadLastBackgroundOnStart.Name = "chkLoadLastBackgroundOnStart"
+        Me.chkLoadLastBackgroundOnStart.Size = New System.Drawing.Size(226, 17)
+        Me.chkLoadLastBackgroundOnStart.TabIndex = 37
+        Me.chkLoadLastBackgroundOnStart.Text = "Den letzten Hintergrund beim Start merken"
+        Me.chkLoadLastBackgroundOnStart.UseVisualStyleBackColor = True
+        '
         'btnBackgroundColorActive2
         '
-        Me.btnBackgroundColorActive2.Location = New System.Drawing.Point(555, 63)
+        Me.btnBackgroundColorActive2.Location = New System.Drawing.Point(168, 115)
         Me.btnBackgroundColorActive2.Name = "btnBackgroundColorActive2"
-        Me.btnBackgroundColorActive2.Size = New System.Drawing.Size(153, 27)
+        Me.btnBackgroundColorActive2.Size = New System.Drawing.Size(153, 20)
         Me.btnBackgroundColorActive2.TabIndex = 36
         Me.btnBackgroundColorActive2.Text = "Event 2 Farbe"
         Me.btnBackgroundColorActive2.UseVisualStyleBackColor = True
         '
         'btnBackgroundColorActive1
         '
-        Me.btnBackgroundColorActive1.Location = New System.Drawing.Point(555, 30)
+        Me.btnBackgroundColorActive1.Location = New System.Drawing.Point(9, 115)
         Me.btnBackgroundColorActive1.Name = "btnBackgroundColorActive1"
-        Me.btnBackgroundColorActive1.Size = New System.Drawing.Size(153, 27)
+        Me.btnBackgroundColorActive1.Size = New System.Drawing.Size(153, 20)
         Me.btnBackgroundColorActive1.TabIndex = 35
         Me.btnBackgroundColorActive1.Text = "Event 1 Farbe"
         Me.btnBackgroundColorActive1.UseVisualStyleBackColor = True
         '
         'txtBackgrundImageFileFormat
         '
-        Me.txtBackgrundImageFileFormat.Location = New System.Drawing.Point(9, 250)
+        Me.txtBackgrundImageFileFormat.Location = New System.Drawing.Point(9, 284)
         Me.txtBackgrundImageFileFormat.Name = "txtBackgrundImageFileFormat"
         Me.txtBackgrundImageFileFormat.Size = New System.Drawing.Size(430, 20)
         Me.txtBackgrundImageFileFormat.TabIndex = 34
@@ -183,7 +193,7 @@ Partial Class frmConfiguration
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(6, 233)
+        Me.Label24.Location = New System.Drawing.Point(6, 267)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(264, 13)
         Me.Label24.TabIndex = 33
@@ -207,7 +217,7 @@ Partial Class frmConfiguration
         '
         'txtThumbnailSuffix
         '
-        Me.txtThumbnailSuffix.Location = New System.Drawing.Point(9, 200)
+        Me.txtThumbnailSuffix.Location = New System.Drawing.Point(9, 234)
         Me.txtThumbnailSuffix.Name = "txtThumbnailSuffix"
         Me.txtThumbnailSuffix.Size = New System.Drawing.Size(430, 20)
         Me.txtThumbnailSuffix.TabIndex = 30
@@ -215,7 +225,7 @@ Partial Class frmConfiguration
         'Label22
         '
         Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(6, 183)
+        Me.Label22.Location = New System.Drawing.Point(6, 217)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(304, 13)
         Me.Label22.TabIndex = 29
@@ -223,7 +233,7 @@ Partial Class frmConfiguration
         '
         'btnBackgroundImageDir
         '
-        Me.btnBackgroundImageDir.Location = New System.Drawing.Point(453, 154)
+        Me.btnBackgroundImageDir.Location = New System.Drawing.Point(453, 188)
         Me.btnBackgroundImageDir.Name = "btnBackgroundImageDir"
         Me.btnBackgroundImageDir.Size = New System.Drawing.Size(26, 19)
         Me.btnBackgroundImageDir.TabIndex = 28
@@ -232,7 +242,7 @@ Partial Class frmConfiguration
         '
         'txtBackgroundImagePath
         '
-        Me.txtBackgroundImagePath.Location = New System.Drawing.Point(9, 154)
+        Me.txtBackgroundImagePath.Location = New System.Drawing.Point(9, 188)
         Me.txtBackgroundImagePath.Name = "txtBackgroundImagePath"
         Me.txtBackgroundImagePath.Size = New System.Drawing.Size(430, 20)
         Me.txtBackgroundImagePath.TabIndex = 27
@@ -240,7 +250,7 @@ Partial Class frmConfiguration
         'lblBackgroundImagePath
         '
         Me.lblBackgroundImagePath.AutoSize = True
-        Me.lblBackgroundImagePath.Location = New System.Drawing.Point(6, 137)
+        Me.lblBackgroundImagePath.Location = New System.Drawing.Point(6, 171)
         Me.lblBackgroundImagePath.Name = "lblBackgroundImagePath"
         Me.lblBackgroundImagePath.Size = New System.Drawing.Size(162, 13)
         Me.lblBackgroundImagePath.TabIndex = 26
@@ -929,16 +939,6 @@ Partial Class frmConfiguration
         Me.btnCancel.TabIndex = 2
         Me.btnCancel.Text = "Änderungen &verwerfen"
         Me.btnCancel.UseVisualStyleBackColor = True
-        '
-        'chkLoadLastBackgroundOnStart
-        '
-        Me.chkLoadLastBackgroundOnStart.AutoSize = True
-        Me.chkLoadLastBackgroundOnStart.Location = New System.Drawing.Point(9, 301)
-        Me.chkLoadLastBackgroundOnStart.Name = "chkLoadLastBackgroundOnStart"
-        Me.chkLoadLastBackgroundOnStart.Size = New System.Drawing.Size(226, 17)
-        Me.chkLoadLastBackgroundOnStart.TabIndex = 37
-        Me.chkLoadLastBackgroundOnStart.Text = "Den letzten Hintergrund beim Start merken"
-        Me.chkLoadLastBackgroundOnStart.UseVisualStyleBackColor = True
         '
         'frmConfiguration
         '

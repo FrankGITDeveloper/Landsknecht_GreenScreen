@@ -51,6 +51,8 @@
 
         chkSettingsAlwaysSave.Checked = My.Settings.setSettingsAlwaysSave
 
+        txtSoundEvent1.Text = My.Settings.setSoundEvent1
+        txtSoundEvent2.Text = My.Settings.setSoundEvent2
 
 
 
@@ -59,13 +61,31 @@
     End Sub
 
     Private Sub btnBackgroundImageDir_Click(sender As Object, e As EventArgs) Handles btnBackgroundImageDir.Click
-        Try
-            FolderBrowserDialog1.ShowDialog()
 
-            txtBackgroundImagePath.Text = FolderBrowserDialog1.SelectedPath
-        Catch
-            MessageBox.Show(Err.Number & " - " & Err.Description, "Es ist ein Fehler aufgetreten!")
-        End Try
+        Dim openFileDialog1 As New OpenFileDialog()
+
+        openFileDialog1.InitialDirectory = System.Reflection.Assembly.GetExecutingAssembly().Location
+        openFileDialog1.Filter = "Soundfiles*.WAV (*.WAV)|*.WAV"
+        openFileDialog1.FilterIndex = 1
+        openFileDialog1.RestoreDirectory = True
+
+        If openFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
+            Try
+                txtSoundEvent1.Text = openFileDialog1.FileName
+
+                'If (myStream IsNot Nothing) Then
+                '    ' Insert code to read the stream here.
+                'End If
+            Catch Ex As Exception
+                MessageBox.Show(Err.Number & " - " & Err.Description, "Es Ist Ein Fehler Aufgetreten! btnApplication1_Click")
+                '     MessageBox.Show("Cannot read file from disk. Original error: " & Ex.Message)
+            Finally
+                '' Check this again, since we need to make sure we didn't throw an exception on open.
+                'If (myStream IsNot Nothing) Then
+                '    myStream.Close()
+                'End If
+            End Try
+        End If
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
@@ -120,6 +140,8 @@
 
         My.Settings.setSettingsAlwaysSave = chkSettingsAlwaysSave.Checked
 
+        My.Settings.setSoundEvent1 = txtSoundEvent1.Text
+        My.Settings.setSoundEvent2 = txtSoundEvent2.Text
 
         My.Settings.Save()
         Me.Dispose()
@@ -165,5 +187,56 @@
         End Try
     End Sub
 
+    Private Sub btnSoundEvent1_Click(sender As Object, e As EventArgs) Handles btnSoundEvent1.Click
 
+        Dim openFileDialog1 As New OpenFileDialog()
+
+        openFileDialog1.InitialDirectory = System.Reflection.Assembly.GetExecutingAssembly().Location
+        openFileDialog1.Filter = "Soundfiles*.WAV (*.WAV)|*.WAV"
+        openFileDialog1.FilterIndex = 1
+        openFileDialog1.RestoreDirectory = True
+
+        If openFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
+            Try
+                txtSoundEvent1.Text = openFileDialog1.FileName
+
+                'If (myStream IsNot Nothing) Then
+                '    ' Insert code to read the stream here.
+                'End If
+            Catch Ex As Exception
+                MessageBox.Show(Err.Number & " - " & Err.Description, "Es Ist Ein Fehler Aufgetreten! btnSoundEvent1_Clic")
+                '     MessageBox.Show("Cannot read file from disk. Original error: " & Ex.Message)
+            Finally
+                '' Check this again, since we need to make sure we didn't throw an exception on open.
+                'If (myStream IsNot Nothing) Then
+                '    myStream.Close()
+                'End If
+            End Try
+        End If
+    End Sub
+
+    Private Sub btnSoundEvent2_Click(sender As Object, e As EventArgs) Handles btnSoundEvent2.Click
+        OpenFileDialog1.InitialDirectory = System.Reflection.Assembly.GetExecutingAssembly().Location
+        OpenFileDialog1.Filter = "Soundfiles*.WAV (*.WAV)|*.WAV"
+        OpenFileDialog1.FilterIndex = 1
+        OpenFileDialog1.RestoreDirectory = True
+
+        If OpenFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
+            Try
+                txtSoundEvent2.Text = OpenFileDialog1.FileName
+
+                'If (myStream IsNot Nothing) Then
+                '    ' Insert code to read the stream here.
+                'End If
+            Catch Ex As Exception
+                MessageBox.Show(Err.Number & " - " & Err.Description, "Es Ist Ein Fehler Aufgetreten! btnSoundEvent1_Clic")
+                '     MessageBox.Show("Cannot read file from disk. Original error: " & Ex.Message)
+            Finally
+                '' Check this again, since we need to make sure we didn't throw an exception on open.
+                'If (myStream IsNot Nothing) Then
+                '    myStream.Close()
+                'End If
+            End Try
+        End If
+    End Sub
 End Class

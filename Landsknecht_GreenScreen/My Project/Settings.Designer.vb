@@ -832,6 +832,30 @@ Namespace My
                 Me("setSettingsAlwaysSave") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property setSoundEvent1() As String
+            Get
+                Return CType(Me("setSoundEvent1"),String)
+            End Get
+            Set
+                Me("setSoundEvent1") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property setSoundEvent2() As String
+            Get
+                Return CType(Me("setSoundEvent2"),String)
+            End Get
+            Set
+                Me("setSoundEvent2") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

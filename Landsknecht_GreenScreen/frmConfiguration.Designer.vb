@@ -24,6 +24,11 @@ Partial Class frmConfiguration
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.btnSoundEvent1 = New System.Windows.Forms.Button()
+        Me.Label40 = New System.Windows.Forms.Label()
+        Me.txtSoundEvent2 = New System.Windows.Forms.TextBox()
+        Me.txtSoundEvent1 = New System.Windows.Forms.TextBox()
+        Me.Label41 = New System.Windows.Forms.Label()
         Me.chkSettingsAlwaysSave = New System.Windows.Forms.CheckBox()
         Me.txtPauseForProcessing = New System.Windows.Forms.TextBox()
         Me.Label39 = New System.Windows.Forms.Label()
@@ -117,6 +122,7 @@ Partial Class frmConfiguration
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
+        Me.btnSoundEvent2 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -137,6 +143,12 @@ Partial Class frmConfiguration
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.SystemColors.Control
+        Me.TabPage1.Controls.Add(Me.btnSoundEvent2)
+        Me.TabPage1.Controls.Add(Me.btnSoundEvent1)
+        Me.TabPage1.Controls.Add(Me.Label40)
+        Me.TabPage1.Controls.Add(Me.txtSoundEvent2)
+        Me.TabPage1.Controls.Add(Me.txtSoundEvent1)
+        Me.TabPage1.Controls.Add(Me.Label41)
         Me.TabPage1.Controls.Add(Me.chkSettingsAlwaysSave)
         Me.TabPage1.Controls.Add(Me.txtPauseForProcessing)
         Me.TabPage1.Controls.Add(Me.Label39)
@@ -161,10 +173,51 @@ Partial Class frmConfiguration
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Standard Einstellungen"
         '
+        'btnSoundEvent1
+        '
+        Me.btnSoundEvent1.Location = New System.Drawing.Point(982, 34)
+        Me.btnSoundEvent1.Name = "btnSoundEvent1"
+        Me.btnSoundEvent1.Size = New System.Drawing.Size(26, 19)
+        Me.btnSoundEvent1.TabIndex = 46
+        Me.btnSoundEvent1.Text = "..."
+        Me.btnSoundEvent1.UseVisualStyleBackColor = True
+        '
+        'Label40
+        '
+        Me.Label40.AutoSize = True
+        Me.Label40.Location = New System.Drawing.Point(551, 65)
+        Me.Label40.Name = "Label40"
+        Me.Label40.Size = New System.Drawing.Size(312, 13)
+        Me.Label40.TabIndex = 45
+        Me.Label40.Text = "Welcher Ton soll abgespielt werden wenn Event2 ausgelöst wird"
+        '
+        'txtSoundEvent2
+        '
+        Me.txtSoundEvent2.Location = New System.Drawing.Point(553, 81)
+        Me.txtSoundEvent2.Name = "txtSoundEvent2"
+        Me.txtSoundEvent2.Size = New System.Drawing.Size(423, 20)
+        Me.txtSoundEvent2.TabIndex = 44
+        '
+        'txtSoundEvent1
+        '
+        Me.txtSoundEvent1.Location = New System.Drawing.Point(553, 35)
+        Me.txtSoundEvent1.Name = "txtSoundEvent1"
+        Me.txtSoundEvent1.Size = New System.Drawing.Size(423, 20)
+        Me.txtSoundEvent1.TabIndex = 42
+        '
+        'Label41
+        '
+        Me.Label41.AutoSize = True
+        Me.Label41.Location = New System.Drawing.Point(550, 18)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(312, 13)
+        Me.Label41.TabIndex = 41
+        Me.Label41.Text = "Welcher Ton soll abgespielt werden wenn Event1 ausgelöst wird"
+        '
         'chkSettingsAlwaysSave
         '
         Me.chkSettingsAlwaysSave.AutoSize = True
-        Me.chkSettingsAlwaysSave.Location = New System.Drawing.Point(556, 34)
+        Me.chkSettingsAlwaysSave.Location = New System.Drawing.Point(9, 120)
         Me.chkSettingsAlwaysSave.Name = "chkSettingsAlwaysSave"
         Me.chkSettingsAlwaysSave.Size = New System.Drawing.Size(268, 17)
         Me.chkSettingsAlwaysSave.TabIndex = 40
@@ -199,18 +252,18 @@ Partial Class frmConfiguration
         '
         'btnBackgroundColorActive2
         '
-        Me.btnBackgroundColorActive2.Location = New System.Drawing.Point(168, 115)
+        Me.btnBackgroundColorActive2.Location = New System.Drawing.Point(453, 81)
         Me.btnBackgroundColorActive2.Name = "btnBackgroundColorActive2"
-        Me.btnBackgroundColorActive2.Size = New System.Drawing.Size(153, 20)
+        Me.btnBackgroundColorActive2.Size = New System.Drawing.Size(83, 20)
         Me.btnBackgroundColorActive2.TabIndex = 36
         Me.btnBackgroundColorActive2.Text = "Event 2 Farbe"
         Me.btnBackgroundColorActive2.UseVisualStyleBackColor = True
         '
         'btnBackgroundColorActive1
         '
-        Me.btnBackgroundColorActive1.Location = New System.Drawing.Point(9, 115)
+        Me.btnBackgroundColorActive1.Location = New System.Drawing.Point(453, 35)
         Me.btnBackgroundColorActive1.Name = "btnBackgroundColorActive1"
-        Me.btnBackgroundColorActive1.Size = New System.Drawing.Size(153, 20)
+        Me.btnBackgroundColorActive1.Size = New System.Drawing.Size(83, 20)
         Me.btnBackgroundColorActive1.TabIndex = 35
         Me.btnBackgroundColorActive1.Text = "Event 1 Farbe"
         Me.btnBackgroundColorActive1.UseVisualStyleBackColor = True
@@ -972,6 +1025,15 @@ Partial Class frmConfiguration
         Me.btnCancel.Text = "Änderungen &verwerfen"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
+        'btnSoundEvent2
+        '
+        Me.btnSoundEvent2.Location = New System.Drawing.Point(982, 80)
+        Me.btnSoundEvent2.Name = "btnSoundEvent2"
+        Me.btnSoundEvent2.Size = New System.Drawing.Size(26, 19)
+        Me.btnSoundEvent2.TabIndex = 47
+        Me.btnSoundEvent2.Text = "..."
+        Me.btnSoundEvent2.UseVisualStyleBackColor = True
+        '
         'frmConfiguration
         '
         Me.AcceptButton = Me.btnSave
@@ -1093,4 +1155,10 @@ Partial Class frmConfiguration
     Friend WithEvents txtPauseForProcessing As TextBox
     Friend WithEvents Label39 As Label
     Friend WithEvents chkSettingsAlwaysSave As CheckBox
+    Friend WithEvents btnSoundEvent1 As Button
+    Friend WithEvents Label40 As Label
+    Friend WithEvents txtSoundEvent2 As TextBox
+    Friend WithEvents txtSoundEvent1 As TextBox
+    Friend WithEvents Label41 As Label
+    Friend WithEvents btnSoundEvent2 As Button
 End Class

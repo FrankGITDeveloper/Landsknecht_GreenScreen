@@ -371,8 +371,8 @@
     Private Sub FileSystemWatcher1_Created(sender As Object, e As IO.FileSystemEventArgs) Handles FileSystemWatcher1.Created
         'Sound abspielen bei Event
 
-        My.Computer.Audio.PlaySystemSound(System.Media.SystemSounds.Beep)
-        MsgBox("Fehler")
+        My.Computer.Audio.Play("D:\Eye-Fi\Development\VisualStudio\VS2015\Landsknecht\Landsknecht_GreenScreen\camera.wav")
+        '      MsgBox("Fehler")
 
         '     System.Threading.Thread.Sleep(System.Threading.Thread.Sleep(My.Settings.SetPauseForProcessing)
 
@@ -425,8 +425,6 @@
 
         Try
 
-            '            Process.Start(txtApplication1.Text, strCommandstring)
-            Beep()
 
             Dim ExterneAnwendung As New System.Diagnostics.Process()
             ExterneAnwendung.StartInfo.FileName = txtApplication1.Text
@@ -434,8 +432,6 @@
             ExterneAnwendung.Start()
 
             ExterneAnwendung.WaitForExit()
-            Beep()
-
 
         Catch
             MessageBox.Show(Err.Number & " - " & Err.Description, "Es ist ein Fehler aufgetreten!  FileSystemWatcher1_Created Process.Start")
@@ -444,48 +440,9 @@
 
     Private Sub FileSystemWatcher2_Created(sender As Object, e As IO.FileSystemEventArgs) Handles FileSystemWatcher2.Created
 
+        System.Threading.Thread.Sleep(My.Settings.SetPauseForProcessing)
 
-        'Dim strCommandstring As String = ""
-        'Dim PhotolineAktionsname As String = My.Settings.setPLAktion2
-
-        'Try
-
-        '    My.Computer.Audio.PlaySystemSound(System.Media.SystemSounds.Beep)
-        '    frmBackroundSelector.Visible = False
-        '    ' ShowDialog(frmBackroundSelector)
-        '    '   Dim x As Integer = frmBackroundSelector.ShowDialog()
-
-        '    Dim SourceFile As String = My.Settings.setTempBackgroundImage
-        '    Dim DestinationFile As String = My.Settings.setBackgroundImagePath & "\Background_temp.jpg"
-
-
-
-        '    'Prüfe auf Photoline Argumente Checkbox
-        '    If chkPhotolineArtguments2.Checked = True Then
-        '        strCommandstring = "-Convert " & e.FullPath.ToString & " " & e.FullPath.ToString & ".PLD " & PhotolineAktionsname
-        '    Else
-        '        strCommandstring = e.FullPath.ToString & txtApplication2Arguments.Text
-
-        '    End If
-        '    MsgBox(txtApplication2.Text, 0, strCommandstring)
-
-
-        '    Process.Start(txtApplication2.Text, strCommandstring)
-
-        '    '      Process.Start(txtApplication2.Text, e.FullPath.ToString)
-
-        'Catch
-        '    MessageBox.Show(Err.Number & " - " & Err.Description, "Es ist ein Fehler aufgetreten! ileSystemWatcher2_Created")
-        'End Try
-
-
-
-        'Sound abspielen bei Event
-
-        My.Computer.Audio.PlaySystemSound(System.Media.SystemSounds.Asterisk)
-        System.Threading.Thread.Sleep(6000)
-        My.Computer.Audio.PlaySystemSound(System.Media.SystemSounds.Asterisk)
-
+        My.Computer.Audio.Play("D:\Eye-Fi\Development\VisualStudio\VS2015\Landsknecht\Landsknecht_GreenScreen\applause.wav")
 
         Dim SourceFile As String = ""
         Dim DestinationFile As String = ""
@@ -522,7 +479,14 @@
 
         Try
 
-            Process.Start(txtApplication2.Text, strCommandstring)
+            Dim ExterneAnwendung As New System.Diagnostics.Process()
+            ExterneAnwendung.StartInfo.FileName = txtApplication2.Text
+            ExterneAnwendung.StartInfo.Arguments = strCommandstring
+            ExterneAnwendung.Start()
+
+            ExterneAnwendung.WaitForExit()
+
+
 
 
         Catch

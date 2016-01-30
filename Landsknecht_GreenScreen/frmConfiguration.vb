@@ -1,63 +1,66 @@
 ﻿Public Class frmConfiguration
     Private Sub frmConfiguration_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        txtPLAktion1.Text = My.Settings.setPLAktion1
-        txtBackgroundImagePath.Text = My.Settings.setBackgroundImagePath
-        txtPLAktion1.Text = My.Settings.setPLAktion1
-        txtPLAktion2.Text = My.Settings.setPLAktion2
-        txtThumbnailSuffix.Text = My.Settings.setThumbnailImageSuffix
-        txtBackgrundImageFileFormat.Text = My.Settings.setBackgroundImageFileFormat
-        txtBackground1.Text = My.Settings.setBackground1
-        txtBackground2.Text = My.Settings.setBackground2
-        txtBackground3.Text = My.Settings.setBackground3
-        txtBackground4.Text = My.Settings.setBackground4
-        txtBackground5.Text = My.Settings.setBackground5
-        txtBackground6.Text = My.Settings.setBackground6
-        txtBackground7.Text = My.Settings.setBackground7
-        txtBackground8.Text = My.Settings.setBackground8
-        txtBackground9.Text = My.Settings.setBackground9
-        txtBackground10.Text = My.Settings.setBackground10
-        txtBackground11.Text = My.Settings.setBackground11
-        txtBackground12.Text = My.Settings.setBackground12
-        txtBackground13.Text = My.Settings.setBackground13
-        txtBackground14.Text = My.Settings.setBackground14
-        txtBackground15.Text = My.Settings.setBackground15
-        txtBackground16.Text = My.Settings.setBackground16
-        txtBackground17.Text = My.Settings.setBackground17
-
-        txtThumbnail1.Text = My.Settings.setBackgroundThumbnail1
-        txtThumbnail2.Text = My.Settings.setBackgroundThumbnail2
-        txtThumbnail3.Text = My.Settings.setBackgroundThumbnail3
-        txtThumbnail4.Text = My.Settings.setBackgroundThumbnail4
-        txtThumbnail5.Text = My.Settings.setBackgroundThumbnail5
-        txtThumbnail6.Text = My.Settings.setBackgroundThumbnail6
-        txtThumbnail7.Text = My.Settings.setBackgroundThumbnail7
-        txtThumbnail8.Text = My.Settings.setBackgroundThumbnail8
-        txtThumbnail9.Text = My.Settings.setBackgroundThumbnail9
-        txtThumbnail10.Text = My.Settings.setBackgroundThumbnail10
-        txtThumbnail11.Text = My.Settings.setBackgroundThumbnail11
-        txtThumbnail12.Text = My.Settings.setBackgroundThumbnail12
-        txtThumbnail13.Text = My.Settings.setBackgroundThumbnail13
-        txtThumbnail14.Text = My.Settings.setBackgroundThumbnail14
-        txtThumbnail15.Text = My.Settings.setBackgroundThumbnail15
-        txtThumbnail16.Text = My.Settings.setBackgroundThumbnail16
-        txtThumbnail17.Text = My.Settings.setBackgroundThumbnail17
-
-        btnBackgroundColorActive1.BackColor = My.Settings.setBackgroundColorActive1
-        btnBackgroundColorActive2.BackColor = My.Settings.setBackgroundColorActive2
-
-        chkLoadLastBackgroundOnStart.Checked = My.Settings.setLoadLastBackgroundOnStart
-
-        txtPauseForProcessing.Text = My.Settings.SetPauseForProcessing
-
-        chkSettingsAlwaysSave.Checked = My.Settings.setSettingsAlwaysSave
-
-        txtSoundEvent1.Text = My.Settings.setSoundEvent1
-        txtSoundEvent2.Text = My.Settings.setSoundEvent2
+        Try
 
 
+            txtPLAktion1.Text = My.Settings.setPLAktion1
+            txtBackgroundImagePath.Text = My.Settings.setBackgroundImagePath
+            txtPLAktion1.Text = My.Settings.setPLAktion1
+            txtPLAktion2.Text = My.Settings.setPLAktion2
+            txtThumbnailSuffix.Text = My.Settings.setThumbnailImageSuffix
+            txtBackgrundImageFileFormat.Text = My.Settings.setBackgroundImageFileFormat
+            txtBackground1.Text = My.Settings.setBackground1
+            txtBackground2.Text = My.Settings.setBackground2
+            txtBackground3.Text = My.Settings.setBackground3
+            txtBackground4.Text = My.Settings.setBackground4
+            txtBackground5.Text = My.Settings.setBackground5
+            txtBackground6.Text = My.Settings.setBackground6
+            txtBackground7.Text = My.Settings.setBackground7
+            txtBackground8.Text = My.Settings.setBackground8
+            txtBackground9.Text = My.Settings.setBackground9
+            txtBackground10.Text = My.Settings.setBackground10
+            txtBackground11.Text = My.Settings.setBackground11
+            txtBackground12.Text = My.Settings.setBackground12
+            txtBackground13.Text = My.Settings.setBackground13
+            txtBackground14.Text = My.Settings.setBackground14
+            txtBackground15.Text = My.Settings.setBackground15
+            txtBackground16.Text = My.Settings.setBackground16
+            txtBackground17.Text = My.Settings.setBackground17
 
+            txtThumbnail1.Text = My.Settings.setBackgroundThumbnail1
+            txtThumbnail2.Text = My.Settings.setBackgroundThumbnail2
+            txtThumbnail3.Text = My.Settings.setBackgroundThumbnail3
+            txtThumbnail4.Text = My.Settings.setBackgroundThumbnail4
+            txtThumbnail5.Text = My.Settings.setBackgroundThumbnail5
+            txtThumbnail6.Text = My.Settings.setBackgroundThumbnail6
+            txtThumbnail7.Text = My.Settings.setBackgroundThumbnail7
+            txtThumbnail8.Text = My.Settings.setBackgroundThumbnail8
+            txtThumbnail9.Text = My.Settings.setBackgroundThumbnail9
+            txtThumbnail10.Text = My.Settings.setBackgroundThumbnail10
+            txtThumbnail11.Text = My.Settings.setBackgroundThumbnail11
+            txtThumbnail12.Text = My.Settings.setBackgroundThumbnail12
+            txtThumbnail13.Text = My.Settings.setBackgroundThumbnail13
+            txtThumbnail14.Text = My.Settings.setBackgroundThumbnail14
+            txtThumbnail15.Text = My.Settings.setBackgroundThumbnail15
+            txtThumbnail16.Text = My.Settings.setBackgroundThumbnail16
+            txtThumbnail17.Text = My.Settings.setBackgroundThumbnail17
 
+            btnBackgroundColorActive1.BackColor = My.Settings.setBackgroundColorActive1
+            btnBackgroundColorActive2.BackColor = My.Settings.setBackgroundColorActive2
 
+            chkLoadLastBackgroundOnStart.Checked = My.Settings.setLoadLastBackgroundOnStart
+
+            txtPauseForProcessing.Text = My.Settings.SetPauseForProcessing
+
+            chkSettingsAlwaysSave.Checked = My.Settings.setSettingsAlwaysSave
+
+            txtSoundEvent1.Text = My.Settings.setSoundEvent1
+            txtSoundEvent2.Text = My.Settings.setSoundEvent2
+
+        Catch ex As Exception
+            MessageBox.Show(Err.Number & " - " & Err.Description, "Es Ist Ein Fehler Aufgetreten! frmConfiguration_Load")
+
+        End Try
     End Sub
 
     Private Sub btnBackgroundImageDir_Click(sender As Object, e As EventArgs) Handles btnBackgroundImageDir.Click

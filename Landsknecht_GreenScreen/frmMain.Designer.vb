@@ -78,12 +78,17 @@ Partial Class frmMain
         Me.KonfigurationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HintergrundAuswahlToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.EinstellungenSpeichernToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripSeparator()
         Me.BeendenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HilfeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ÜberToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.picLastScan = New System.Windows.Forms.PictureBox()
         Me.picPreview = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.ToolStripStatusLabelBildanzahl = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabelErkannteDateien = New System.Windows.Forms.ToolStripStatusLabel()
         CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FileSystemWatcher2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -97,6 +102,7 @@ Partial Class frmMain
         CType(Me.picLastScan, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picPreview, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'FileSystemWatcher1
@@ -108,7 +114,7 @@ Partial Class frmMain
         '
         Me.btnEnd.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.btnEnd.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnEnd.Location = New System.Drawing.Point(346, 388)
+        Me.btnEnd.Location = New System.Drawing.Point(351, 413)
         Me.btnEnd.Name = "btnEnd"
         Me.btnEnd.Size = New System.Drawing.Size(129, 36)
         Me.btnEnd.TabIndex = 10
@@ -118,7 +124,7 @@ Partial Class frmMain
         'btnStop
         '
         Me.btnStop.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnStop.Location = New System.Drawing.Point(147, 388)
+        Me.btnStop.Location = New System.Drawing.Point(151, 413)
         Me.btnStop.Name = "btnStop"
         Me.btnStop.Size = New System.Drawing.Size(129, 36)
         Me.btnStop.TabIndex = 9
@@ -128,7 +134,7 @@ Partial Class frmMain
         'btnStart
         '
         Me.btnStart.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnStart.Location = New System.Drawing.Point(12, 388)
+        Me.btnStart.Location = New System.Drawing.Point(16, 413)
         Me.btnStart.Name = "btnStart"
         Me.btnStart.Size = New System.Drawing.Size(129, 36)
         Me.btnStart.TabIndex = 8
@@ -153,7 +159,7 @@ Partial Class frmMain
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.HotTrack = True
-        Me.TabControl1.Location = New System.Drawing.Point(12, 27)
+        Me.TabControl1.Location = New System.Drawing.Point(12, 36)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(501, 338)
@@ -545,13 +551,13 @@ Partial Class frmMain
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DateiToolStripMenuItem, Me.HilfeToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(729, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(730, 24)
         Me.MenuStrip1.TabIndex = 37
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'DateiToolStripMenuItem
         '
-        Me.DateiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.KonfigurationToolStripMenuItem, Me.HintergrundAuswahlToolStripMenuItem, Me.ToolStripMenuItem1, Me.BeendenToolStripMenuItem})
+        Me.DateiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.KonfigurationToolStripMenuItem, Me.HintergrundAuswahlToolStripMenuItem, Me.ToolStripMenuItem1, Me.EinstellungenSpeichernToolStripMenuItem, Me.ToolStripMenuItem2, Me.BeendenToolStripMenuItem})
         Me.DateiToolStripMenuItem.Name = "DateiToolStripMenuItem"
         Me.DateiToolStripMenuItem.Size = New System.Drawing.Size(46, 20)
         Me.DateiToolStripMenuItem.Text = "&Datei"
@@ -559,24 +565,35 @@ Partial Class frmMain
         'KonfigurationToolStripMenuItem
         '
         Me.KonfigurationToolStripMenuItem.Name = "KonfigurationToolStripMenuItem"
-        Me.KonfigurationToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.KonfigurationToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
         Me.KonfigurationToolStripMenuItem.Text = "Konfiguration"
         '
         'HintergrundAuswahlToolStripMenuItem
         '
         Me.HintergrundAuswahlToolStripMenuItem.Name = "HintergrundAuswahlToolStripMenuItem"
-        Me.HintergrundAuswahlToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.HintergrundAuswahlToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
         Me.HintergrundAuswahlToolStripMenuItem.Text = "Hintergrund Auswahl"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(184, 6)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(196, 6)
+        '
+        'EinstellungenSpeichernToolStripMenuItem
+        '
+        Me.EinstellungenSpeichernToolStripMenuItem.Name = "EinstellungenSpeichernToolStripMenuItem"
+        Me.EinstellungenSpeichernToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
+        Me.EinstellungenSpeichernToolStripMenuItem.Text = "Einstellungen speichern"
+        '
+        'ToolStripMenuItem2
+        '
+        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(196, 6)
         '
         'BeendenToolStripMenuItem
         '
         Me.BeendenToolStripMenuItem.Name = "BeendenToolStripMenuItem"
-        Me.BeendenToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.BeendenToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
         Me.BeendenToolStripMenuItem.Text = "&Beenden"
         '
         'HilfeToolStripMenuItem
@@ -603,7 +620,7 @@ Partial Class frmMain
         '
         'picPreview
         '
-        Me.picPreview.Location = New System.Drawing.Point(520, 49)
+        Me.picPreview.Location = New System.Drawing.Point(520, 35)
         Me.picPreview.Name = "picPreview"
         Me.picPreview.Size = New System.Drawing.Size(197, 136)
         Me.picPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -614,18 +631,39 @@ Partial Class frmMain
         '
         Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.PictureBox1.Image = Global.Landsknecht_GreenScreen.My.Resources.Resources.RZ_Landsnecht_RGB_transparent
-        Me.PictureBox1.Location = New System.Drawing.Point(520, 330)
+        Me.PictureBox1.Location = New System.Drawing.Point(524, 355)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(203, 94)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 40
         Me.PictureBox1.TabStop = False
         '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabelBildanzahl, Me.ToolStripStatusLabelErkannteDateien})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 452)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(730, 22)
+        Me.StatusStrip1.TabIndex = 43
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'ToolStripStatusLabelBildanzahl
+        '
+        Me.ToolStripStatusLabelBildanzahl.Name = "ToolStripStatusLabelBildanzahl"
+        Me.ToolStripStatusLabelBildanzahl.Size = New System.Drawing.Size(99, 17)
+        Me.ToolStripStatusLabelBildanzahl.Text = "Erkannte Dateien:"
+        '
+        'ToolStripStatusLabelErkannteDateien
+        '
+        Me.ToolStripStatusLabelErkannteDateien.Name = "ToolStripStatusLabelErkannteDateien"
+        Me.ToolStripStatusLabelErkannteDateien.Size = New System.Drawing.Size(0, 17)
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(729, 436)
+        Me.ClientSize = New System.Drawing.Size(730, 474)
+        Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.picLastScan)
         Me.Controls.Add(Me.picPreview)
         Me.Controls.Add(Me.TabControl1)
@@ -634,6 +672,7 @@ Partial Class frmMain
         Me.Controls.Add(Me.btnStart)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.PictureBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
@@ -658,6 +697,8 @@ Partial Class frmMain
         CType(Me.picLastScan, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picPreview, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.StatusStrip1.ResumeLayout(False)
+        Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -723,4 +764,9 @@ Partial Class frmMain
     Private WithEvents lblOutputformat1 As Label
     Private WithEvents Label7 As Label
     Private WithEvents txtOutputFormat2 As TextBox
+    Friend WithEvents EinstellungenSpeichernToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem2 As ToolStripSeparator
+    Friend WithEvents StatusStrip1 As StatusStrip
+    Friend WithEvents ToolStripStatusLabelBildanzahl As ToolStripStatusLabel
+    Friend WithEvents ToolStripStatusLabelErkannteDateien As ToolStripStatusLabel
 End Class

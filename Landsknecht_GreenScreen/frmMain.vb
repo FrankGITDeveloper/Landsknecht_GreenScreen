@@ -1,6 +1,7 @@
 ﻿Public Class frmMain
     Public bolChanges As Boolean = False    'Änderungen am Ende speichern
     Public intBackgroundPicSelected As Integer = 0
+    Public ErkannteDateien As Integer
 
     Private Sub frmMain_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Try
@@ -193,6 +194,9 @@
             FileSystemWatcher2.EnableRaisingEvents = False
             Timer1.Enabled = False
 
+            'Eventuell im  Browser zeigen
+            browserBrowser_Laden()
+
         Catch ex As Exception
 
         End Try
@@ -368,131 +372,7 @@
 
 
 
-    Private Sub FileSystemWatcher1_Created(sender As Object, e As IO.FileSystemEventArgs) Handles FileSystemWatcher1.Created
-        'Sound abspielen bei Event
 
-        My.Computer.Audio.Play("D:\Eye-Fi\Development\VisualStudio\VS2015\Landsknecht\Landsknecht_GreenScreen\camera.wav")
-        '      MsgBox("Fehler")
-
-        '     System.Threading.Thread.Sleep(System.Threading.Thread.Sleep(My.Settings.SetPauseForProcessing)
-
-        Dim SourceFile As String = ""
-        Dim DestinationFile As String = ""
-        Dim strCommandstring As String = ""
-        Dim PhotolineAktionsname As String = My.Settings.setPLAktion1
-
-        Dim strOutputDateiName As String
-
-
-
-        If Trim(My.Settings.SetOutPutDirectoryEvent1) <> "" Then
-            strOutputDateiName = My.Settings.SetOutPutDirectoryEvent1 & "\" & System.IO.Path.GetFileName(e.FullPath) & "." & My.Settings.SetOutputFormat1
-        Else
-            strOutputDateiName = e.FullPath & "." & My.Settings.SetOutputFormat1
-
-        End If
-
-
-        Try
-            'Prüfe auf Photoline Argumente Checkbox
-            If chkPhotolineArtguments.Checked = True Then
-                strCommandstring = "-Convert " & Chr(34) & e.FullPath.ToString & Chr(34) & " " & Chr(34) & strOutputDateiName & Chr(34) & " " & PhotolineAktionsname
-            Else
-                strCommandstring = Chr(34) & e.FullPath.ToString & Chr(34) & " " & txtApplication1Arguments.Text
-
-            End If
-
-
-        Catch ex As Exception
-
-            End Try
-
-            Try
-                'Hintergrund immer im gleichen Namen speichern, damit die Aktion danach programmiert werden kann
-                If My.Settings.setTempBackgroundImage = "" Then
-                    ' MsgBox("Hintergrundbild nicht angegeben")
-                    Dim x As DialogResult = frmBackroundSelector.ShowDialog()
-
-                End If
-                SourceFile = My.Settings.setTempBackgroundImage ' .setBackgroundImagePath & "\" & My.Settings.setBackground17 & My.Settings.setBackgroundImageFileFormat  ' Define source file name.
-                DestinationFile = My.Settings.setBackgroundImagePath & "\Background_temp.jpg"   ' Define target file name.
-                'DestinationFile = txtScanPath2.Text & "\Background_temp.jpg"   ' Define target file name.
-
-                FileCopy(SourceFile, DestinationFile)   ' Copy source to target.
-            Catch ex As Exception
-
-            End Try
-
-        Try
-
-
-            Dim ExterneAnwendung As New System.Diagnostics.Process()
-            ExterneAnwendung.StartInfo.FileName = txtApplication1.Text
-            ExterneAnwendung.StartInfo.Arguments = strCommandstring
-            ExterneAnwendung.Start()
-
-            ExterneAnwendung.WaitForExit()
-
-        Catch
-            MessageBox.Show(Err.Number & " - " & Err.Description, "Es ist ein Fehler aufgetreten!  FileSystemWatcher1_Created Process.Start")
-        End Try
-    End Sub
-
-    Private Sub FileSystemWatcher2_Created(sender As Object, e As IO.FileSystemEventArgs) Handles FileSystemWatcher2.Created
-
-        System.Threading.Thread.Sleep(My.Settings.SetPauseForProcessing)
-
-        My.Computer.Audio.Play("D:\Eye-Fi\Development\VisualStudio\VS2015\Landsknecht\Landsknecht_GreenScreen\applause.wav")
-
-        Dim SourceFile As String = ""
-        Dim DestinationFile As String = ""
-        Dim strCommandstring As String = ""
-        Dim PhotolineAktionsname As String = My.Settings.setPLAktion2
-
-        Dim strOutputDateiName As String
-
-
-
-        If Trim(My.Settings.SetOutPutDirectoryEvent2) <> "" Then
-            strOutputDateiName = My.Settings.SetOutPutDirectoryEvent2 & "\" & System.IO.Path.GetFileName(e.FullPath) & "." & My.Settings.SetOutputFormat2
-        Else
-            strOutputDateiName = e.FullPath & "." & My.Settings.SetOutputFormat2
-
-        End If
-
-
-        Try
-            'Prüfe auf Photoline Argumente Checkbox
-            If chkPhotolineArtguments.Checked = True Then
-                strCommandstring = "-Convert " & Chr(34) & e.FullPath.ToString & Chr(34) & " " & Chr(34) & strOutputDateiName & Chr(34) & " " & PhotolineAktionsname
-            Else
-                strCommandstring = Chr(34) & e.FullPath.ToString & Chr(34) & " " & txtApplication2Arguments.Text
-
-            End If
-
-
-        Catch ex As Exception
-
-        End Try
-
-
-
-        Try
-
-            Dim ExterneAnwendung As New System.Diagnostics.Process()
-            ExterneAnwendung.StartInfo.FileName = txtApplication2.Text
-            ExterneAnwendung.StartInfo.Arguments = strCommandstring
-            ExterneAnwendung.Start()
-
-            ExterneAnwendung.WaitForExit()
-
-
-
-
-        Catch
-            MessageBox.Show(Err.Number & " - " & Err.Description, "Es ist ein Fehler aufgetreten!  FileSystemWatcher2_Created Process.Start")
-        End Try
-    End Sub
 
     Private Sub chkPhotolineArtguments_CheckedChanged(sender As Object, e As EventArgs) Handles chkPhotolineArtguments.CheckedChanged
         bolChanges = True
@@ -590,5 +470,195 @@
         End Try
     End Sub
 
+    Private Sub EinstellungenSpeichernToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EinstellungenSpeichernToolStripMenuItem.Click
+        My.Settings.Save()
+
+    End Sub
+
+
+    Private Sub FileSystemWatcher1_Created(sender As Object, e As IO.FileSystemEventArgs) Handles FileSystemWatcher1.Created
+
+        ErkannteDateien = ErkannteDateien + 1
+        Me.StatusStrip1.Items(1).Text = ErkannteDateien.ToString
+
+        Try
+
+
+            frmPreview.ImageBox1.Image = Image.FromFile(e.FullPath.ToString)
+            frmPreview.w
+            frmPreview.Show()
+
+        Catch ex As Exception
+            MessageBox.Show(Err.Number & " - " & Err.Description, "Es ist ein Fehler aufgetreten!  Bild anzeigen")
+
+
+        End Try
+
+
+        Try
+        'Ist nicht mehr nötig, da Prozess jetzt wartet
+        System.Threading.Thread.Sleep(My.Settings.SetPauseForProcessing)
+
+            'Sound abspielen bei Event
+            My.Computer.Audio.Play(My.Settings.setSoundEvent1)
+
+        Catch ex As Exception
+
+        End Try
+        '      MsgBox("Fehler")
+
+        '     System.Threading.Thread.Sleep(System.Threading.Thread.Sleep(My.Settings.SetPauseForProcessing)
+
+        Dim SourceFile As String = ""
+        Dim DestinationFile As String = ""
+        Dim strCommandstring As String = ""
+        Dim PhotolineAktionsname As String = My.Settings.setPLAktion1
+
+        Dim strOutputDateiName As String
+
+
+
+        If Trim(My.Settings.SetOutPutDirectoryEvent1) <> "" Then
+            strOutputDateiName = My.Settings.SetOutPutDirectoryEvent1 & "\" & System.IO.Path.GetFileName(e.FullPath) & "." & My.Settings.SetOutputFormat1
+        Else
+            strOutputDateiName = e.FullPath & "." & My.Settings.SetOutputFormat1
+
+        End If
+
+
+        Try
+            'Prüfe auf Photoline Argumente Checkbox
+            If chkPhotolineArtguments.Checked = True Then
+                strCommandstring = "-Convert " & Chr(34) & e.FullPath.ToString & Chr(34) & " " & Chr(34) & strOutputDateiName & Chr(34) & " " & PhotolineAktionsname
+            Else
+                strCommandstring = Chr(34) & e.FullPath.ToString & Chr(34) & " " & txtApplication1Arguments.Text
+
+            End If
+
+
+        Catch ex As Exception
+
+        End Try
+
+        Try
+            'Hintergrund immer im gleichen Namen speichern, damit die Aktion danach programmiert werden kann
+            If My.Settings.setTempBackgroundImage = "" Then
+                ' MsgBox("Hintergrundbild nicht angegeben")
+                Dim x As DialogResult = frmBackroundSelector.ShowDialog()
+
+            End If
+            SourceFile = My.Settings.setTempBackgroundImage ' .setBackgroundImagePath & "\" & My.Settings.setBackground17 & My.Settings.setBackgroundImageFileFormat  ' Define source file name.
+            DestinationFile = My.Settings.setBackgroundImagePath & "\Background_temp.jpg"   ' Define target file name.
+            'DestinationFile = txtScanPath2.Text & "\Background_temp.jpg"   ' Define target file name.
+
+            FileCopy(SourceFile, DestinationFile)   ' Copy source to target.
+        Catch ex As Exception
+
+        End Try
+
+        Try
+
+
+            Dim ExterneAnwendung As New System.Diagnostics.Process()
+            ExterneAnwendung.StartInfo.FileName = txtApplication1.Text
+            ExterneAnwendung.StartInfo.Arguments = strCommandstring
+            ExterneAnwendung.Start()
+
+            ExterneAnwendung.WaitForExit()
+            '   ExterneAnwendung.Dispose()
+            '   ExterneAnwendung.Close()
+            '   ExterneAnwendung.Dispose()
+            '   ExterneAnwendung.Kill()
+
+        Catch
+            MessageBox.Show(Err.Number & " - " & Err.Description, "Es ist ein Fehler aufgetreten!  FileSystemWatcher1_Created Process.Start")
+        End Try
+    End Sub
+
+    Private Sub FileSystemWatcher2_Created(sender As Object, e As IO.FileSystemEventArgs) Handles FileSystemWatcher2.Created
+
+
+
+        Try
+            'Ist nicht mehr nötig, da Prozess jetzt wartet
+            System.Threading.Thread.Sleep(My.Settings.SetPauseForProcessing)
+
+            My.Computer.Audio.Play(My.Settings.setSoundEvent2)
+
+        Catch ex As Exception
+
+        End Try
+
+
+        Dim SourceFile As String = ""
+        Dim DestinationFile As String = ""
+        Dim strCommandstring As String = ""
+        Dim PhotolineAktionsname As String = My.Settings.setPLAktion2
+
+        Dim strOutputDateiName As String
+
+
+
+        If Trim(My.Settings.SetOutPutDirectoryEvent2) <> "" Then
+            strOutputDateiName = My.Settings.SetOutPutDirectoryEvent2 & "\" & System.IO.Path.GetFileName(e.FullPath) & "." & My.Settings.SetOutputFormat2
+        Else
+            strOutputDateiName = e.FullPath & "." & My.Settings.SetOutputFormat2
+
+        End If
+
+
+        Try
+            'Prüfe auf Photoline Argumente Checkbox
+            If chkPhotolineArtguments.Checked = True Then
+                strCommandstring = "-Convert " & Chr(34) & e.FullPath.ToString & Chr(34) & " " & Chr(34) & strOutputDateiName & Chr(34) & " " & PhotolineAktionsname
+            Else
+                strCommandstring = Chr(34) & e.FullPath.ToString & Chr(34) & " " & txtApplication2Arguments.Text
+
+            End If
+
+
+        Catch ex As Exception
+
+        End Try
+
+
+
+        Try
+
+            Dim ExterneAnwendung As New System.Diagnostics.Process()
+            ExterneAnwendung.StartInfo.FileName = txtApplication2.Text
+            ExterneAnwendung.StartInfo.Arguments = strCommandstring
+
+            'ExterneAnwendung.StartInfo.CreateNoWindow = True
+            'ExterneAnwendung.StartInfo.UseShellExecute = True
+
+            ExterneAnwendung.Start()
+            ExterneAnwendung.WaitForExit()
+
+            '   ExterneAnwendung.Close()
+            '   ExterneAnwendung.Dispose()
+
+        Catch
+            MessageBox.Show(Err.Number & " - " & Err.Description, "Es ist ein Fehler aufgetreten!  FileSystemWatcher2_Created Process.Start")
+        End Try
+    End Sub
+
+    Private Sub browserBrowser_Laden()
+
+        Dim Antwort As MsgBoxResult
+        Antwort = MsgBox("Möchten Sie die verarbeiteten Dateien anzeigen?", vbYesNo, "Browser laden?")
+        If Antwort = vbYes Then
+            Dim ExterneAnwendung As New System.Diagnostics.Process()
+            ExterneAnwendung.StartInfo.FileName = txtApplication1.Text
+            ExterneAnwendung.StartInfo.Arguments = " -browse " & Chr(34) & txtOutPutDirectoryEvent1.Text & Chr(34)
+
+            'ExterneAnwendung.StartInfo.CreateNoWindow = True
+            'ExterneAnwendung.StartInfo.UseShellExecute = True
+
+            ExterneAnwendung.Start()
+        End If
+
+
+    End Sub
 
 End Class

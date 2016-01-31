@@ -30,6 +30,13 @@ Public Class frmSelectPicture
                 txtHintergrundbild.Text = openFileDialog1.FileName
                 Hintergrundbild = openFileDialog1.FileName
 
+                '       picPicture.ImageLocation = openFileDialog1.FileName
+                picPicture.Image = Image.FromFile(openFileDialog1.FileName)
+
+
+                Create_Thumbnail()
+
+
             Catch Ex As Exception
                 MessageBox.Show(Err.Number & " - " & Err.Description, "Es Ist Ein Fehler Aufgetreten! btnHintergrundbild_Click")
 
@@ -39,6 +46,36 @@ Public Class frmSelectPicture
         End If
     End Sub
 
+    Private Sub Create_Thumbnail()
+        Dim imgThumb As Image = Nothing
+
+
+        Try
+            Dim image As Image = Nothing
+            'Hoch oder querformat
+            If picPicture.Image.Size.Width > picPicture.Image.Size.Height Then
+                imgThumb = picPicture.Image.GetThumbnailImage(200, 141, Nothing, New IntPtr())
+            Else
+                imgThumb = picPicture.Image.GetThumbnailImage(141, 200, Nothing, New IntPtr())
+            End If
+
+            ' Check if image exists
+            '  If Not image Is Nothing Then
+
+            Me.Refresh()
+            '         End If
+            picThumbnail.Image = imgThumb
+
+
+            '      Button1.Image = imgThumb
+            picThumbnail.Image.Save(Trim(txtHintergrundbild.Text) & My.Settings.setThumbnailImageSuffix, System.Drawing.Imaging.ImageFormat.Jpeg)
+
+            txtHintergrundThumbnail.Text = Trim(txtHintergrundbild.Text) & My.Settings.setThumbnailImageSuffix
+            HintergrundThumbnail = txtHintergrundThumbnail.Text
+        Catch
+            MessageBox.Show(Err.Number & " - " & Err.Description, "Es Ist Ein Fehler Aufgetreten! btnHintergrundbild_Click")
+        End Try
+    End Sub
     Private Sub btnHintergrundThumbnail_Click(sender As Object, e As EventArgs) Handles btnHintergrundThumbnail.Click
         Dim openFileDialog1 As New OpenFileDialog()
 

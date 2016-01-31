@@ -478,15 +478,26 @@
 
     Private Sub FileSystemWatcher1_Created(sender As Object, e As IO.FileSystemEventArgs) Handles FileSystemWatcher1.Created
 
+
+
         ErkannteDateien = ErkannteDateien + 1
         Me.StatusStrip1.Items(1).Text = ErkannteDateien.ToString
 
         Try
 
 
-            frmPreview.ImageBox1.Image = Image.FromFile(e.FullPath.ToString)
-            frmPreview.w
+            frmPreview.ImageBox1.ImageLocation = e.FullPath.ToString
+            frmPreview.WindowState = FormWindowState.Maximized
+            frmPreview.TopMost = True
+
+
+
             frmPreview.Show()
+
+
+            'Ist nicht mehr nötig, da Prozess jetzt wartet
+            System.Threading.Thread.Sleep(My.Settings.SetPauseForProcessing)
+
 
         Catch ex As Exception
             MessageBox.Show(Err.Number & " - " & Err.Description, "Es ist ein Fehler aufgetreten!  Bild anzeigen")

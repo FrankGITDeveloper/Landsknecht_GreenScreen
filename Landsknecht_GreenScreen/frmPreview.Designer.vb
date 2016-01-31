@@ -32,7 +32,7 @@ Partial Class frmPreview
         Me.ImageBox1.Enabled = False
         Me.ImageBox1.Location = New System.Drawing.Point(0, 0)
         Me.ImageBox1.Name = "ImageBox1"
-        Me.ImageBox1.Size = New System.Drawing.Size(607, 415)
+        Me.ImageBox1.Size = New System.Drawing.Size(344, 244)
         Me.ImageBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.ImageBox1.TabIndex = 0
         Me.ImageBox1.TabStop = False
@@ -42,7 +42,7 @@ Partial Class frmPreview
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(607, 415)
+        Me.ClientSize = New System.Drawing.Size(344, 244)
         Me.Controls.Add(Me.ImageBox1)
         Me.Name = "frmPreview"
         Me.Text = "frmPreview"

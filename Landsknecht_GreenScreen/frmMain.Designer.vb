@@ -89,6 +89,8 @@ Partial Class frmMain
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabelBildanzahl = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabelErkannteDateien = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
         CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FileSystemWatcher2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -611,7 +613,7 @@ Partial Class frmMain
         '
         'picLastScan
         '
-        Me.picLastScan.Location = New System.Drawing.Point(520, 188)
+        Me.picLastScan.Location = New System.Drawing.Point(521, 213)
         Me.picLastScan.Name = "picLastScan"
         Me.picLastScan.Size = New System.Drawing.Size(197, 136)
         Me.picLastScan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -620,7 +622,7 @@ Partial Class frmMain
         '
         'picPreview
         '
-        Me.picPreview.Location = New System.Drawing.Point(520, 35)
+        Me.picPreview.Location = New System.Drawing.Point(521, 58)
         Me.picPreview.Name = "picPreview"
         Me.picPreview.Size = New System.Drawing.Size(197, 136)
         Me.picPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -658,11 +660,31 @@ Partial Class frmMain
         Me.ToolStripStatusLabelErkannteDateien.Name = "ToolStripStatusLabelErkannteDateien"
         Me.ToolStripStatusLabelErkannteDateien.Size = New System.Drawing.Size(0, 17)
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(521, 42)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(93, 13)
+        Me.Label8.TabIndex = 44
+        Me.Label8.Text = "Gewähle Location"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(519, 200)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(65, 13)
+        Me.Label9.TabIndex = 45
+        Me.Label9.Text = "Letztes Foto"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(730, 474)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.picLastScan)
         Me.Controls.Add(Me.picPreview)
@@ -769,4 +791,6 @@ Partial Class frmMain
     Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents ToolStripStatusLabelBildanzahl As ToolStripStatusLabel
     Friend WithEvents ToolStripStatusLabelErkannteDateien As ToolStripStatusLabel
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label8 As Label
 End Class

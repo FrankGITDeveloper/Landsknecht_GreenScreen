@@ -485,14 +485,16 @@
 
         Try
 
+            picLastScan.ImageLocation = e.FullPath.ToString
 
-            frmPreview.ImageBox1.ImageLocation = e.FullPath.ToString
-            frmPreview.WindowState = FormWindowState.Maximized
-            frmPreview.TopMost = True
+            ' frmPreview.ImageBox1.ImageLocation = e.FullPath.ToString
+            ' frmPreview.ImageBox1.Refresh()
+            'frmPreview.WindowState = FormWindowState.Maximized
+            'frmPreview.TopMost = True
 
 
 
-            frmPreview.Show()
+            'frmPreview.Show()
 
 
             'Ist nicht mehr nötig, da Prozess jetzt wartet
